@@ -1,8 +1,8 @@
-# PyrEval
+# PyrEval 2
 
 PyrEval Copyright (C) 2017 Yanjun Gao
 
-This is the package for running PyrEval. The current pacakge is written in Python 2.7 and Python>=3.6 will be released soon. 
+This is the package for running PyrEval. The current pacakge is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.   
 
 [Here](https://youtu.be/i_wdH3__urY) is a demo presented in [CLIEDE2017](https://sites.psu.edu/cliede2017/). Please cite these papers if you use our code. 
 
@@ -10,35 +10,40 @@ This is the package for running PyrEval. The current pacakge is written in Pytho
 
 [2] Gao, Yanjun, Andrew Warner, and Rebecca J. Passonneau. "Pyreval: An automated method for summary content analysis." Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC). 2018. [Link](http://www.lrec-conf.org/proceedings/lrec2018/pdf/1096.pdf)
 
-
-## Introduction 
-PyrEval is a tool that automates the pyramid method for summary content evauation.[1] It constructs a content model of semantically coherent units discovered from a small sample of expert reference summaries of one or more source texts, and to apply the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [2, 3]. The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college student's summaries in multiple domains, and on sections of legal briefs written by law students.
-
-![PyrEval system pipeline and log output example](img/pyreval_img.png)
-
-### Table of Contents
+## Table of Contents
+**[Introduction](#introduction)**<br>
 **[Requirements](#requirements)**<br>
 **[Components and Directories](#components-and-directories)**<br>
 **[HOW TO USE - Launcher (Recommended)](#how-to-use---launcher-recommended)**<br>
 **[HOW TO USE - Manual](#how-to-use---manual)**<br>
 **[Acknowledgement](#acknowledgement)**<br>
 
+## Introduction 
+PyrEval is a tool that automates the pyramid method for summary content evauation [1]. It constructs a content model of semantically coherent units discovered from a small sample of expert reference summaries of one or more source texts, and to apply the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [2, 3]. 
+
+The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college student's summaries in multiple domains, and on sections of legal briefs written by law students.
+
+![PyrEval system pipeline and log output example](img/pyreval_img.png)
+
+
+
 
 ## Requirements
 ### Installation Requirement 
-1. Python 2.7 (or Anaconda2)
-2. Perl
-3. Stanford CoreNLP System[6], see download [link](https://drive.google.com/file/d/18Q1GxX7IkF-Zp14khacT-hDtdn5anLd6/view?usp=sharing) for 2018-10-05 version. The newest CoreNLP system is not compatible with PyrEval, and we are working on upgrading PyrEval to python 3.8 with newest dependencies.  
-
-### Data Requirement 
-4 to 5 human-written summaries in plain text files (referred throughout as “wise crowd” summaries); any number of summaries to score (referred throughout as “peer” summaries) 
-
-### Install dependencies 
-
-```bash
+1. Python 3.6
+2. Stanford CoreNLP System[6], see download [link](https://stanfordnlp.github.io/CoreNLP/). PyrEval has been tested with version 4.4.0 of Stanford CoreNLP. The directory should be placed inside the Stanford subdirectory of the repository.
+3. Install the packages listed in requirements.txt to the environment along with additional dependencies:
+```
 pip install -r requirements.txt
 sudo apt install python-lxml
+python3 -m nltk.downloader punkt
 ```
+4. (Optional) Install the ABCD package to use ABCD, a graph based Neural Network model for sentence decomposition instead of the Decompostion Parser [link](https://github.com/serenayj/ABCD-ACL2021). 
+
+### Data Requirement 
+4 to 5 human-written summaries in plain text files (referred throughout as “wise crowd” summaries); any number of summaries to score (referred throughout as “peer” summaries).
+These must be placed in the Raw subdirectory under their respective subsirectories.
+
 
 ## Components and Directories
 This package contains two major components: Build the pyramid and Score the peer summaries by the pyramid.  
@@ -239,7 +244,7 @@ If nltk throws error like SSL: CERTIFICATE_VERIFY_FAILED, then it means you need
 It is also required to install Java Runtime before running PyrEval.
 
 ## Acknowledgement
-The contributors to this repository include: Andrew Warner (for initial implementation of the pipeline), Brent Hoffert (for creation of the launcher), Purushartha Singh (for fixing bugs in decomposition parser), and Steven Fontanella (for cleaning up the package and testing the improvements).  
+The contributors to this repository include: Andrew Warner (for initial implementation of the pipeline), Brent Hoffert (for creation of the launcher), Purushartha Singh (for reimplementation of the Decomposition Parser and log generation, extending the WMIN implementation, optimization of the preprocessing, extending the implementation for feedback generation, and parameter tuning), Steven Fontanella (for cleaning up the package and testing the improvements), and Wasih Mohammad (for updating to PyrEval 3, integration of GloVe embeddings and ABCD, and creating the configuration file).  
 
 ## References
 [1] Nenkova, Ani and Rebecca J. Passonneau. Evaluating content selection in summarization: The Pyramid Method. Joint Annual Meeting of Human Language Technology and the North American chapter of the Association for Computational Linguistics (HLT/NAACL). Boston, MA. June, 2004.
