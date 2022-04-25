@@ -38,29 +38,60 @@ pip install -r requirements.txt
 sudo apt install python-lxml
 python3 -m nltk.downloader punkt
 ```
-4. (Optional) Install the ABCD package to use ABCD, a graph based Neural Network model for sentence decomposition instead of the Decompostion Parser [link](https://github.com/serenayj/ABCD-ACL2021). 
+4. Java DK
+5. Perl 
+6. (Optional) Install the ABCD package to use ABCD, a graph based Neural Network model for sentence decomposition instead of the Decompostion Parser [link](https://github.com/serenayj/ABCD-ACL2021). 
 
 ### Data Requirement 
 4 to 5 human-written summaries in plain text files (referred throughout as “wise crowd” summaries); any number of summaries to score (referred throughout as “peer” summaries).
 These must be placed in the Raw subdirectory under their respective subsirectories.
 
 
-## Components and Directories
-This package contains two major components: Build the pyramid and Score the peer summaries by the pyramid.  
+## Component Description
 
-Here is an explanation of 5 folders under PyrEval. 
-- Raw: For raw summary text files in launcher.  
+### Directories
+Here is an explanation of the folders present in the PyrEval package: 
+- Raw: For raw summary text files in launcher. 
 - Preprocess: For preprocessing your raw texts (step 0 and 1). Currently the decomposition into sub-sentence clauses uses Stanford CoreNLP tools [6], and conversion to semantic vectors uses WTMF.[7,8] In principle, these can be replaced by other methods.
 - Pyramid: For preprocessing model summaries(step 2). PyrEval uses model summaries under wise_crowd to build the pyramid. We build the pyramid from model summaries under wise_crowd. And output the pyramid for future use. 
 - Scoring: For scoring peer summaries by the pyramid (step3).  
-- log: folder of log output
+- log: The folder of log output (Not present without running the package)
+- Stanford: The directory where StanfordCoreNLP is placed.
+- ABCD: The directory where ABCD repository should be placed.
+- Datasets: Contains a sample dataset (cryptocurrency). Other datasets can be added to the directory in the right format to be used with the automated pipeline script.
+- Baseline: The ground truth scores for the sample dataset based on the manual annotations.
+- Results: The Results of the sample pipeline are stored in this directory.
 
+### Scripts
+Here is a brief description of the relevant python scripts which can be used for batch execution or calculations of correlations.
+- pyreval.py: The script starts the launcher which can be used to execute the pipeline in stages. Using the launher is discussed in the next [section](##how-to-use---launcher-recommended)
+- pipeline.py: Sample pipeline to execute the PyrEval packages manually. This can be used for grid search and running the pipeline with multiple datasets.
+- correlations.py: Based on the inputs, calculates the correlations between the scores of the baselines and the multiple iterations of pipeline runs.
+- to_xml.py: Used to convert a human readable Pyramid file (requires correct formatting) into a PyrEval readable Pyramid xml file.
+- pyreval_flask.py: Flask implementation of the pipeline (Not stable)
 
-## HOW TO USE - Launcher (Recommended)
+### Configuration
+The configuration file `parameters.ini` contains all the parameters and paths for the package with a brief description of the parameter options provided below
+- Paths: The relative paths are based on the absolute path of the basedir. Changing of the relative paths is not recommended.
+- *outputpyramidname*: Change this to change the name of the constructed Pyramid.
+- WMIN parameters:
+    - *edgethreshold*: Changes the edge threshold when constructing the hypergraph using cosine similarities. 
+    - *topkscus*: The number of scu candidates for each segment in the hypergraph. Range: 2-8 tested.
+    - *sortingmetric*: The metric used for selecting the top k SCUs. Acceptable values: product, cosine, stddev, wtdsum, normsum.
+    - *weightingmetric*: The metric used to assign weight to each match in the candidate SCU list. Acceptable values: product, cosine, stddev, wtdsum, normsum.
+    - *weightingscheme*: The node weighting scheme which decides the weight of each node. Acceptable values: sum, average, max.
+- Vectorization: The *method* determines the methodology used when contructing the phrase vectors. Implemented values: wtmf, glove.
+- Segmentation: 
+    - *method*: Describes which method for sentence decomposition is used. Implemented values: abcd, dcp (recommended)
+    - *decompositionmode*: Decides which mode of decompostion parser to utilize. Acceptable values: default, sentence, sentsplit, vpsbar, convp.
+    - *minsentencelength*: Determines the minimum length of an independent clause within decomposition parser. Range: 1-7 tested. 
 
-PyrEval comes with a launcher program for ease of use, and has been tested on mutiple OS. The launcher is stable but experimental, so if you experience problems you should resort to manual use (instructions below).
+## HOW TO USE - Launcher 
+
+PyrEval comes with a launcher for ease of use, and has been tested with Linux. The launcher is stable but requires manual input to run stages of pipeline. 
 
 ### Launcher Preparation
+The *basedir* parameter should be changed to the current working directory. Other parameters should be changed based on the run expectation. 
 
 You must place your summary text files in the `Raw` folder in PyrEval's directory.
 
@@ -69,7 +100,8 @@ You must place your summary text files in the `Raw` folder in PyrEval's director
 
 The Stanford CoreNLP System must be extracted to the `Stanford` folder in PyrEval's directory.
 
-At this time, the launcher allows you to specify your Python executable, but you must have `java` and `perl` executables on your system path.
+It is also recommended to first run "sanity.py" by: python3 sanity.py (or python sanity.py, if using Python2). This script will check whether all required directories like Stanford Directory, Scoring Directory, Model directory, etc. are present or not and whether the required dependencies are installed or not. Note: If you are getting some error with nltk, then please refer to the Notes section in this README.
+
 
 ### Usage
 
@@ -86,12 +118,7 @@ Example: Renamed Python executable (e.g., homebrew)
 >>> i python2
 ```
 
-Example: py launcher with options (e.g., Windows)
-```
->>> i py -2
-```
-
-At this time, the launcher does not remember your interpreter preference. You must set it each time you run the launcher.
+The default Python interpreter is present in the parameters file.
 
 #### 3. Run PyrEval commands
 
@@ -142,37 +169,34 @@ In automatic mode, any flags passed will be forwarded to the scoring step ONLY. 
 
 **WARNING**: Running the clean command will delete *all* files generated by PyrEval, including the results file. If you wish to save your results, save them to a different directory before cleaning. The clean command will not delete your raw text files (`Raw/model`; `Raw/peers`), but it MAY delete other files you place in other directories. Please back up your files, and use this command at your own risk.
 
-Typing `c` will clean the PyrEval directories of all files generated by the toolchain. It will not delete your original text input files. This is useful for performing a "clean run," and the most common use for this command to clean all of the directories of the previous data before running on new input files. As of right now, if you do not clean in this case, PyrEval will incorrectly merge the previous data with your new data, producing incorrect results.
-
-It is a known issue that this command will occasionally throw an error when attempting to delete files that were never generated. It is safe to ignore this error and assume the cleaning was performed correctly.
+Typing `c` will clean the PyrEval directories of all files generated by the toolchain. It will not delete your original text input files and files in the `Datasets`, `Baseline` and `Results` directories. This is useful for performing a "clean run," and the most common use for this command to clean all of the directories of the previous data before running on new input files. 
 
 #### 6. Exit
 
-To exit the PyrEval launcher, simply press `<Enter/Return>` with no input.
+To exit the PyrEval launcher, simply input `q` and execute.
 
 
 ## HOW TO USE - Manual
 
-### Step 00 (If your data is already one sentence per line and special characters removed, you don’t need this step): Split your documents into lines and clean up. Using the script split-sent.py as following: 
+A script needs to be written to execute the pipeline a sample of which has been provided in `pipeline.py`. 
+
+### Step 00 (If your data is already one sentence per line and special characters removed, you don’t need this step): Split your documents into lines and clean up. Using the script splitsent.py by using the following function: 
 
 ```
-python split-sent.py path_to_raw_text path_to_output
+split(path_to_raw_text, path_to_output)
 ```
 This step has to be done twice, once for wise crowd summaries, once for peer summaries.
 
-### Step 0: Download and run Stanford CoreNLP to generate xml files, see download link above. Unpack the file you will get a folder. This step has to be done twice, once for wise crowd summaries, once for peer summaries
+### Step 0: Download and run Stanford CoreNLP to generate xml files. Unpack the downloaded package files and move the folder in the Stanford directory. This step has to be done twice, once for wise crowd summaries, once for peer summaries
  
-Copy stanford.py to the Stanford CoreNLP folder, then run command: 
+Copy stanford.py to the Stanford CoreNLP folder, then use the following function from the stanford.py script: 
 ```
-python stanford.py path_to_raw_text mode path_to_PyrEval
+stanfordmain(path_to_raw_text, mode, path_to_PyrEval)
 ```
-where mode: 1: peer summries; 2: wise_crowd_summaries. E.g: 
-```
-python stanford.py Users\blah\raw_text 2 Users\blah\PyrEval 
-```
+where mode: 1: peer summries; 2: wise_crowd_summaries.
 
 ### Step 1: Preprocess files to generate sentence embeddings. 
-We are using vectorizations method by WTMF, created by Weiwei Guo. [7][8]
+We are using vectorizations method by WTMF, created by Weiwei Guo. [7][8]. There is also the option to use GloVe vectors [9]
 
 cd to Preprocess directory, then run preprocess.py:
 ```
@@ -181,11 +205,11 @@ python preprocess.py mode
 where mode: 1: peer summries; 2: wise_crowd_summaries. 
 
 ### Step 2: Build Pyramid
-The script will take input from Preprocess/wise_crowd_summaries/*, and output the pyramid as .pyr file to Pyramid/scu/. 
+The function from the pyramid.py script will take input from Preprocess/wise_crowd_summaries/*, and output the pyramid as .pyr file to Pyramid/scu/ along with a size file. 
 
 Change your location to the pyramid folder: 
 ```
-python pyramid.py 
+pyramid(pyramid_name)
 ```
 Output of Step 2 could be found in the following three places. The format of filename is: "pyramid_tSimilarityThreshold_aCoefficient_bCoefficient.suffix".  
 
@@ -216,21 +240,6 @@ Where the selected_pyramid could be found in Scoring/pyrs/pyramids/*.p.
 
 Output of Step 3 is a .csv file, located under PyrEval. 
 
-## Migration to Python3 and Flask Support
-1. For Python3 users, PyrEval should now be able to run on Python3 seamlessly. To use PyrEval with Python3, first you need to install the packages listed in requirements.txt as: sudo pip3 install -r requirements.txt.
-**NOTE**: For efficiently using CoreNLP with Flask (one summary at a time), now the Python wrapper, stanfordcorenlp (Available only for Python3) is required to be installed. We have added the same to requirements.txt but sanity.py wouldn't check for it; so if you intend to use it with Flask, please install all the dependencies mentioned in requirements.txt
-2. ~~Additionally, lxml needs to be installed for Python3 as: sudo apt install python3-lxml~~ Now, we have added lxml to requirements.txt, so no need to install it separately.
-3. There is a parameters' file which has been added, "parameters.ini". It basically contains paths' information and it is mostly self-explanatory. Some paths like, BaseDir, OutputFile require absolute path.
-4. Note that the parameters' file now contains two additional arguments, "PyramidPath" and "NumModels". Please kindly ignore "PyramidPath" and delete "NumModels = 5" line. These parameters are used with the Flask setup because at testing time, pyramid building is skipped. To run PyrEval with Flask, please visit: https://github.com/wasih7/PyrEval-Flask
-5. It is also recommended to first run "sanity.py" by: python3 sanity.py (or python sanity.py, if using Python2). This script will check whether all required directories like Stanford Directory, Scoring Directory, Model directory, etc. are present or not and whether the required dependencies are installed or not. Note: If you are getting some error with nltk, then please refer to the Notes section in this README.
-6. To run PyrEval in python3 run it as: python3 pyreval.py. Also, change the parameter, "PythonInterp" to python3 in "parameters.ini" if you are using python3 and to python if using python2.
-7. Some additional enhancements which have been done in Python3 are: 
-   - Colored prints to show error or completion of a process like stanford coreNLP step or preprocessing step, etc. 
-   - Thorough cleaning of generated output files. Now, with the command, 'c' on the interpreter of PyrEval, all output files like log folder, pyramids directory, etc. would now be deleted (except the model and peer directory).
-   - We now graciously exit out of the interpreter by typing the command, 'q'. 
-   - **NEW**: Now, we use CoreNLP efficiently when running PyrEval with Flask. Specifically, now the annotators in the pipeline are not loaded every time a query is made to the Flask server. This is avoided by running coreNLP in a server-client fashion, where only the first time are the annotators loaded. The time is reduced from ~27sec (for CoreNLP step) to ~3.3sec! To incorporate this change in the Flask application, please check: https://github.com/wasih7/PyrEval-Flask
-8. If you notice any bugs or issues with the Python3 use, please raise an issue under this branch ("new_impl") as its still under development phase.
-9. **NEW**: Now, we have introduce a set of configurable parameters under a section, Scoring_Params in the config file. See the file, lib_scoring.py and search for Wasih for an understanding of the meanings of these parameters. These should allow the user for more control over the scoring step of the pipeline. Also, a minor bug in the getWeight() function of lib_scoring.py has been corrected where scu[0] has been changed to scu[1].
 
 ## Notes
 If nltk throws errors like: "Resource punkt not found" in the 1) (Pre-processing step), it means that you need to install it manually like:
