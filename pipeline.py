@@ -35,66 +35,54 @@ def cleanup():
 
 start = time.time()
 counter = 0
+
 for x in sorted(os.listdir(homedir), reverse=True):
     print(x)
-    if 'abcd' not in x or 'av' not in x:
-        continue
     try:
         cleanup()
     except:
         pass
-    res = resultdir+"/"+x
+    res = os.path.join(resultdir,x)
     if x ==".DS_Store":
         continue
     if not os.path.isdir(res):
         os.mkdir(res)
     else:
         pass
-    tempdir = homedir+"/"+x 
+    tempdir = os.path.join(homedir, x) 
     print("Working on dataset "+ x)
     for each in os.listdir(tempdir):
         # if os.path.isdir(tempdir+"/"+each):
         #     continue
-        shutil.copytree(tempdir+"/"+each, rawdir+"/"+each)
-        if not os.path.exists(rawdir+"/"+each+'/split'):
-            os.mkdir(rawdir+"/"+each+'/split')
+        shutil.copytree(os.path.join(tempdir,each), os.path.join(rawdir,each))
+        if not os.path.exists(os.path.join(rawdir,each,'split'):
+            os.mkdir(os.path.join(rawdir,each,'split')
 
 
-    # split(rawdir+'/model', rawdir+'/model/split')
-    # split(rawdir+'/peers', rawdir+'/peers/split')
+    split(os.path.join(rawdir,'model'), os.path.join(rawdir,'model','split'))
+    split(os.path.join(rawdir,'peers'), os.path.join(rawdir,'model','peers'))
 
     # splitsent('')
     # stanford('')
     print("Stanford")
     os.chdir(stanforddir)
-    # stanfordmain(rawdir+'/peers/split', 1, basedir)
+    stanfordmain(os.path.join(rawdir,'model','split'), 1, basedir)
     os.chdir(stanforddir)
-    # stanfordmain(rawdir+'/model/split', 2, basedir)
+    stanfordmain(os.path.join(rawdir,'model','peers'), 2, basedir)
 
     # sys.exit()
     print("Preprocessing")
     os.chdir(preprocessdir)
-    # os.system("python preprocess.py 1")
-    # os.system("python preprocess.py 2")
-    if 'abcd' in x:
-        if 'av' not in x:
-            shutil.rmtree(preprocessdir+"/wise_crowd_summaries")
-            # os.mkdir(preprocessdir+"/wise_crowd_summaries")
-            shutil.rmtree(preprocessdir+"/peer_summaries")
-            # os.mkdir(preprocessdir+"/peer_summaries")
-            for each in os.listdir(tempdir):
-            # if os.path.isdir(tempdir+"/"+each):
-            #     continue
-                shutil.copytree(tempdir+"/"+each, preprocessdir+"/"+each)
-                # if not os.path.exists(rawdir+"/"+each+'/split'):
-                    # os.mkdir(rawdir+"/"+each+'/split')
+    os.system("python preprocess.py 1")
+    os.system("python preprocess.py 2")
+    
             
 
     
     os.chdir(basedir)
     parser = configparser.ConfigParser()
     parser.read('parameters.ini')
-    parser.set('Paths', 'OutputPyramidName', x+'_abcd')
+    parser.set('Paths', 'OutputPyramidName', x)
     
     if not os.path.exists(os.path.join(scoredir, 'scu')):
         os.makedirs(os.path.join(scoredir, 'scu'))
@@ -113,9 +101,10 @@ for x in sorted(os.listdir(homedir), reverse=True):
     
     with open('parameters.ini', 'w') as f:
         parser.write(f)
+
     os.chdir(pyramiddir)
-    if 'av' not in x:
-        pyramidmain(x+'_abcd')
+    # if 'av' not in x:
+    pyramidmain(x)
 
     topk = ['2', '4', '8']
     sorting = ['product', 'stddev', 'cosine', 'normsum']
@@ -143,20 +132,20 @@ for x in sorted(os.listdir(homedir), reverse=True):
         os.chdir(res)
         os.mkdir(conf_str)
 
-        shutil.copytree(basedir+"/log", res+'/'+conf_str+"/log")
-        shutil.move(scoredir+"/results.csv", res+'/'+conf_str)
+        shutil.copytree(os.path.join(basedir,"log"), os.path.join(res, conf_str,"log"))
+        shutil.move(os.path.join(scoredir,"results.csv"), os.path.join(res,conf_str))
         
         counter += 1
         
     os.chdir(scoredir)
     for each in os.listdir("sizes"):
-        shutil.move("sizes/"+each, res)
+        shutil.move(os.path.join("sizes", each), res)
     
     for each in os.listdir("scu"):
-        shutil.move("scu/"+each, res)
+        shutil.move(os.path.join("scu", each), res)
     
-    for each in os.listdir("pyrs/pyramids"):
-        shutil.move("pyrs/pyramids/"+each, res)
+    for each in os.listdir(os.path.join("pyrs","pyramids")):
+        shutil.move(os.path.join("pyrs","pyramids",each), res)
     
     os.chdir(homedir)           
 
