@@ -52,7 +52,7 @@ def DecomposeSummary(fname, summ_ind, dir1, method, sentence_file = None, abcd_d
 	""" Reads in XML file from CoreNLP_XMLs, facilitates sentence decomposition, outputs .segs file """
 	#cmd = 'python sentparser.py ' + fname + '.xml ' + str(summ_ind)
 	#Wasih (06-25-21) Add ABCD segmentation method
-	if method == 'rule':
+	if method == 'dcp':
 		cmd = 'python sentparser.py ' + fname +' ' + str(summ_ind) + ' '+ dir1
 	else:
 		cmd = 'python abcd_decomposer.py ' + fname + ' ' + str(summ_ind) + ' ' + dir1 + ' ' + sentence_file + ' ' + abcd_dir + ' ' + glove_dir

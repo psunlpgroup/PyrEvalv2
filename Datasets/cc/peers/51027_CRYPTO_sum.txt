@@ -1,0 +1,9 @@
+In the article ‘Has crypto-currency peaked?’ <REF> there is a debate between two guests who weigh in on their opinion on the future of cryptocurrencies.
+Christopher Shake believes that, through creating a cryptocurrency only art gallery, investors and merchants will start to take the currency more seriously.
+Conversely David Gerard believes that crypto currencies are moving backwards with fewer merchants accepting them due to their volatility.
+Gerard elaborates by saying ‘You couldn't trust it for volatility, you couldn't trust it because transactions were slow and often didn't go through at all.
+It really destroyed the use-case for the general merchant acceptance of cryptos.’ <REF>.
+He expresses this due to the bitcoin bubble expanding greatly, many worrying of a crash in the market.
+On the other hand Christopher Shake believes there is a future in crypto currencies and claims that companies as big as Amazon and Facebook are moving to adopt forms of cryptocurrency.
+Despite his reservations, Gerard does admit that he does not expect bitcoin to disappear any time soon, rather that ‘Bitcoin has spent its entire existence lurching from crisis to crisis, any of which would have killed a sane financial instrument’.
+He goes on to predict that Bitcoin will become regulated and normalised, the complete opposite ideal of its creators original goals(Bernard, Z).
