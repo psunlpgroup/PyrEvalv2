@@ -122,7 +122,7 @@ The default Python interpreter is present in the parameters file.
 
 #### 3. Run PyrEval commands
 
-Once you have set your interpreter, you are ready to run PyrEval. You run PyrEval commands by typing the number of the command you wish to run. E.g.,
+Once you have set your interpreter, you are ready to run PyrEval. You run PyrEval commands by typing the number of the command you wish to run. The launcher has 5 steps represented as integer inputs, corresponding to the sentence splitting (1), creating the xml for the tokenized version of the input text (2), creating the sentence segments and converting them to semantic vectors (3), running EDUA to create the pyramid (4), and running WMIN to assess the content of the peer inputs.  E.g.:
 
 ```
 >``>> 1
