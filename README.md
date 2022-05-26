@@ -23,12 +23,14 @@ Please cite these papers if you use our code.
 ## Introduction 
 PyrEval is a tool that automates the pyramid method for summary content evauation [1]. It constructs a content model of semantically coherent units discovered from a small sample of expert reference summaries of one or more source texts, and to apply the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [2, 3]. 
 
-The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college student's summaries in multiple domains, and on sections of legal briefs written by law students.
+The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college students summaries in multiple domains, and on sections of legal case briefs written by law students.
 
 ![PyrEval system pipeline and log output example](img/pyreval_img.png)
 
 
+![PyrEval2 pipeline: original](img/pyreval2_orig.png)
 
+![Pyreval2 pipeline: for PyrEval+CR[7, 8]](img/pyreval2_mod.png)
 
 ## Requirements
 ### Installation Requirement 
@@ -270,6 +272,10 @@ The contributors to the original repository include: Andrew Warner (for initial 
 
 [6] Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bethard, and David McClosky. 2014. The Stanford CoreNLP Natural Language Processing Toolkit In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pp. 55-60.
 
-[7] Weiwei Guo, Wei Liu and Mona Diab. "Fast Tweet Retrieval with Compact Binary Codes". In Proceedings of COLING, 2014, Dublin, Ireland.
+[7] Singh, P.;
+    
+[8] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education, Durham University, UK.
+    
+[9] Weiwei Guo, Wei Liu and Mona Diab. "Fast Tweet Retrieval with Compact Binary Codes". In Proceedings of COLING, 2014, Dublin, Ireland.
 
-[8] Weiwei Guo and Mona Diab. "Modeling Sentences in the Latent Space". In Proceedings of ACL, 2012, Jeju, Korea.
+[10] Weiwei Guo and Mona Diab. "Modeling Sentences in the Latent Space". In Proceedings of ACL, 2012, Jeju, Korea.
