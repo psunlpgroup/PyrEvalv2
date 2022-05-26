@@ -23,9 +23,11 @@ Please cite these papers if you use our code.
 ## Introduction 
 PyrEval is a tool that automates the pyramid method for summary content evauation [1]. It constructs a content model of semantically coherent units discovered from a small sample of expert reference summaries of one or more source texts, and to apply the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [2, 3]. 
 
-The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college students summaries in multiple domains, and on sections of legal case briefs written by law students.
+The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college students summaries in multiple domains, and on sections of legal case briefs written by law students. Below is an impage showing the original pipeline and log output.
 
 ![PyrEval system pipeline and log output example](img/pyreval_img.png)
+
+PyrEval version 2 has been modified to include the original pipeline (shown again below) or a new pipeline for use with a computable rubric (PyrEval+CR) as described in [7, 8].  
 
 ![PyrEval2 pipeline: original](img/pyreval_orig.png)
 
