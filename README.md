@@ -36,7 +36,7 @@ PyrEval version 2 has been modified to include the original pipeline (shown agai
 ## Requirements
 ### Installation Requirement 
 1. Python 3.6
-2. Stanford CoreNLP System[6], see download [link](https://stanfordnlp.github.io/CoreNLP/). PyrEval has been tested with version 4.4.0 of Stanford CoreNLP. The directory should be placed inside the Stanford subdirectory of the repository.
+2. Stanford CoreNLP System [6], see download [link](https://stanfordnlp.github.io/CoreNLP/). PyrEval has been tested with version 4.4.0 of Stanford CoreNLP. The directory should be placed inside the Stanford subdirectory of the repository.
 3. Install the packages listed in requirements.txt to the environment along with additional dependencies:
 ```
 pip install -r requirements.txt
