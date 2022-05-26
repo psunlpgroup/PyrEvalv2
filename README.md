@@ -255,7 +255,7 @@ If nltk throws error like SSL: CERTIFICATE_VERIFY_FAILED, then it means you need
 It is also required to install Java Runtime before running PyrEval.
 
 ## Acknowledgement
-The contributors to this repository include: Andrew Warner (for initial implementation of the pipeline), Brent Hoffert (for creation of the launcher), Purushartha Singh (for reimplementation of the Decomposition Parser and log generation, extending the WMIN implementation, optimization of the preprocessing, extending the implementation for feedback generation, and parameter tuning), Steven Fontanella (for cleaning up the package and testing the improvements), and Wasih Mohammad (for updating to PyrEval 3, integration of GloVe embeddings and ABCD, and creating the configuration file).  
+The contributors to the original repository include: Andrew Warner (for initial implementation of the pipeline), Brent Hoffert (for creation of the launcher), Purushartha Singh (for reimplementation of the Decomposition Parser and log generation, Steven Fontanella (for cleaning up the package and testing the improvements).  The contributors to the current repository include Purushartha Singh (for extending the WMIN implementation, optimization of the preprocessing, extending the implementation for feedback generation, and parameter tuning), and Wasih Mohammad (for updating to PyrEval 3, integration of GloVe embeddings and ABCD, and improving the modularization, including use of the configuration file).  
 
 ## References
 [1] Nenkova, Ani and Rebecca J. Passonneau. Evaluating content selection in summarization: The Pyramid Method. Joint Annual Meeting of Human Language Technology and the North American chapter of the Association for Computational Linguistics (HLT/NAACL). Boston, MA. June, 2004.
