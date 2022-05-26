@@ -27,10 +27,9 @@ The tool is aimed at two audiences. It can help educators evaluate students’ s
 
 ![PyrEval system pipeline and log output example](img/pyreval_img.png)
 
+![PyrEval2 pipeline: original](img/pyreval_orig.png)
 
-![PyrEval2 pipeline: original](img/pyreval2_orig.png)
-
-![Pyreval2 pipeline: for PyrEval+CR[7, 8]](img/pyreval2_mod.png)
+![Pyreval2 pipeline: for PyrEval+CR [7,8]](img/pyreval_mod.png)
 
 ## Requirements
 ### Installation Requirement 
