@@ -83,9 +83,9 @@ The configuration file `parameters.ini` contains all the parameters and paths fo
 - WMIN parameters:
     - *edgethreshold*: Changes the edge threshold when constructing the hypergraph using cosine similarities. 
     - *topkscus*: The number of scu candidates for each segment in the hypergraph. Range: 2-8 tested.
-    - *sortingmetric*: The metric used for selecting the top k SCUs. Acceptable values: product, cosine, stddev, wtdsum, normsum.
-    - *weightingmetric*: The metric used to assign weight to each match in the candidate SCU list. Acceptable values: product, cosine, stddev, wtdsum, normsum.
-    - *weightingscheme*: The node weighting scheme which decides the weight of each node. Acceptable values: sum, average, max.
+    - *sortingmetric*: The metric used for selecting the top k CUs to include in an internal node of the WMIN hypergraph. Acceptable values: product, cosine, stddev, wtdsum, normsum.
+    - *weightingmetric*: The metric used to assign weight to the hypergraph node. Acceptable values: product, cosine, stddev, wtdsum, normsum.
+    - *weightingscheme*: The weighting scheme which decides the weight of each match to a CU. Acceptable values: sum, average, max.
 - Vectorization: The *method* determines the methodology used when contructing the phrase vectors. Implemented values: wtmf, glove.
 - Segmentation: 
     - *method*: Describes which method for sentence decomposition is used. Implemented values: abcd, dcp (recommended)
