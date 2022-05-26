@@ -48,9 +48,10 @@ python3 -m nltk.downloader punkt
 6. (Optional) Install the ABCD package to use ABCD, a graph based Neural Network model for sentence decomposition instead of the Decompostion Parser [link](https://github.com/serenayj/ABCD-ACL2021). 
 
 ### Data Requirement 
-4 to 5 human-written summaries in plain text files (referred throughout as “wise crowd” summaries); any number of summaries to score (referred throughout as “peer” summaries).
+For the full pipeline, PyrEval requires 4 to 5 human-written summaries or short essays in plain text files (referred throughout as “wise crowd” summaries/essays); any number of summaries/essays to score (referred throughout as “peer” summaries).
 These must be placed in the Raw subdirectory under their respective subsirectories.
 
+For the modified pipeline, PyrEval+CR requires a computable rubric, which converts a rubric to assess short essays to the format of a pyramid that would be created automatically from wise crowd summaries or short essays.
 
 ## Component Description
 
@@ -273,7 +274,7 @@ The contributors to the original repository include: Andrew Warner (for initial 
 
 [6] Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bethard, and David McClosky. 2014. The Stanford CoreNLP Natural Language Processing Toolkit In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pp. 55-60.
 
-[7] Singh, P.;
+[7] Singh, P.; Gnesdilow, D; Cang, C; Baker, S.; Goss, W; Kim, C.; Passonneau, R. J.; Puntambekar, S. 2022. Design of Real-time Scaffolding of Middle School Science Writing Using Automated Techniques. In Proceedings of the International Conference of the Learning Sciences (ICLS).
     
 [8] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education, Durham University, UK.
     
