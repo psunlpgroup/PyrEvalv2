@@ -84,7 +84,7 @@ Here is a brief description of the relevant python scripts which can be used for
 The configuration file `parameters.ini` contains all the parameters and paths for the package with a brief description of the parameter options provided below
 - Paths: The relative paths are based on the absolute path of the basedir. Changing of the relative paths is not recommended.
 - *outputpyramidname*: Change this to change the name of the constructed Pyramid.
-- WMIN parameters:
+- WMIN parameters (see [11]):
     - *edgethreshold*: Changes the edge threshold when constructing the hypergraph using cosine similarities. 
     - *topkscus*: The number of scu candidates for each segment in the hypergraph. Range: 2-8 tested.
     - *sortingmetric*: The metric used for selecting the top k CUs to include in an internal node of the WMIN hypergraph. Acceptable values: product, cosine, stddev, wtdsum, normsum.
@@ -92,7 +92,7 @@ The configuration file `parameters.ini` contains all the parameters and paths fo
     - *weightingscheme*: The weighting scheme which decides the weight of each match to a CU. Acceptable values: sum, average, max.
 - Vectorization: The *method* determines the methodology used when contructing the phrase vectors. Implemented values: wtmf, glove.
 - Segmentation: 
-    - *method*: Describes which method for sentence decomposition is used. Implemented values: abcd, dcp (recommended)
+    - *method*: Describes which method for sentence decomposition is used. Implemented values: dcp (recommended); abcd.
     - *decompositionmode*: Decides which mode of decompostion parser to utilize. Acceptable values: default, sentence, sentsplit, vpsbar, convp.
     - *minsentencelength*: Determines the minimum length of an independent clause within decomposition parser. Range: 1-7 tested. 
 
