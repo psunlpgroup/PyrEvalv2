@@ -21,7 +21,7 @@ Please cite these papers if you use our code.
 **[Acknowledgement](#acknowledgement)**<br>
 
 ## Introduction 
-PyrEval is a tool originally developed to automate the pyramid method for summary content evaluation [5, 6, 7]. It has recently been extended to assess the content of students' short, written science explanations (PyrEval+CR). PyrEval constructs a pyramid, which is a weighted content model of semantically coherent units (typically propositions) discovered in a small sample (e.g., 4 or 5) of expert reference summaries of one or more source texts. It then applies the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [7]. Instead of creating an emergent content model from reference summaries, PyrEval+CR is for use with a computable rubric (CR), which has the form of a pyramid, but which represents assessment criteria similar to an analytic rubric [11, 12]
+PyrEval is a tool originally developed to automate the pyramid method for summary content evaluation [6, 7, 8]. It has recently been extended to assess the content of students' short, written science explanations (PyrEval+CR). PyrEval constructs a pyramid, which is a weighted content model of semantically coherent units (typically propositions) discovered in a small sample (e.g., 4 or 5) of expert reference summaries of one or more source texts. It then applies the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [8]. Instead of creating an emergent content model from reference summaries, PyrEval+CR is for use with a computable rubric (CR), which has the form of a pyramid, but which represents assessment criteria similar to an analytic rubric [10, 11]
 
 The tool is aimed at two audiences. It can help educators evaluate the content of students’ short, written passages (summaries or essays). Summaries of source texts that students write to a prompt are a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [8]. It has performed well on college students' summaries across multiple domains, and on sections of legal case briefs written by law students. PyrEval can also assess automated summarizers [1].
 
@@ -29,7 +29,7 @@ Below is an image showing the original pipeline and log output.
 
 ![PyrEval system pipeline and log output example](img/pyreval_img.png)
 
-PyrEval version 2 has been modified to include the original pipeline (shown again below) or a new pipeline for use with a computable rubric (PyrEval+CR) as described in [11, 12].  
+PyrEval version 2 has been modified to include the original pipeline (shown again below) or a new pipeline for use with a computable rubric (PyrEval+CR) as described in [10, 11].  
 
 ![PyrEval2 pipeline: original](img/pyreval_orig.png)
 
@@ -38,7 +38,7 @@ PyrEval version 2 has been modified to include the original pipeline (shown agai
 ## Requirements
 ### Installation Requirement 
 1. Python 3.6
-2. Stanford CoreNLP System [6], see download [link](https://stanfordnlp.github.io/CoreNLP/). PyrEval has been tested with version 4.4.0 of Stanford CoreNLP. The directory should be placed inside the Stanford subdirectory of the repository.
+2. Stanford CoreNLP System [5], see download [link](https://stanfordnlp.github.io/CoreNLP/). PyrEval has been tested with version 4.4.0 of Stanford CoreNLP. The directory should be placed inside the Stanford subdirectory of the repository.
 3. Install the packages listed in requirements.txt to the environment along with additional dependencies:
 ```
 pip install -r requirements.txt
@@ -50,8 +50,7 @@ python3 -m nltk.downloader punkt
 6. (Optional) Install the ABCD package to use ABCD, a graph based Neural Network model for sentence decomposition instead of the Decompostion Parser [link](https://github.com/serenayj/ABCD-ACL2021). 
 
 ### Data Requirement 
-For the full pipeline, PyrEval requires 4 to 5 human-written summaries or short essays in plain text files (referred throughout as “wise crowd” summaries/essays); any number of summaries/essays to score (referred throughout as “peer” summaries).
-These must be placed in the Raw subdirectory under their respective subsirectories.
+For the full pipeline, PyrEval requires 4 to 5 human-written summaries or short essays in plain text files (referred throughout as “wise crowd” summaries/essays); any number of summaries/essays to score (referred throughout as “peer” summaries).  These must be placed in the Raw subdirectory under their respective subsirectories.
 
 For the modified pipeline, PyrEval+CR requires a computable rubric, which converts a rubric to assess short essays to the format of a pyramid that would be created automatically from wise crowd summaries or short essays.
 
@@ -60,7 +59,7 @@ For the modified pipeline, PyrEval+CR requires a computable rubric, which conver
 ### Directories
 Here is an explanation of the folders present in the PyrEval package: 
 - Raw: For raw summary text files in launcher. 
-- Preprocess: For preprocessing your raw texts (step 0 and 1). Currently the decomposition into sub-sentence clauses uses Stanford CoreNLP tools [6], and conversion to semantic vectors uses WTMF.[7,8] In principle, these can be replaced by other methods.
+- Preprocess: For preprocessing your raw texts (step 0 and 1). Currently the decomposition into sub-sentence clauses uses Stanford CoreNLP tools [6], and conversion to semantic vectors uses WTMF[3, 4] In principle, these can be replaced by other methods.
 - Pyramid: For preprocessing model summaries(step 2). PyrEval uses model summaries under wise_crowd to build the pyramid. We build the pyramid from model summaries under wise_crowd. And output the pyramid for future use. 
 - Scoring: For scoring peer summaries by the pyramid (step3).  
 - log: The folder of log output (Not present without running the package)
@@ -130,7 +129,7 @@ The default Python interpreter is present in the parameters file.
 
 #### 3. Run PyrEval commands
 
-Once you have set your interpreter, you are ready to run PyrEval. You run PyrEval commands by typing the number of the command you wish to run. The launcher has 5 steps represented as integer inputs, corresponding to the sentence splitting (1), creating the xml for the tokenized version of the input text (2), creating the sentence segments and converting them to semantic vectors (3), running EDUA to create the pyramid (4), and running WMIN to assess the content of the peer inputs (5).  E.g.:
+Once you have set your interpreter, you are ready to run PyrEval. You run PyrEval commands by typing the number of the command you wish to run. The launcher has 5 steps represented as integer inputs, corresponding to 1) the sentence splitting, 2) creating the xml for the tokenized version of the input text, 3) creating the sentence segments and converting them to semantic vectors, 4) running EDUA to create the pyramid, 5) and running WMIN to assess the content of the peer inputs.  E.g.:
 
 ```
 >``>> 1
