@@ -110,7 +110,7 @@ You must place your summary text files in the `Raw` folder in PyrEval's director
 
 The Stanford CoreNLP System must be extracted to the `Stanford` folder in PyrEval's directory.
 
-It is also recommended to first run "sanity.py" by: python3 sanity.py (or python sanity.py, if using Python2). See above uner ### Scripts
+It is also recommended to first run "sanity.py" by: python3 sanity.py (or python sanity.py, if using Python2). See above under ### Scripts
 
 
 ### Usage
