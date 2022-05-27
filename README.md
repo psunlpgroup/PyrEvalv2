@@ -66,7 +66,7 @@ Here is an explanation of the folders present in the PyrEval package:
 - Pyramid: Code for processing model summaries (step 2). PyrEval uses model summaries that must be placed in Raw/model to build the pyramid, using the EDUA algorithm [1]. 
 - Raw: Two subfolders (model and peers) store plain text files containing the model summaries (or other genres of model texts) and the peer text (summaries or other inputs to be assessed).
 - Scoring: Code for scoring peer summaries by the pyramid (step 3 of the launcher).
-- log: The folder to store the PyrEval log output that is created at the end of processing peer files.
+- log: This folder is created at the end of processing peer files, and stores PyrEval's log output; see the image above of example log output.
 - Stanford: The directory where StanfordCoreNLP is placed.
 
 ### Scripts
