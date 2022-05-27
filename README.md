@@ -2,15 +2,15 @@
 
 PyrEval Copyright (C) 2017 Yanjun Gao
 
-This is the package for running PyrEval. The current pacakge is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for realtime assessment of student writing.
+This is the package for running PyrEval. The current pacakge is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing.
 
 [Here](https://youtu.be/i_wdH3__urY) is a demo presented at the [CLIEDE2017](https://sites.psu.edu/cliede2017/) workshop. Look for a more recent demo video soon.
 
 Please cite these papers if you use our code. 
 
-[1] Gao, Yanjun, Chen Sun, and Rebecca J. Passonneau. "Automated Pyramid Summarization Evaluation." Proceedings of Conference on Computational Natural Language Learning (CoNLL). 2019. [Link](https://www.aclweb.org/anthology/K19-1038/) 
+[1] Gao, Yanjun; Sun, Chen; Passonneau, Rebecca J. 2019. Automated Pyramid Summarization Evaluation. Proceedings of Conference on Computational Natural Language Learning (CoNLL). [Link](https://www.aclweb.org/anthology/K19-1038/) 
 
-[2] Gao, Yanjun, Andrew Warner, and Rebecca J. Passonneau. "Pyreval: An automated method for summary content analysis." Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC). 2018. [Link](http://www.lrec-conf.org/proceedings/lrec2018/pdf/1096.pdf)
+[2] Gao, Yanjun; Warner, Andrew; Passonneau, Rebecca J. 2018. Pyreval: An automated method for summary content analysis. Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC).  [Link](http://www.lrec-conf.org/proceedings/lrec2018/pdf/1096.pdf)
 
 ## Table of Contents
 **[Introduction](#introduction)**<br>
@@ -21,13 +21,15 @@ Please cite these papers if you use our code.
 **[Acknowledgement](#acknowledgement)**<br>
 
 ## Introduction 
-PyrEval is a tool that automates the pyramid method for summary content evauation [1]. It constructs a content model of semantically coherent units discovered from a small sample of expert reference summaries of one or more source texts, and to apply the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [2, 3]. 
+PyrEval is a tool originally developed to automate the pyramid method for summary content evaluation [5, 6, 7]. It has recently been extended to assess the content of students' short, written science explanations (PyrEval+CR). PyrEval constructs a pyramid, which is a weighted content model of semantically coherent units (typically propositions) discovered in a small sample (e.g., 4 or 5) of expert reference summaries of one or more source texts. It then applies the content model to automatically evaluate the content of new summaries. It automates a manual method that was developed over a decade ago [1], and found to be extremely reliable [7]. Instead of creating an emergent content model from reference summaries, PyrEval+CR is for use with a computable rubric (CR), which has the form of a pyramid, but which represents assessment criteria similar to an analytic rubric [11, 12]
 
-The tool is aimed at two audiences. It can help educators evaluate students’ summaries for content; this is important because summarization is a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [4, 5]. It can also be used in evaluation of automated summarizers [5]. It has performed well on college students summaries in multiple domains, and on sections of legal case briefs written by law students. Below is an impage showing the original pipeline and log output.
+The tool is aimed at two audiences. It can help educators evaluate the content of students’ short, written passages (summaries or essays). Summaries of source texts that students write to a prompt are a commonly used vehicle to teach reading and writing skills, and to assess students’ knowledge of content [8]. It has performed well on college students' summaries across multiple domains, and on sections of legal case briefs written by law students. PyrEval can also assess automated summarizers [1].
+
+Below is an image showing the original pipeline and log output. 
 
 ![PyrEval system pipeline and log output example](img/pyreval_img.png)
 
-PyrEval version 2 has been modified to include the original pipeline (shown again below) or a new pipeline for use with a computable rubric (PyrEval+CR) as described in [7, 8].  
+PyrEval version 2 has been modified to include the original pipeline (shown again below) or a new pipeline for use with a computable rubric (PyrEval+CR) as described in [11, 12].  
 
 ![PyrEval2 pipeline: original](img/pyreval_orig.png)
 
@@ -262,22 +264,26 @@ It is also required to install Java Runtime before running PyrEval.
 The contributors to the original repository include: Andrew Warner (for initial implementation of the pipeline), Brent Hoffert (for creation of the launcher), Purushartha Singh (for reimplementation of the Decomposition Parser and log generation, Steven Fontanella (for cleaning up the package and testing the improvements).  The contributors to the current repository include Purushartha Singh (for extending the WMIN implementation, optimization of the preprocessing, extending the implementation for feedback generation, and parameter tuning), and Wasih Mohammad (for updating to PyrEval 3, integration of GloVe embeddings and ABCD, and improving the modularization, including use of the configuration file).  
 
 ## References
-[1] Nenkova, Ani and Rebecca J. Passonneau. Evaluating content selection in summarization: The Pyramid Method. Joint Annual Meeting of Human Language Technology and the North American chapter of the Association for Computational Linguistics (HLT/NAACL). Boston, MA. June, 2004.
+[1] Gao, Yanjun; Sun, Chen; Passonneau, Rebecca J. 2019. Automated Pyramid Summarization Evaluation. Proceedings of Conference on Computational Natural Language Learning (CoNLL). [Link](https://www.aclweb.org/anthology/K19-1038/) 
 
-[2] Nenkova, Ani, Rebecca J. Passonneau, and Kathleen McKeown. "The pyramid method: Incorporating human content selection variation in summarization evaluation." ACM Transactions on Speech and Language Processing (TSLP) 4.2 (2007): 4.
+[2] Gao, Yanjun; Warner, Andrew; Passonneau, Rebecca J. 2018. Pyreval: An automated method for summary content analysis. Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC). [Link](http://www.lrec-conf.org/proceedings/lrec2018/pdf/1096.pdf)
 
-[3] Passonneau, Rebecca J. 2010. Formal and functional assessment of the pyramid method for summary content evaluation. Natural Language Engineering 16:107-131. Copyright Cambridge University Press.
+[3] Guo, Weiwei and Mona Diab. 2014. Fast Tweet Retrieval with Compact Binary Codes. In Proceedings of COLING, 2014, Dublin, Ireland.
 
-[4] Passonneau, Rebecca J., et al. "Wise Crowd Content Assessment and Educational Rubrics." International Journal of Artificial Intelligence in Education (2016): 1-27.
+[4] Guo, Weiwei and Mona Diab. 2012. Modeling Sentences in the Latent Space. In Proceedings of ACL, 2012, Jeju, Korea.
 
-[5] Yang, Qian, Rebecca J. Passonneau, and Gerard de Melo. "PEAK: Pyramid Evaluation via Automated Knowledge Extraction." AAAI. 2016.
+[5] Nenkova, Ani and Rebecca J. Passonneau. 2004. Evaluating content selection in summarization: The Pyramid Method. Joint Annual Meeting of Human Language Technology and the North American chapter of the Association for Computational Linguistics (HLT/NAACL). Boston, MA. June, 2004.
 
-[6] Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bethard, and David McClosky. 2014. The Stanford CoreNLP Natural Language Processing Toolkit In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pp. 55-60.
+[6] Nenkova, Ani; Passonneau, Rebecca J.; McKeown, Kathleen. 2007. The pyramid method: Incorporating human content selection variation in summarization evaluation. ACM Transactions on Speech and Language Processing (TSLP) 4.2 (2007): 4.
 
-[7] Singh, P.; Gnesdilow, D; Cang, C; Baker, S.; Goss, W; Kim, C.; Passonneau, R. J.; Puntambekar, S. 2022. Design of Real-time Scaffolding of Middle School Science Writing Using Automated Techniques. In Proceedings of the International Conference of the Learning Sciences (ICLS). Hybrid, online and Hiroshima, Japan.
+[7] Passonneau, Rebecca J. 2010. Formal and functional assessment of the pyramid method for summary content evaluation. Natural Language Engineering 16:107-131. Copyright Cambridge University Press.
+
+[8] Passonneau, Rebecca J., et al. 2018. Wise Crowd Content Assessment and Educational Rubrics. International Journal of Artificial Intelligence in Education 28(1), 29–55.
+
+[9] Yang, Qian; Passonneau, Rebecca J.; de Melo,Gerard. 2016. PEAK: Pyramid Evaluation via Automated Knowledge Extraction. AAAI. 2016.
+
+[10] Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bethard, and David McClosky. 2014. The Stanford CoreNLP Natural Language Processing Toolkit In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pp. 55-60.
+
+[11] Singh, P.; Gnesdilow, D; Cang, C; Baker, S.; Goss, W; Kim, C.; Passonneau, R. J.; Puntambekar, S. 2022. Design of Real-time Scaffolding of Middle School Science Writing Using Automated Techniques. In Proceedings of the International Conference of the Learning Sciences (ICLS). Hybrid, online and Hiroshima, Japan.
     
-[8] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education. Hyrid, online and Durham University, UK.
-    
-[9] Weiwei Guo, Wei Liu and Mona Diab. "Fast Tweet Retrieval with Compact Binary Codes". In Proceedings of COLING, 2014, Dublin, Ireland.
-
-[10] Weiwei Guo and Mona Diab. "Modeling Sentences in the Latent Space". In Proceedings of ACL, 2012, Jeju, Korea.
+[12] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education. Hyrid, online and Durham University, UK.
