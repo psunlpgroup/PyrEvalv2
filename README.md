@@ -70,12 +70,15 @@ Here is an explanation of the folders present in the PyrEval package:
 - Stanford: The directory where StanfordCoreNLP is placed.
 
 ### Scripts
-Here is a brief description of the relevant python scripts which can be used for batch execution or calculations of correlations.
-- pyreval.py: The script starts the launcher which can be used to execute the pipeline in stages. Using the launher is discussed in the next [section](##how-to-use---launcher-recommended)
-- pipeline.py: Sample pipeline to execute the PyrEval packages manually. This can be used for grid search and running the pipeline with multiple datasets.
+Here is a brief description of the relevant python scripts which can be used for batch execution or to calculate correlations of PyrEval scores with ground truth scores.
 - correlations.py: Based on the inputs, calculates the correlations between the scores of the baselines and the multiple iterations of pipeline runs.
-- to_xml.py: Used to convert a human readable Pyramid file (requires correct formatting) into a PyrEval readable Pyramid xml file.
+- pipeline.py: Sample pipeline to execute the PyrEval packages manually. This can be used for grid search and running the pipeline with multiple datasets.
+- pyreval.py: The script starts the launcher which can be used to execute the pipeline in stages. Using the launher is discussed in the next [section](##how-to-use---launcher-recommended)
 - pyreval_flask.py: Flask implementation of the pipeline (Not stable)
+- sanity.py: This script will check whether all required directories like Stanford, Scoring, Raw/model, etc. are present and whether the required dependencies are installed. Note: If you are getting some error with nltk, then please refer to the Notes section in this README.
+- splitsent.py: Does some cleaning and checking of input files, and splits the file into one sentence per line.
+- stanford.py: Runs the Stanford Core NLP tools [
+- to_xml.py: Used to convert a human readable Pyramid file (requires correct formatting) into a PyrEval readable Pyramid xml file, which has a "pyr" file extension.
 
 ### Configuration
 The configuration file `parameters.ini` contains all the parameters and paths for the package with a brief description of the parameter options provided below
@@ -107,7 +110,7 @@ You must place your summary text files in the `Raw` folder in PyrEval's director
 
 The Stanford CoreNLP System must be extracted to the `Stanford` folder in PyrEval's directory.
 
-It is also recommended to first run "sanity.py" by: python3 sanity.py (or python sanity.py, if using Python2). This script will check whether all required directories like Stanford Directory, Scoring Directory, Model directory, etc. are present or not and whether the required dependencies are installed or not. Note: If you are getting some error with nltk, then please refer to the Notes section in this README.
+It is also recommended to first run "sanity.py" by: python3 sanity.py (or python sanity.py, if using Python2). See above uner ### Scripts
 
 
 ### Usage
@@ -271,18 +274,19 @@ The contributors to the original repository include: Andrew Warner (for initial 
 
 [4] Guo, Weiwei and Mona Diab. 2012. Modeling Sentences in the Latent Space. In Proceedings of ACL, 2012, Jeju, Korea.
 
-[5] Nenkova, Ani and Rebecca J. Passonneau. 2004. Evaluating content selection in summarization: The Pyramid Method. Joint Annual Meeting of Human Language Technology and the North American chapter of the Association for Computational Linguistics (HLT/NAACL). Boston, MA. June, 2004.
+[5] Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bethard, and David McClosky. 2014. The Stanford CoreNLP Natural Language Processing Toolkit In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pp. 55-60.
 
-[6] Nenkova, Ani; Passonneau, Rebecca J.; McKeown, Kathleen. 2007. The pyramid method: Incorporating human content selection variation in summarization evaluation. ACM Transactions on Speech and Language Processing (TSLP) 4.2 (2007): 4.
+[6] Nenkova, Ani and Rebecca J. Passonneau. 2004. Evaluating content selection in summarization: The Pyramid Method. Joint Annual Meeting of Human Language Technology and the North American chapter of the Association for Computational Linguistics (HLT/NAACL). Boston, MA. June, 2004.
 
-[7] Passonneau, Rebecca J. 2010. Formal and functional assessment of the pyramid method for summary content evaluation. Natural Language Engineering 16:107-131. Copyright Cambridge University Press.
+[7] Nenkova, Ani; Passonneau, Rebecca J.; McKeown, Kathleen. 2007. The pyramid method: Incorporating human content selection variation in summarization evaluation. ACM Transactions on Speech and Language Processing (TSLP) 4.2 (2007): 4.
 
-[8] Passonneau, Rebecca J., et al. 2018. Wise Crowd Content Assessment and Educational Rubrics. International Journal of Artificial Intelligence in Education 28(1), 29–55.
+[8] Passonneau, Rebecca J. 2010. Formal and functional assessment of the pyramid method for summary content evaluation. Natural Language Engineering 16:107-131. Copyright Cambridge University Press.
 
-[9] Yang, Qian; Passonneau, Rebecca J.; de Melo,Gerard. 2016. PEAK: Pyramid Evaluation via Automated Knowledge Extraction. AAAI. 2016.
+[9] Passonneau, Rebecca J., et al. 2018. Wise Crowd Content Assessment and Educational Rubrics. International Journal of Artificial Intelligence in Education 28(1), 29–55.
 
-[10] Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bethard, and David McClosky. 2014. The Stanford CoreNLP Natural Language Processing Toolkit In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pp. 55-60.
-
-[11] Singh, P.; Gnesdilow, D; Cang, C; Baker, S.; Goss, W; Kim, C.; Passonneau, R. J.; Puntambekar, S. 2022. Design of Real-time Scaffolding of Middle School Science Writing Using Automated Techniques. In Proceedings of the International Conference of the Learning Sciences (ICLS). Hybrid, online and Hiroshima, Japan.
+[10] Singh, P.; Gnesdilow, D; Cang, C; Baker, S.; Goss, W; Kim, C.; Passonneau, R. J.; Puntambekar, S. 2022. Design of Real-time Scaffolding of Middle School Science Writing Using Automated Techniques. In Proceedings of the International Conference of the Learning Sciences (ICLS). Hybrid, online and Hiroshima, Japan.
     
-[12] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education. Hyrid: online and Durham University, UK.
+[11] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education. Hyrid: online and Durham University, UK.
+
+[12] Yang, Qian; Passonneau, Rebecca J.; de Melo,Gerard. 2016. PEAK: Pyramid Evaluation via Automated Knowledge Extraction. AAAI. 2016.
+
