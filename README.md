@@ -77,7 +77,7 @@ Here is a brief description of the relevant python scripts which can be used for
 - pyreval_flask.py: Flask implementation of the pipeline (Not stable)
 - sanity.py: This script will check whether all required directories like Stanford, Scoring, Raw/model, etc. are present and whether the required dependencies are installed. Note: If you are getting some error with nltk, then please refer to the Notes section in this README.
 - splitsent.py: Does some cleaning and checking of input files, and splits the file into one sentence per line.
-- stanford.py: Runs the Stanford Core NLP tools [
+- stanford.py: Runs the Stanford Core NLP tools [5].
 - to_xml.py: Used to convert a human readable Pyramid file (requires correct formatting) into a PyrEval readable Pyramid xml file, which has a "pyr" file extension.
 
 ### Configuration
