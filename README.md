@@ -95,7 +95,7 @@ The configuration file `parameters.ini` contains all the parameters and paths fo
 
 ## HOW TO USE - Launcher 
 
-PyrEval comes with a launcher for ease of use, and has been tested with Linux. The launcher is stable but requires manual input to run stages of pipeline. 
+PyrEval comes with a launcher for ease of use, and has been tested with Linux. The launcher is stable but requires manual input to run all the stages of pipeline. 
 
 ### Launcher Preparation
 The *basedir* parameter should be changed to the current working directory. Other parameters should be changed based on the run expectation. 
