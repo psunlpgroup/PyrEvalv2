@@ -148,7 +148,7 @@ Once you have set your interpreter, you are ready to run PyrEval. You run PyrEva
 
 Typing `0` (automatic mode) will run through each of the 5 PyrEval steps in sequence. It is equivalent to running the `1`, `2`, `3`, `4`, and `5` commands in order. It is not recommended that you use automatic mode for your first run of PyrEval in case there are errors, but once you are confident that the PyrEval toolchain is running correctly, automatic mode is a convenient way to run through each step in sequence.
 
-#### 4. Command flags
+#### 4. Optional command flags for launcher's step 5
 
 The fifth PyrEval step (scoring) supports various command line flags. 
 
