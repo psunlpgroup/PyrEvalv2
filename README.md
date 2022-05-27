@@ -285,4 +285,4 @@ The contributors to the original repository include: Andrew Warner (for initial 
 
 [11] Singh, P.; Gnesdilow, D; Cang, C; Baker, S.; Goss, W; Kim, C.; Passonneau, R. J.; Puntambekar, S. 2022. Design of Real-time Scaffolding of Middle School Science Writing Using Automated Techniques. In Proceedings of the International Conference of the Learning Sciences (ICLS). Hybrid, online and Hiroshima, Japan.
     
-[12] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education. Hyrid, online and Durham University, UK.
+[12] Singh, P.; Passonneau, Rebecca J.; Wasih, M.; Cang, X.; Kim, ChanMin; Puntambekar, S. 2022. Automated Support to Scaffold Students’ Written Explanations in Science. In Proceedings of the 23rd International Conference on Artificial Intelligence in Education. Hyrid: online and Durham University, UK.
