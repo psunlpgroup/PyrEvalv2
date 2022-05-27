@@ -59,7 +59,8 @@ For the modified pipeline, PyrEval+CR requires a computable rubric, which conver
 ### Directories
 Here is an explanation of the folders present in the PyrEval package: 
 - ABCD: The directory where ABCD repository should be placed.
-- Baseline: The ground truth scores for the sample dataset based on the manual annotations.  It is in the form of  *csv file. It can be used for verifying that PyrEval as been run correctly, using the datasets in the Datasets folder.
+- Baseline: The ground truth scores for the sample dataset based on the manual annotations.  It is in the form of  .csv file. It can be used for verifying that PyrEval as been run correctly, using the datasets in the Datasets folder.
+- Datasets: A dataset to generate the baseline results (the crypto-currency dataset from [1]).
 - img: image files used in the README.md
 - Preprocess: For preprocessing your raw texts (step 0 and 1). Currently the decomposition into sub-sentence clauses uses Stanford CoreNLP tools [6], and conversion to semantic vectors uses WTMF [3, 4] In principle, these can be replaced by other methods. See the parameters.ini file.
 - Pyramid: Code for processing model summaries (step 2). PyrEval uses model summaries that must be placed in Raw/model to build the pyramid, using the EDUA algorithm [1]. 
