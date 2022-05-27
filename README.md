@@ -58,16 +58,15 @@ For the modified pipeline, PyrEval+CR requires a computable rubric, which conver
 
 ### Directories
 Here is an explanation of the folders present in the PyrEval package: 
-- Raw: For raw summary text files in launcher. 
-- Preprocess: For preprocessing your raw texts (step 0 and 1). Currently the decomposition into sub-sentence clauses uses Stanford CoreNLP tools [6], and conversion to semantic vectors uses WTMF[3, 4] In principle, these can be replaced by other methods.
-- Pyramid: For preprocessing model summaries(step 2). PyrEval uses model summaries under wise_crowd to build the pyramid. We build the pyramid from model summaries under wise_crowd. And output the pyramid for future use. 
-- Scoring: For scoring peer summaries by the pyramid (step3).  
-- log: The folder of log output (Not present without running the package)
-- Stanford: The directory where StanfordCoreNLP is placed.
 - ABCD: The directory where ABCD repository should be placed.
-- Datasets: Contains a sample dataset (cryptocurrency). Other datasets can be added to the directory in the right format to be used with the automated pipeline script.
-- Baseline: The ground truth scores for the sample dataset based on the manual annotations.
-- Results: The Results of the sample pipeline are stored in this directory.
+- Baseline: The ground truth scores for the sample dataset based on the manual annotations.  It is in the form of  *csv file. It can be used for verifying that PyrEval as been run correctly, using the datasets in the Datasets folder.
+- img: image files used in the README.md
+- Preprocess: For preprocessing your raw texts (step 0 and 1). Currently the decomposition into sub-sentence clauses uses Stanford CoreNLP tools [6], and conversion to semantic vectors uses WTMF [3, 4] In principle, these can be replaced by other methods. See the parameters.ini file.
+- Pyramid: Code for processing model summaries (step 2). PyrEval uses model summaries that must be placed in Raw/model to build the pyramid, using the EDUA algorithm [1]. 
+- Raw: Two subfolders (model and peers) store plain text files containing the model summaries (or other genres of model texts) and the peer text (summaries or other inputs to be assessed).
+- Scoring: Code for scoring peer summaries by the pyramid (step 3 of the launcher).
+- log: The folder to store the PyrEval log output that is created at the end of processing peer files.
+- Stanford: The directory where StanfordCoreNLP is placed.
 
 ### Scripts
 Here is a brief description of the relevant python scripts which can be used for batch execution or calculations of correlations.
