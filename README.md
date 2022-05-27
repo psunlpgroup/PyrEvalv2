@@ -2,7 +2,7 @@
 
 PyrEval Copyright (C) 2017 Yanjun Gao
 
-This is the package for running PyrEval. The current pacakge is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing.
+This is the package for running PyrEval (which includes a new variant PyrEval+CR). The current pacakge is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing.
 
 [Here](https://youtu.be/i_wdH3__urY) is a demo presented at the [CLIEDE2017](https://sites.psu.edu/cliede2017/) workshop. Look for a more recent demo video soon.
 
