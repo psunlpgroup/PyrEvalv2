@@ -1,0 +1,61 @@
+
+########################################50496_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 8
+                                     Raw: 2
+         Maximum possible score with Raw: 26
+                                 Quality: 0.0769
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.0676
+                           Comprehensive: 0.0722
+
+
+  Content Unit List [ID(Weight)]: 8(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Crypto currencies is something rather interesting, in a couple of
+	         .................... years it has grown at rapid rate and has been purchased and sold
+	         .................... worldwide.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... It has had a huge impact on the internet making millions of people
+	         .................... successful.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 8 [Weight: 2]
+	Segment: .................... So what are crypto currencies It is simply a digital form of money
+	         .................... which can be used to purchase; it comes in multiple forms such as
+	         .................... Litecoin, Ethereum, Zcash and the main one which has been very
+	         .................... popular known as Bitcoin.
+	Content Unit: ............... (1) that many different companies of different natures not just
+	              ...............     technology related are getting involved with crypto currencies
+	              ............... (2) Even with these questions, there are still many that have
+	              ...............     faith in digital currencies, with people and businesses still
+	              ...............     working towards a wider acceptance and usability of this
+	              ...............     medium.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... One very powerful factor about crypto currencies is that it has no
+	         .................... relationships with the any government.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... In this essay the pros and cons will be revealed in an argument.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Now back to the main topic are crypto currencies the future
+====================================================================================================

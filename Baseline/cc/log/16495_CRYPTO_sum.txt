@@ -1,0 +1,65 @@
+
+########################################16495_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 8
+                                     Raw: 4
+         Maximum possible score with Raw: 26
+                                 Quality: 0.1538
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.1351
+                           Comprehensive: 0.1445
+
+
+  Content Unit List [ID(Weight)]: 6(2), 8(2) 
+
+
+
+Sentence: 1 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 8 [Weight: 2]
+	Segment: .................... whether crypto currencies have been accepted or do their better
+	         .................... days still
+	Content Unit: ............... (1) that many different companies of different natures not just
+	              ...............     technology related are getting involved with crypto currencies
+	              ............... (2) Even with these questions, there are still many that have
+	              ...............     faith in digital currencies, with people and businesses still
+	              ...............     working towards a wider acceptance and usability of this
+	              ...............     medium.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... The article talks about lie ahead in the future.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Two prominent individuals were asked to provide their views on the
+	         .................... article.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... One of them was David Gerard, who is the author of Attack of the
+	         .................... Foot Blockchain.
+
+Sentence: 4 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... The other one was Christopher Shake, who is the director of a
+	         .................... London gallery;
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... The House of Fine Art.Gerard had a sceptical point of view on the
+	         .................... crypto landscape.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Shake was a big crypto currency enthusiast.
+====================================================================================================

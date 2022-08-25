@@ -1,0 +1,138 @@
+
+########################################52997_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 21
+                                     Raw: 10
+         Maximum possible score with Raw: 44
+                                 Quality: 0.2273
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.3378
+                           Comprehensive: 0.2826
+
+
+  Content Unit List [ID(Weight)]: 4(3), 5(3), 6(2), 15(1), 16(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... On September Rory Cellan Jones published a BBC newsletter article
+	         .................... asking Has Crypto currency peaked In order to figure this out he
+	         .................... invited David Gerrard an author and blogger on crypto and
+	         .................... Christopher Shake Director of London gallery, The house of fine
+	         .................... arts.
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p David Gerrard states that the main problem Crypto currency is
+	         .................... facing volatility.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 15 [Weight: 1]
+	Segment: .................... This all started after the bitcoin bubble.
+	Content Unit: ............... (1) However, with the recent bubble burst, a lot of the trust in
+	              ...............     them has disappeared.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 16 [Weight: 1]
+	Segment: .................... During this period transactions were very slow and most of the
+	         .................... times did not even process through.
+	Content Unit: ............... (1) This includes the transaction issues, such as going through
+	              ...............     slowly or not at all.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This ruined and slowed the progress of Crypto being accepted by
+	         .................... companies businesses because it was not being efficient.
+
+Sentence: 6 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Crypto was changing so much that you could not trust it and
+
+	Segment ID: 1 | Content Unit: 4 [Weight: 3]
+	Segment: .................... people are sitting on large crypto assets but are not able to use
+	         .................... them.
+	Content Unit: ............... (1) It is pointed out that a motivation for this approach is based
+	              ...............     upon the belief that people are sitting on large crypto assets
+	              ...............     and are unable to spend them.
+	              ............... (2) This is proof that some people are still working towards the
+	              ...............     age of cryptocurrencies, or at least an age.
+	              ............... (3) The owner of the gallery explained that he wanted to solve a
+	              ...............     problem with crypto currencies which is people sitting on big
+	              ...............     crypto assets arent able to spend them.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This led to fewer merchants using it because there was no
+	         .................... confidence of smooth transactions happening.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Merchants left and this slowed down the use of crypto currency.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... If you compare its beginning to now it doesn t seem that fun or
+	         .................... exciting anymore.
+
+Sentence: 10 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p However, merchants like Christopher Shake think the currency is
+	         .................... the future.
+
+Sentence: 11 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... At his museum he has introduced Crypto currency and
+
+	Segment ID: 1 | Content Unit: 5 [Weight: 3]
+	Segment: .................... he encourages more merchants like himself to accept the currency
+	         .................... and give it a chance.
+	Content Unit: ............... (1) It is suggested that if more businesses start to accept
+	              ...............     cryptocurrencies then this will in turn create confidence in
+	              ...............     the crypto market.
+	              ............... (2) that this could suggest the currencies are failing
+	              ............... (3) With the help of a few experts, he also implies that if
+	              ...............     businesses keep jumping onto supporting crypto currency, it
+	              ...............     will survive.
+
+Sentence: 12 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He states that bigger companies like Amazon, Facebook etc. are
+	         .................... slowly moving onto crypto.
+
+Sentence: 13 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Due to it just starting crypto won t disappear anytime soon.
+
+Sentence: 14 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This is because despite it constantly facing issues it has gotten
+	         .................... bigger and better every time.
+
+Sentence: 15 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This will lead to it being more used and normalized as time goes
+	         .................... on.
+====================================================================================================

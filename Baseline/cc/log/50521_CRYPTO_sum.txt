@@ -1,0 +1,103 @@
+
+########################################50521_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 18
+                                     Raw: 6
+         Maximum possible score with Raw: 41
+                                 Quality: 0.1463
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2027
+                           Comprehensive: 0.1745
+
+
+  Content Unit List [ID(Weight)]: 1(4), 13(1), 17(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The article gives a good understanding of how cryptocurrency is
+	         .................... performing at the moment.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The article shows different opinion of people for and against
+	         .................... cryptocurrency.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... It is stated in the article that bitcoin had reached to fall,
+	         .................... which shows the fall of crypto currency in the market.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p In the very start the article doesn t show any benefit of using
+	         .................... cryptocurrency but instead it stated If you believe crypto
+	         .................... currencies are the future this has not been a good week.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This statement represents that the article is totally against
+	         .................... crypto currency.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p The two main opponents Christopher Shake and David Gerard have
+	         .................... different opinion on crypto currency.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Christopher Shake shares his opinion by saying It is sticking
+	         .................... around because it has value.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Whereas on the other hand David Gerrard is against crypto
+	         .................... currency.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 13 [Weight: 1]
+	Segment: .................... He says, You couldnt trust it for volatility.
+	Content Unit: ............... (1) how volatile they are
+
+Sentence: 10 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: 17 [Weight: 1]
+	Segment: .................... These opinions shows a very strong argument but being a strong
+	         .................... opponent for crypto currency
+	Content Unit: ............... (1) Bitcoin, however, has an advantage of wielding a strong
+	              ...............     support from people.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... Christopher Shake makes a sudden move and says that one can buy
+	         .................... his art pieces for regular cash.
+
+Sentence: 11 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This statement indicates that he isn t confident enough to stick
+	         .................... to his main plan, which was to sell his pieces in crypto currency.
+====================================================================================================

@@ -1,0 +1,81 @@
+
+########################################50976_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 11
+                                     Raw: 7
+         Maximum possible score with Raw: 32
+                                 Quality: 0.2188
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2365
+                           Comprehensive: 0.2276
+
+
+  Content Unit List [ID(Weight)]: 0(5), 10(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... In the summary, I will be discussing about the main concepts of
+	         .................... the article, also I will be giving a brief report on
+	         .................... cryptocurrency concerning if they are the future or not.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cryptocurrency is a digital or computer generated type of currency
+	         .................... for which encryption methods are used to control its use and
+	         .................... generate its release for security.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... It is an innovative new form of currency that is being used to buy
+	         .................... products and services.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This currency is decentralised which means isnt secured to bank,
+	         .................... or organised by a government.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 10 [Weight: 2]
+	Segment: .................... Furthermore, bitcoin the largest cryptocurrency has recently had a
+	         .................... displeasing downfall in value and is now per cent below its peak.
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However, some organisations have lined up plans to sanction
+	         .................... customers to pay with crypto currencies.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 0 [Weight: 5]
+	Segment: .................... For example, both a London art gallery and a Scottish hotel have
+	         .................... been in talks about campaigns to allow customers to pay with
+	         .................... crypto currencies.
+	Content Unit: ............... (1) For example, an art gallery in London held an exhibition with
+	              ...............     digital currencies as the preferred payment method.
+	              ............... (2) Cellan Jones writes that Businesses located in London and
+	              ...............     Scotland have made enquiries to allow payment from customers
+	              ...............     using cryptocurrencies.
+	              ............... (3) However, there has been some positive news as businesses such
+	              ...............     as a Scottish Hotel and a London Art Gallery are allowing
+	              ...............     customers to pay with crypto currencies.
+	              ............... (4) Cellan Jones then goes on to counter this argument, by
+	              ...............     suggesting that a London art gallery and Scottish hotel chain
+	              ...............     plan to introduce support for different crypto currencies.
+	              ............... (5) Cellan Jones writes recent days both a London art gallery and
+	              ...............     a Scottish hotel have contacted me about plans to allow their
+	              ...............     customers to pay with crypto currencies.
+====================================================================================================

@@ -1,0 +1,129 @@
+
+########################################38664_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 17
+                                     Raw: 12
+         Maximum possible score with Raw: 40
+                                 Quality: 0.3000
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.4054
+                           Comprehensive: 0.3527
+
+
+  Content Unit List [ID(Weight)]: 1(4), 3(3), 6(2), 10(2), 16(1) 
+
+
+
+Sentence: 1 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... Tech Tent: Has Crypto currency Peaked written by Rory Cellan Jones
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... According to the BBC News article, the likelihood of
+	         .................... cryptocurrencies becoming the currencies of the future seems slim.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Even the title of the article alludes to this; suggesting that
+	         .................... cryptocurrencies have already reached the peak of their attraction
+	         .................... and that their popularity is on the decline.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 10 [Weight: 2]
+	Segment: .................... This is further evidenced by the value of Ethereum, the future of
+	         .................... crypto and rival to Bitcoin, which has dropped below its peak.
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This article features both Christopher Shake, a supporter of
+	         .................... cryptocurrency, and David Gerard who remains sceptical of its
+	         .................... future.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... Shake, as the director a London art gallery, shows his support by
+	         .................... accepting cryptocurrency at the gallery s art exhibitions.
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... For Shake, cryptocurrencies need encouragement from merchants in
+	         .................... order to thrive.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... Gerard however, believes that merchants won t accept
+	         .................... cryptocurrencies due to their volatile nature and the fact that
+	         .................... they are not the smooth cost free transactions that they were
+	         .................... promised to be.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 8 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... After its initial introduction transactions proved to be slow and
+	         .................... unreliable,
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... that this has led to merchants being reluctant to accept it as a
+	         .................... currency
+
+	Segment ID: 2 | Content Unit: 16 [Weight: 1]
+	Segment: .................... often not going through at all and.
+	Content Unit: ............... (1) This includes the transaction issues, such as going through
+	              ...............     slowly or not at all.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However, despite his reservations, Gerard attests that
+	         .................... cryptocurrencies will not disappear in a hurry and his forecast is
+	         .................... that they will slowly become more regulated and normalised.
+
+Sentence: 10 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... REF.
+====================================================================================================

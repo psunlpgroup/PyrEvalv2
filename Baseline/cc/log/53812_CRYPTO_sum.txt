@@ -1,0 +1,130 @@
+
+########################################53812_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 20
+                                     Raw: 7
+         Maximum possible score with Raw: 43
+                                 Quality: 0.1628
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2365
+                           Comprehensive: 0.1996
+
+
+  Content Unit List [ID(Weight)]: 1(4), 6(2), 15(1) 
+
+
+
+Sentence: 1 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... peaked there have been several views from Christopher Shake and
+	         .................... David Gerard concerning the future of cryptocurrency
+
+	Segment ID: 1 | Content Unit: 1 [Weight: 4]
+	Segment: .................... In the BBC article Tech Tent: Has crypto currency.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The article states that it has not been a good week due to the
+	         .................... value of Ethereum dropping in value below its peak.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Ethereum is Bitcoins main rival and a form of cryptocurrency.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... Christopher Shake is the director of the London Gallery, The House
+	         .................... of Fine Art.
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... According to his views he states that the currencies will stick
+	         .................... around as they have good value and it s a great technology
+	         .................... overall.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Christopher Shake sees it completely different from David Gerard,
+	         .................... he says that merchants such as Amazon and Facebook are
+	         .................... investigating to make use of cryptocurrencies.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... David Gerard is known as the main author of Attack of the Foot
+	         .................... Blockchain.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Regarding his views cryptocurrencies are having several issues
+	         .................... within the financial market.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... For example, less merchants are accepting cryptocurrencies due to
+	         .................... their volatility measures.
+
+Sentence: 10 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 15 [Weight: 1]
+	Segment: .................... He said many people left during the Bitcoin bubble, because it
+	         .................... could not be trusted as transitions were very slow and
+	Content Unit: ............... (1) However, with the recent bubble burst, a lot of the trust in
+	              ...............     them has disappeared.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... transitions did not go through at times.
+
+Sentence: 11 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... According to the article his views were summed up of the entire
+	         .................... cryptocurrency market stating, It s not interesting or shiny
+	         .................... anymore, meaning its value is decreasing.
+
+Sentence: 12 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... In addition, David does not see the Cryptocurrency Bitcoin
+	         .................... disappearing any time soon.
+
+Sentence: 13 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... His forecast states that the cryptocurrencies will gradually
+	         .................... become more normalised and regulated.
+
+Sentence: 14 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... There have been many drops in value and hacking situations with
+	         .................... Cryptocurrencies such as Bitcoin that I will discuss from my
+	         .................... research.
+====================================================================================================

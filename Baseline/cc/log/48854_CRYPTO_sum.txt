@@ -1,0 +1,98 @@
+
+########################################48854_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 16
+                                     Raw: 5
+         Maximum possible score with Raw: 39
+                                 Quality: 0.1282
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.1689
+                           Comprehensive: 0.1486
+
+
+  Content Unit List [ID(Weight)]: 3(3), 6(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... The real world application and merits of both cryptocurrency and
+	         .................... the underlying technology are discussed in a sit down debate
+	         .................... between Christopher Shake, a cryptocurrency enthusiast London
+	         .................... Gallery director and David Gerard, cryptocurrency sceptic and
+	         .................... author of Attack of the Foot Blockchain.
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p The debate was spurred by Shake s gallery offering works for
+	         .................... sale exclusively for digital currency in an attempt to give
+	         .................... confidence to merchants who may have been teasing the idea of
+	         .................... accepting cryptocurrency as payment.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... With this event Shake simultaneously addresses the main problem as
+	         .................... he sees it.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cryptocurrency is already out there and people that have either
+	         .................... mined or acquired an amount of it have few viable outlets to spend
+	         .................... it.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p Gerard s position is that cryptocurrencies and in particular
+	         .................... Bitcoin has a strong following rooted in idealism.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He sees a world where perhaps within the framework of regulation
+	         .................... cryptocurrencies co exist with established systems of money.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He believes that really it is the underlying blockchain technology
+	         .................... that will be the impetus for innovation and adoption from
+	         .................... businesses.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... p There s a fundamental agreement that the volatility in the value
+	         .................... of cryptocurrency has been a factor in discouraging business
+	         .................... adoption.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... They differ greatly on how solve this problem though.
+====================================================================================================

@@ -1,0 +1,114 @@
+
+########################################50879_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 22
+                                     Raw: 6
+         Maximum possible score with Raw: 45
+                                 Quality: 0.1333
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2027
+                           Comprehensive: 0.1680
+
+
+  Content Unit List [ID(Weight)]: 1(4), 7(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Tech Tent doesn t seem to think so.
+
+Sentence: 2 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... who is sceptical on the topic of cryptocurrency
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... whom spoke for cryptocurrencies as attractive to businesses, and
+	         .................... David Gerard
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... which mainly looks at a debate hosted by Tech Tent between
+	         .................... Christopher Shake
+
+	Segment ID: 3 | Content Unit: 1 [Weight: 4]
+	Segment: .................... An article by Rory Cellen Jones titled; Tech Tent: Has crypto
+	         .................... currency peaked;;.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... It also briefly goes over varying other reasons that
+	         .................... cryptocurrency is in decline, one such reason being regulations
+	         .................... against companies using cryptocurrencies in the US, which is
+	         .................... likely to do with it s volitivity and unpredictable rises and
+	         .................... drops in value.
+
+Sentence: 4 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 7 [Weight: 2]
+	Segment: .................... So, is cryptocurrency failing Most of the points made in Cellen
+	         .................... Jones article
+	Content Unit: ............... (1) Cellan Jones spoke to David Gerard, the author of Attack of
+	              ...............     the Foot Blockchain, he said this issue with crypto currencies
+	              ...............     is their lack of acceptance in many different places and just.
+	              ............... (2) Cellan Jones writes recent days.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... p does suggest that this is a fact.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Gerard has stated that fewer merchants are accepting crypto
+	         .................... currencies.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However, in a Forbes article by Michael del Castillo in June th,
+	         .................... which informs of the top companies using blockchains, these
+	         .................... findings to not correlate with Gerard s statement.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... It seems that despite the volatility in value and slowness in
+	         .................... transactions have not stopped JPMorgan, Apple and the ICBC
+	         .................... Industrial Commercial Bank of China from using blockchains.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However, several of the companies in this list have voiced
+	         .................... opinions against cryptocurrency or are using them in secret.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This does mean that cryptocurrencies can not be failing, if such
+	         .................... large organisations are investing billions into Bitcoin and
+	         .................... blockchains like Tzero.
+
+Sentence: 10 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Could this mean we could see cryptocurrencies being much more
+	         .................... widely used by more famous organisations It is possible, given it
+	         .................... s increasing value and uses.
+====================================================================================================

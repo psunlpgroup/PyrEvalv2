@@ -1,0 +1,124 @@
+
+########################################55072_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 9
+                                     Raw: 14
+         Maximum possible score with Raw: 28
+                                 Quality: 0.5000
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.4730
+                           Comprehensive: 0.4865
+
+
+  Content Unit List [ID(Weight)]: 0(5), 1(4), 3(3), 6(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... The article published by BBC news, technology respondent, Rory
+	         .................... Cellan Jones, the article talks about the cryptocurrencies and
+	         .................... their values, which have seen a drastic downfall, i.e. eighty
+	         .................... percent below its peak price.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Besides this, the US regulatory agencies are acting in
+	         .................... contradiction of the companies involved in the initial coin
+	         .................... offerings ICOs and cryptocurrencies.
+
+Sentence: 3 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 0 [Weight: 5]
+	Segment: .................... a Scottish hotel, and London art gallery, has planned a scheme for
+	         .................... its consumers to pay through cryptocurrencies
+	Content Unit: ............... (1) For example, an art gallery in London held an exhibition with
+	              ...............     digital currencies as the preferred payment method.
+	              ............... (2) Cellan Jones writes that Businesses located in London and
+	              ...............     Scotland have made enquiries to allow payment from customers
+	              ...............     using cryptocurrencies.
+	              ............... (3) However, there has been some positive news as businesses such
+	              ...............     as a Scottish Hotel and a London Art Gallery are allowing
+	              ...............     customers to pay with crypto currencies.
+	              ............... (4) Cellan Jones then goes on to counter this argument, by
+	              ...............     suggesting that a London art gallery and Scottish hotel chain
+	              ...............     plan to introduce support for different crypto currencies.
+	              ............... (5) Cellan Jones writes recent days both a London art gallery and
+	              ...............     a Scottish hotel have contacted me about plans to allow their
+	              ...............     customers to pay with crypto currencies.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... In addition to this, the article states that there are prospects
+	         .................... for the cryptocurrencies.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... The article discusses the debate between Christopher Shake,
+	         .................... Director, The House of Fine Art Gallery, London, and the author of
+	         .................... Attack of the Foot Blockchain, David Gerard.
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p The two parties discuss the future of cryptocurrencies in terms
+	         .................... of their utilisation within the business sector.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... According to Shake, the cryptocurrencies still have a vast
+	         .................... prospect to come back in the market as some businesses are
+	         .................... contemplating the thought of enabling their consumers to pay
+	         .................... through cryptocurrencies.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Whereas, Gerard argues that, very few vendors are taking a step to
+	         .................... accept the cryptocurrencies as they are considered to be utterly
+	         .................... volatile.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... In addition to this, he further states that due to the currencies
+	         .................... volatility it can not be trusted, Gerard further summed up his
+	         .................... argument stating that the whole market of crypto is not considered
+	         .................... to be shiny or interesting anymore REF.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+====================================================================================================

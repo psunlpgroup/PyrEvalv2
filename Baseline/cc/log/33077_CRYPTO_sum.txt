@@ -1,0 +1,74 @@
+
+########################################33077_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 11
+                                     Raw: 5
+         Maximum possible score with Raw: 32
+                                 Quality: 0.1562
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.1689
+                           Comprehensive: 0.1626
+
+
+  Content Unit List [ID(Weight)]: 1(4), 18(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... In this summary I will be summarising all the key factors that are
+	         .................... presented in the article about Crypto currencies.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 18 [Weight: 1]
+	Segment: .................... There are many concepts included, I also will be discussing if
+	         .................... Crypto currencies are the future or not.
+	Content Unit: ............... (1) With the founding and usage of these new digital currencies,
+	              ...............     many questions have arisen regarding the strength, value,
+	              ...............     stability and future of these new trade methods.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p What is Crypto currency Crypto currency is a digital computer
+	         .................... interactive generated currency in which encryption techniques are
+	         .................... used to adjust the generation of units of currency and verify the
+	         .................... transfer of funds, it operates independently of a central bank; it
+	         .................... isn t controlled by the government.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... It also is tax free and has no transaction fees when being used.
+
+Sentence: 5 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... The article is based on wondering if Crypto currencies have peaked
+	         .................... or
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... , this is what they re discussing in the article, Due to the fact
+	         .................... that the value of Bitcoin has lurched even lower and is now below
+	         .................... its peak.
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... if it still has better days ahead, in addition to this bitcoin
+	         .................... which is the largest Crypto currency
+====================================================================================================

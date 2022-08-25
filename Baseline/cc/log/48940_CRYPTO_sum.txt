@@ -1,0 +1,95 @@
+
+########################################48940_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 14
+                                     Raw: 6
+         Maximum possible score with Raw: 37
+                                 Quality: 0.1622
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2027
+                           Comprehensive: 0.1824
+
+
+  Content Unit List [ID(Weight)]: 1(4), 16(1), 24(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... In the article Tech Tent: there is a balanced discussion between
+	         .................... David Gerard and Christopher Shake the pair shared a change in
+	         .................... view when asked the same question about crypto currency Has crypto
+	         .................... currency peaked.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... In the article it was clearly stated that as of late crypto
+	         .................... currency has gone down immensely to be exact this is not looking
+	         .................... good for people who have invested the big question caused both
+	         .................... Gerard and Shake to explore the possibilities and inform reader
+	         .................... there may not be future in crypto currency.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p According to Gerard the crypto currencies are facing
+	         .................... overwhelming challenges in the market that could seal the fate.
+
+Sentence: 4 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: 16 [Weight: 1]
+	Segment: .................... when putting a transaction through proved to be very slow
+	Content Unit: ............... (1) This includes the transaction issues, such as going through
+	              ...............     slowly or not at all.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... he did a huge sum up and.
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... he and spoke out when he said that crypto currencies have lost
+	         .................... their field of interest.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However, on the counteracted side of the article Shake expressed
+	         .................... that crypto currencies will be sticking around as they may be
+	         .................... renowned by merchant such as: Facebook, Amazon, Twitter, Wish.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 24 [Weight: 1]
+	Segment: .................... Etc. he stated they will always be around as they are a part of
+	         .................... technology and technology will always be around and keep itself a
+	         .................... float with that compelling statement at one point within the
+	         .................... article Gerard admits that Bitcoin will never disappear and will
+	         .................... always be around.
+	Content Unit: ............... (1) Within the article the other side of the argument is presented
+	              ...............     from David Gerard and his belief that cryptocurrency has had
+	              ...............     its time, he tempers this by saying he does not feel it will
+	              ...............     disappear overnight, instead becoming more regulated and
+	              ...............     normalised, essentially a different vision from the original
+	              ...............     early bitcoin.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Therefore, both parties David Gerard and Christopher Shake agree
+	         .................... that the future of crypto currencies will have a future.
+====================================================================================================

@@ -1,0 +1,145 @@
+
+########################################49457_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 14
+                                     Raw: 14
+         Maximum possible score with Raw: 37
+                                 Quality: 0.3784
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.4730
+                           Comprehensive: 0.4257
+
+
+  Content Unit List [ID(Weight)]: 1(4), 3(3), 6(2), 10(2), 13(1), 18(1), 24(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... In the article Tech Tent: Has crypto currency peaked Talks about
+	         .................... the different views and arguments of David Gerard and Christopher
+	         .................... Shake regarding the future of crypto currencies in the future.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 10 [Weight: 2]
+	Segment: .................... The article informs us that the future of crypto currency is not
+	         .................... as strong as first though out to be as the value of Ethereum, a
+	         .................... type of crypto currency and bitcoins main rival, has fallen below
+	         .................... its peak value.
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 6 [Weight: 2]
+	Segment: .................... Christopher Shake, the director of the London gallery The House of
+	         .................... Fine Art.
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 18 [Weight: 1]
+	Segment: .................... According to him if a lot more merchants accept crypto currencies,
+	         .................... that will add confidence to the market REF.
+	Content Unit: ............... (1) With the founding and usage of these new digital currencies,
+	              ...............     many questions have arisen regarding the strength, value,
+	              ...............     stability and future of these new trade methods.
+
+Sentence: 5 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He went on to claim that everyone from Amazon and Facebook are
+	         .................... moving into crypto currencies, but
+
+	Segment ID: 1 | Content Unit: 13 [Weight: 1]
+	Segment: .................... as fewer merchants are accepting them because of their volatile
+	         .................... nature REF
+	Content Unit: ............... (1) how volatile they are
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... according to David Gerard, author of Attack of the Foot Blockchain
+	         .................... crypto currencies are facing difficulties as he states things are
+	         .................... moving in the opposite direction.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... He presents that many are leaving the market due to the volatility
+	         .................... of crypto currencies and that transactions were slow and often
+	         .................... didn t go through.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He summed up his view by stating that crypto currencies have lost
+	         .................... their field of interest.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However, Christopher Shake believes crypto currency are sticking
+	         .................... around because of its great value and technology.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 24 [Weight: 1]
+	Segment: .................... Towards the end of the article David Gerard has accepted some
+	         .................... crypto currencies like Bitcoin are not likely to disappear so
+	         .................... fast.
+	Content Unit: ............... (1) Within the article the other side of the argument is presented
+	              ...............     from David Gerard and his belief that cryptocurrency has had
+	              ...............     its time, he tempers this by saying he does not feel it will
+	              ...............     disappear overnight, instead becoming more regulated and
+	              ...............     normalised, essentially a different vision from the original
+	              ...............     early bitcoin.
+
+Sentence: 10 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He forecasts that crypto currencies will become regulated and
+	         .................... normalised slowly not having a negative affect on banks and
+	         .................... governments REF.
+
+Sentence: 11 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Therefore, the article can be summarized that both the
+	         .................... professional didn t rule out that crypto currencies could be the
+	         .................... currency of the future.
+====================================================================================================

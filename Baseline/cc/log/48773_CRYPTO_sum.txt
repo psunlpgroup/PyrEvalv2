@@ -1,0 +1,127 @@
+
+########################################48773_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 15
+                                     Raw: 12
+         Maximum possible score with Raw: 38
+                                 Quality: 0.3158
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.4054
+                           Comprehensive: 0.3606
+
+
+  Content Unit List [ID(Weight)]: 1(4), 3(3), 8(2), 10(2), 24(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 4]
+	Segment: .................... The BBC s Rory Cellan Jones has presented an informative article
+	         .................... discussing the possibility that crypto currency may become
+	         .................... obsolete over the next few years.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 2 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 10 [Weight: 2]
+	Segment: .................... which dropped to lower than its peak
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... This is due to a recent drop of the cryptocurrency Ethereum,.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cellan Jones gives two examples of businesses that have recently
+	         .................... contacted him regarding their decision to allow payment via crypto
+	         .................... currency.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The manager of one of these businesses, Christopher Shake, joins
+	         .................... him along with Crypto sceptic, David Gerard, to discuss the future
+	         .................... of crypto currency.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 24 [Weight: 1]
+	Segment: .................... p Though the article is laid out as a formal debate, it reads more
+	         .................... like a conversation, with one party stating their predictions or
+	         .................... opinions and then the other offering theirs.
+	Content Unit: ............... (1) Within the article the other side of the argument is presented
+	              ...............     from David Gerard and his belief that cryptocurrency has had
+	              ...............     its time, he tempers this by saying he does not feel it will
+	              ...............     disappear overnight, instead becoming more regulated and
+	              ...............     normalised, essentially a different vision from the original
+	              ...............     early bitcoin.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... They are far from peers however, as Gerard is the author of the
+	         .................... book Attack of the Foot Blockchain in which tackles this very
+	         .................... issue, and Shake is merely an advocate for crypto currency s more
+	         .................... widespread use.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... Gerard argues that confidence in the market is at an all time low
+	         .................... and the currencies are lurching from crisis to crisis.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He believes that confidence to the market will be restored if a
+	         .................... lot of merchants accept crypto currencies as valid currency.
+
+Sentence: 9 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... which subsequently means that his artists will receive more
+	         .................... exposure
+
+	Segment ID: 1 | Content Unit: 8 [Weight: 2]
+	Segment: .................... Shake states that Our main goal is to support and promote our
+	         .................... artists as he feels that allowing payment via crypto currency will
+	         .................... attract a wider audience,, as well as business.
+	Content Unit: ............... (1) that many different companies of different natures not just
+	              ...............     technology related are getting involved with crypto currencies
+	              ............... (2) Even with these questions, there are still many that have
+	              ...............     faith in digital currencies, with people and businesses still
+	              ...............     working towards a wider acceptance and usability of this
+	              ...............     medium.
+====================================================================================================

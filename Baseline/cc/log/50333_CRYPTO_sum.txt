@@ -1,0 +1,93 @@
+
+########################################50333_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 15
+                                     Raw: 7
+         Maximum possible score with Raw: 38
+                                 Quality: 0.1842
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2365
+                           Comprehensive: 0.2103
+
+
+  Content Unit List [ID(Weight)]: 3(3), 4(3), 13(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... In this essay I will be discussing what cryptocurriences cryto are
+	         .................... and what effect they have on conventional forms of curriencies and
+	         .................... the implications they have.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The article I used to inform my argument was by the BBC and
+	         .................... disscuses how entherum a form of cryptocurrienies has reached an
+	         .................... all time low in value.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The article discusses recent uses of crytocurriences in the world,
+	         .................... such as an art exhibition to only be avalible through
+	         .................... crytocurriences.
+
+Sentence: 4 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... and a potential solution is if merchants jump on and accept crypto
+	         .................... currencies however this doesn t seem likely as David Gerard
+	         .................... explains that merchants are just not willing to accept cyrpto as
+	         .................... it is too volitile and the main selling point of cost free
+	         .................... transaction is merely an illusion to Gerard.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+	Segment ID: 1 | Content Unit: 4 [Weight: 3]
+	Segment: .................... And explains how the issue with crytocuriences is that people are
+	         .................... sitting on big crypto assests aren t able to spend them
+	Content Unit: ............... (1) It is pointed out that a motivation for this approach is based
+	              ...............     upon the belief that people are sitting on large crypto assets
+	              ...............     and are unable to spend them.
+	              ............... (2) This is proof that some people are still working towards the
+	              ...............     age of cryptocurrencies, or at least an age.
+	              ............... (3) The owner of the gallery explained that he wanted to solve a
+	              ...............     problem with crypto currencies which is people sitting on big
+	              ...............     crypto assets arent able to spend them.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Furtheron Christopher Shake thinks differently.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Shake believes that large companies are moving to crypto from
+	         .................... Goldman Sachs to Amazon and Facebook Shake insists that crypto is
+	         .................... great technology and that it s value outweighs its disadvantages.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 13 [Weight: 1]
+	Segment: .................... Shake: believes that crypto will be a standard and become less
+	         .................... volatile.
+	Content Unit: ............... (1) how volatile they are
+====================================================================================================

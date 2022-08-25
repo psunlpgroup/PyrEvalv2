@@ -1,0 +1,106 @@
+
+########################################48518_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 15
+                                     Raw: 7
+         Maximum possible score with Raw: 38
+                                 Quality: 0.1842
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.2365
+                           Comprehensive: 0.2103
+
+
+  Content Unit List [ID(Weight)]: 3(3), 6(2), 10(2) 
+
+
+
+Sentence: 1 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... whether the Bitcoin boom or bubble in and its subsequent negative
+	         .................... effects on all Crypto currencies share prices and general
+	         .................... acceptance by merchants
+
+	Segment ID: 1 | Content Unit: 6 [Weight: 2]
+	Segment: .................... Jones Technology Consultant, BBC Technology asks both David
+	         .................... Gerrard Author and Christopher Shake Art Gallery Director
+	Content Unit: ............... (1) Christopher Shake, the director of the London art gallery,
+	              ...............     suggests and.
+	              ............... (2) Gallery director and cryptocurrency supporter Christopher
+	              ...............     Shake was hoping to host the first exhibition where payment
+	              ...............     was only available via cryptocurrency.
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... Rory Cellan has spelled the end for digital money.
+
+Sentence: 2 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... because another Crypto currency has fallen majorly in share price
+	         .................... recently
+
+	Segment ID: 1 | Content Unit: 10 [Weight: 2]
+	Segment: .................... The questions have arisen, Cellan Jones states The value of
+	         .................... Ethereum, Bitcoins main rival and the future of crypto not so long
+	         .................... ago, and is now below its peak.
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... The questions have arisen, Cellan Jones, has lurched ever lower
+	         .................... and is now below its peak.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p The main idea behind the interview is trying to understand
+	         .................... whether Cryptos could be used in the future as a world currency as
+	         .................... intended by its inventors to de centralise banking and financial
+	         .................... institutions and spread wealth more evenly across the world or
+	         .................... whether their well documented instability and regulatory issues
+	         .................... means it will become heavily regulated or shut down entirely.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p Shake is enthusiastic about the future of Cryptos and he
+	         .................... believes that by his gallery running an exhibition that accepts
+	         .................... digital currency it will entice other merchants to start accepting
+	         .................... them too.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This will enhance Crypto s share stability and value.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... Gerrard s view opposes this as he says, things are moving in the
+	         .................... opposite direction fewer merchants are accepting crypto currencies
+	         .................... because they are so volatile and the promise of smooth cost free
+	         .................... transactions has proved illusory.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cellan Jones REF.
+====================================================================================================

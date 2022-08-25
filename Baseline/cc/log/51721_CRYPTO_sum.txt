@@ -1,0 +1,154 @@
+
+########################################51721_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 18
+                                     Raw: 16
+         Maximum possible score with Raw: 41
+                                 Quality: 0.3902
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.5405
+                           Comprehensive: 0.4654
+
+
+  Content Unit List [ID(Weight)]: 0(5), 3(3), 4(3), 8(2), 10(2), 16(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... This is about cryptocurrencies will be peak in the future or will
+	         .................... not.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... People know cryptocurrencies as stocks market despond how business
+	         .................... go up or down.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... There have problem in cryptocurrencies; people think that well for
+	         .................... future and others think it is will not.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cryptocurrencies can help for the business and good technology
+	         .................... support.
+
+Sentence: 5 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cryptocurrencies it is great technology and
+
+	Segment ID: 1 | Content Unit: 10 [Weight: 2]
+	Segment: .................... that people will still want to use it, the value of ethereum which
+	         .................... is bitcoin s main rival is now below it is peak.
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... In lots of people used bitcoin but a lot of people stopped using
+	         .................... it because the value of it kept changing and transactions were
+	         .................... slow and sometime didn t work at all.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The usage cryptocurrencies has declined.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Many people thought ethereum would be the future of
+	         .................... cryptocurrencies.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 16 [Weight: 1]
+	Segment: .................... Cryptocurrencies the value and transactions were slow and
+	         .................... sometimes did not work at all.
+	Content Unit: ............... (1) This includes the transaction issues, such as going through
+	              ...............     slowly or not at all.
+
+Sentence: 10 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... The usage of cryptocurrencies has decided but many companies such
+	         .................... as Amazon and Facebook are moving into cryptocurrencies.
+
+Sentence: 11 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Some companies have been involved in scheme to make new coin but
+
+	Segment ID: 1 | Content Unit: 0 [Weight: 5]
+	Segment: .................... a Scottish hotel and a London art gallery have made enquiries
+	         .................... about their customers
+	Content Unit: ............... (1) For example, an art gallery in London held an exhibition with
+	              ...............     digital currencies as the preferred payment method.
+	              ............... (2) Cellan Jones writes that Businesses located in London and
+	              ...............     Scotland have made enquiries to allow payment from customers
+	              ...............     using cryptocurrencies.
+	              ............... (3) However, there has been some positive news as businesses such
+	              ...............     as a Scottish Hotel and a London Art Gallery are allowing
+	              ...............     customers to pay with crypto currencies.
+	              ............... (4) Cellan Jones then goes on to counter this argument, by
+	              ...............     suggesting that a London art gallery and Scottish hotel chain
+	              ...............     plan to introduce support for different crypto currencies.
+	              ............... (5) Cellan Jones writes recent days both a London art gallery and
+	              ...............     a Scottish hotel have contacted me about plans to allow their
+	              ...............     customers to pay with crypto currencies.
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... US government have acted against them so recently using
+	         .................... cryptocurrencies for transaction.
+
+Sentence: 12 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 8 [Weight: 2]
+	Segment: .................... That customers would be encouraged to use digital currencies but
+	         .................... could pay by the did fashioned methods as well.
+	Content Unit: ............... (1) that many different companies of different natures not just
+	              ...............     technology related are getting involved with crypto currencies
+	              ............... (2) Even with these questions, there are still many that have
+	              ...............     faith in digital currencies, with people and businesses still
+	              ...............     working towards a wider acceptance and usability of this
+	              ...............     medium.
+
+Sentence: 13 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 4 [Weight: 3]
+	Segment: .................... There is a problem with people that big cryptocurrencies asset
+	         .................... that they are not able to spend.
+	Content Unit: ............... (1) It is pointed out that a motivation for this approach is based
+	              ...............     upon the belief that people are sitting on large crypto assets
+	              ...............     and are unable to spend them.
+	              ............... (2) This is proof that some people are still working towards the
+	              ...............     age of cryptocurrencies, or at least an age.
+	              ............... (3) The owner of the gallery explained that he wanted to solve a
+	              ...............     problem with crypto currencies which is people sitting on big
+	              ...............     crypto assets arent able to spend them.
+====================================================================================================

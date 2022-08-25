@@ -1,0 +1,72 @@
+
+########################################33342_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 8
+                                     Raw: 5
+         Maximum possible score with Raw: 26
+                                 Quality: 0.1923
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.1689
+                           Comprehensive: 0.1806
+
+
+  Content Unit List [ID(Weight)]: 1(4), 18(1) 
+
+
+
+Sentence: 1 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... whether crypto currency has now reached its peak
+
+	Segment ID: 1 | Content Unit: 18 [Weight: 1]
+	Segment: .................... whether the blockchain still holds the potential to be a currency
+	         .................... in the future
+	Content Unit: ............... (1) With the founding and usage of these new digital currencies,
+	              ...............     many questions have arisen regarding the strength, value,
+	              ...............     stability and future of these new trade methods.
+
+	Segment ID: 2 | Content Unit: None
+	Segment: .................... Its been almost two years since the meteoric rise in market
+	         .................... capitalization of major crypto currencies such as Bitcoin,
+	         .................... Ethereum and relative newcomer Ripple, which of course was then
+	         .................... followed by quite a sharp correction at the beginning of this year
+	         .................... which have left some wondering, and.
+
+Sentence: 2 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... as evidence of a steadier downward trend at least for the
+	         .................... foreseeable future
+
+	Segment ID: 1 | Content Unit: 1 [Weight: 4]
+	Segment: .................... p A recent article from Tech Correspondent Rory Cellan Jones from
+	         .................... the BBC Tech Tent asks one of these questions highlighting the
+	         .................... value of Ethereum s overall decline in market capitalization since
+	         .................... its peak in January,.
+	Content Unit: ............... (1) Rory Cellan Jones talks about the current state of crypto
+	              ...............     currencies, in the September BBC article entitled, Tech Tent:
+	              ...............     Has crypto currency peaked He suggests that the crypto
+	              ...............     currency has hit its peak in popularity.
+	              ............... (2) In a news article Tech Tent: Has crypto currency peaked, Rory
+	              ...............     Cellan Jones discusses the future of crypto currencies such as
+	              ...............     Bitcoin, Ethereum.
+	              ............... (3) There have been some recent setbacks for crypto currencies as
+	              ...............     US regulators have acted against companies involved in crypto
+	              ...............     currencies REF and as such has led to the Ethereum dropping to
+	              ...............     below its peak value.
+	              ............... (4) online article Has crypto currency peaked by Rory Cellan Jones
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p Given that crypto currencies have been around for almost a
+	         .................... decade now, US regulators have also been quite slow when trying to
+	         .................... regulate the industry with only last November warning celebrities
+	         .................... regarding paid endorsements and disclosure, could this be an
+	         .................... indicator that might suggest further regulation ahead providing
+	         .................... that overall market capitalization continues its trend upwards for
+	         .................... the next ten years and more.
+====================================================================================================

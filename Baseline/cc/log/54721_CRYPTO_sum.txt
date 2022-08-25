@@ -1,0 +1,121 @@
+
+########################################54721_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 12
+                                     Raw: 13
+         Maximum possible score with Raw: 34
+                                 Quality: 0.3824
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.4392
+                           Comprehensive: 0.4108
+
+
+  Content Unit List [ID(Weight)]: 0(5), 3(3), 4(3), 10(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 4 [Weight: 3]
+	Segment: .................... A crypto currency enthusiast, explains that there is a problem
+	         .................... that would like to solve: people sitting on large assets of crypto
+	         .................... currency but they are not able to spend them.
+	Content Unit: ............... (1) It is pointed out that a motivation for this approach is based
+	              ...............     upon the belief that people are sitting on large crypto assets
+	              ...............     and are unable to spend them.
+	              ............... (2) This is proof that some people are still working towards the
+	              ...............     age of cryptocurrencies, or at least an age.
+	              ............... (3) The owner of the gallery explained that he wanted to solve a
+	              ...............     problem with crypto currencies which is people sitting on big
+	              ...............     crypto assets arent able to spend them.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... While, the US regulators acted against the companies involved in
+	         .................... cryptocurrencies and initial offers of coins ICO schemes to create
+	         .................... new coins.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... If you believe that the crypto currencies are the future, this has
+	         .................... not been a good time.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... If many traders come forward and accept cryptocurrencies, this
+	         .................... will add confidence to the market.
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p The gallerys press release boasted that it was going to publish
+	         .................... the first art exhibition available only through the crypto
+	         .................... currency.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 0 [Weight: 5]
+	Segment: .................... In the last few days both a London art gallery and a Scottish
+	         .................... hotel have contacted about plans to allow their customers to pay
+	         .................... with cryptocurrencies.
+	Content Unit: ............... (1) For example, an art gallery in London held an exhibition with
+	              ...............     digital currencies as the preferred payment method.
+	              ............... (2) Cellan Jones writes that Businesses located in London and
+	              ...............     Scotland have made enquiries to allow payment from customers
+	              ...............     using cryptocurrencies.
+	              ............... (3) However, there has been some positive news as businesses such
+	              ...............     as a Scottish Hotel and a London Art Gallery are allowing
+	              ...............     customers to pay with crypto currencies.
+	              ............... (4) Cellan Jones then goes on to counter this argument, by
+	              ...............     suggesting that a London art gallery and Scottish hotel chain
+	              ...............     plan to introduce support for different crypto currencies.
+	              ............... (5) Cellan Jones writes recent days both a London art gallery and
+	              ...............     a Scottish hotel have contacted me about plans to allow their
+	              ...............     customers to pay with crypto currencies.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 10 [Weight: 2]
+	Segment: .................... p The value of Ethereum, the main rival of Bitcoin and the future
+	         .................... of crypto not so long ago, has decreased lower and lower and is
+	         .................... currently at the height of.
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 3]
+	Segment: .................... But David Gerard says that things are moving in the opposite
+	         .................... direction: fewer traders accept cryptocurrencies because they are
+	         .................... so volatile and the promise of regular and cost free transactions
+	         .................... has proved illusory.
+	Content Unit: ............... (1) Author David Gerard s opinion is that crypto currencies aren t
+	              ...............     being adopted because it doesn t offer what was promised, as
+	              ...............     smooth cost free transactions turned out to be slow and often
+	              ...............     didn t work.
+	              ............... (2) The main reason offered for the lack of market take up is the
+	              ...............     sheer volatility in value coupled with troublesome transaction
+	              ...............     processes, stating that in some cases transactions were slow
+	              ...............     and often didn t complete at all.
+	              ............... (3) However, contradicting his point, these questions going
+	              ...............     unanswered due to no person or organisation being able to
+	              ...............     confidently provide solid and supported answers,
+	              ...............     cryptocurrencies have been volatile at best in its recent
+	              ...............     history; the current unstable state leading to an uncertain
+	              ...............     future.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... He claims that everyone from Goldman Sachs to Amazon and Facebook
+	         .................... is turning into crypto currencies something that David Gerard says
+	         .................... is not really the case and he believes it is an idea whose time
+	         .................... has come.
+====================================================================================================

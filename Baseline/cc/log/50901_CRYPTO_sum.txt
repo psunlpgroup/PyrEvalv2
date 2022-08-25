@@ -1,0 +1,112 @@
+
+########################################50901_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 24
+                                     Raw: 1
+         Maximum possible score with Raw: 47
+                                 Quality: 0.0213
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.0338
+                           Comprehensive: 0.0275
+
+
+  Content Unit List [ID(Weight)]: 18(1) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cryptocurrencies have made a huge noise during the past two years.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... It all started off with Bitcoin which was one of the first
+	         .................... cryptocurrencies to surface back in.
+
+Sentence: 3 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... If you were to purchase one Bitcoin during it would have cost.
+
+Sentence: 4 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... .
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Fast forward to December and Bitcoin was worth over,.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... However since then the currency has been dropping and has never
+	         .................... reached that peak again.
+
+Sentence: 7 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Since Bitcoin arrived other crypto currencies have also surfaced
+	         .................... like Ethereum and Litecoin.
+
+Sentence: 8 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Although they are also cryptocurrencies they are no where near
+	         .................... worth the same amount as bitcoin.
+
+Sentence: 9 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 18 [Weight: 1]
+	Segment: .................... People are beginning to question are cryptocurrencies likely to
+	         .................... replace other currencies and become the currencies of the future.
+	Content Unit: ............... (1) With the founding and usage of these new digital currencies,
+	              ...............     many questions have arisen regarding the strength, value,
+	              ...............     stability and future of these new trade methods.
+
+Sentence: 10 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... p Cryptocurrencies allow people to use a coin wallet to make
+	         .................... transfers as well as managing finances.
+
+Sentence: 11 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Cryptocurrency has become extremely popular to use and invest
+	         .................... into.
+
+Sentence: 12 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... I think that cryptocurrencies are a brilliant currency which allow
+	         .................... for your money to be invested.
+
+Sentence: 13 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... I personally purchased one bitcoin and the price of it rose to
+	         .................... over.
+
+Sentence: 14 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... I think that Cryptocurrencies are being more and more popular.
+
+Sentence: 15 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... There have also been developments which allow you to add money to
+	         .................... your crypto account using a bitcoin atm.
+
+Sentence: 16 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... People are getting much more familiar with cryptocurrencies than
+	         .................... they ever were before.
+====================================================================================================

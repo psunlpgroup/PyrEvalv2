@@ -1,0 +1,32 @@
+
+########################################55342_CRYPTO_sum.txt########################################
+                                         pyr_111121_curated                                         
+
+          No. of segments in the summary: 2
+                                     Raw: 2
+         Maximum possible score with Raw: 9
+                                 Quality: 0.2222
+                     Average No. of SCUs: 9.8
+  Maximum score with average No. of SCUs: 29.6
+                                Coverage: 0.0676
+                           Comprehensive: 0.1449
+
+
+  Content Unit List [ID(Weight)]: 10(2) 
+
+
+
+Sentence: 1 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... Debate on Tech Tent from BBC, on technology website.
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 10 [Weight: 2]
+	Segment: .................... about Crypto currency, lower below its peak
+	Content Unit: ............... (1) Cellan Jones suggests that since Ethereum a Bitcoin rival is
+	              ...............     now eighty percent lower than its peak,.
+	              ............... (2) that Ethereum, Bitcoins main rival within the crypto
+	              ...............     marketplace is below its peak
+====================================================================================================
