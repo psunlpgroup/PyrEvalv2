@@ -82,7 +82,7 @@ Here is a brief description of the relevant python scripts which can be used for
 
 ### Configuration
 The configuration file `parameters.ini` contains all the parameters and paths for the package with a brief description of the parameter options provided below
-- Paths: The relative paths are based on the absolute path of the basedir. Changing of the relative paths is not recommended.
+- Paths: First, you must change the basedir path in parameters.ini to the location you are usin to run PyrEval. The relative paths are based on the absolute path of the basedir. Changing of the relative paths is not recommended.
 - *outputpyramidname*: Change this to change the name of the constructed Pyramid.
 - WMIN parameters (see [11]):
     - *edgethreshold*: Changes the edge threshold when constructing the hypergraph using cosine similarities. 
