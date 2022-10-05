@@ -186,7 +186,9 @@ def compoundSplit(tree):
         nosplitflag = True
 
     # For each split subtree, checks SBAR sibling relation
+    #rhpan update on 05/10/2022
     for x in splits:
+        temp=""
         for st in x.subtrees():
             if patternSBAR.match(str(st)):
                 dellist = []
@@ -201,8 +203,9 @@ def compoundSplit(tree):
                 for j in dellist:
                     del st[j]
                 if skipflag:
-                    if len(x.leaves()) > minLength + 2:
+                    if len(x.leaves()) > minLength + 2 and x!=temp:
                         splits.append(x)
+                        temp=x
                 else:
                     if len(x.leaves()) > minLength:
                         splits.append(x)
