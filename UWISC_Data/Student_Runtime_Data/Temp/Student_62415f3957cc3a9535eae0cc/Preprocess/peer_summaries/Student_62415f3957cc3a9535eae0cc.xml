@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <docId>Student_62415f3957cc3a9535eae0cc</docId>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>you</word>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>3</CharacterOffsetEnd>
+            <POS>PRP</POS>
+          </token>
+          <token id="2">
+            <word>did</word>
+            <CharacterOffsetBegin>4</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>VBD</POS>
+          </token>
+          <token id="3">
+            <word>nt</word>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>RB</POS>
+          </token>
+          <token id="4">
+            <word>write</word>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>VB</POS>
+          </token>
+          <token id="5">
+            <word>anything</word>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>NN</POS>
+          </token>
+          <token id="6">
+            <word>!</word>
+            <CharacterOffsetBegin>24</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>.</POS>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (PRP you)) (VP (VBD did) (RB nt) (VP (VB write) (NP (NN anything)))) (. !))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">write</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">write</governor>
+            <dependent idx="1">you</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">write</governor>
+            <dependent idx="2">did</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="4">write</governor>
+            <dependent idx="3">nt</dependent>
+          </dep>
+          <dep type="obj">
+            <governor idx="4">write</governor>
+            <dependent idx="5">anything</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">write</governor>
+            <dependent idx="6">!</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">write</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">write</governor>
+            <dependent idx="1">you</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">write</governor>
+            <dependent idx="2">did</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="4">write</governor>
+            <dependent idx="3">nt</dependent>
+          </dep>
+          <dep type="obj">
+            <governor idx="4">write</governor>
+            <dependent idx="5">anything</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">write</governor>
+            <dependent idx="6">!</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">write</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">write</governor>
+            <dependent idx="1">you</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">write</governor>
+            <dependent idx="2">did</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="4">write</governor>
+            <dependent idx="3">nt</dependent>
+          </dep>
+          <dep type="obj">
+            <governor idx="4">write</governor>
+            <dependent idx="5">anything</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">write</governor>
+            <dependent idx="6">!</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="enhanced-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">write</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">write</governor>
+            <dependent idx="1">you</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">write</governor>
+            <dependent idx="2">did</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="4">write</governor>
+            <dependent idx="3">nt</dependent>
+          </dep>
+          <dep type="obj">
+            <governor idx="4">write</governor>
+            <dependent idx="5">anything</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">write</governor>
+            <dependent idx="6">!</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="enhanced-plus-plus-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="4">write</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="4">write</governor>
+            <dependent idx="1">you</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">write</governor>
+            <dependent idx="2">did</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="4">write</governor>
+            <dependent idx="3">nt</dependent>
+          </dep>
+          <dep type="obj">
+            <governor idx="4">write</governor>
+            <dependent idx="5">anything</dependent>
+          </dep>
+          <dep type="punct">
+            <governor idx="4">write</governor>
+            <dependent idx="6">!</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -8,9 +8,9 @@ if len(sys.argv) == 4:
 	output_xml = sys.argv[2]
 	output_size = sys.argv[3]
 else:
-	input_file = r"Revised_pyramid_readable_20220302_rjp.pyr"
-	output_xml = r"Pyramid_v4\Revised_pyramid_readable_20220302_rjp_xml.pyr"
-	output_size = r"Pyramid_v4\Revised_pyramid_readable_20220302_rjp_xml.size"
+	input_file = r"/home/adithya/Desktop/NLP_Internship/ProjectCode/PyrEvalv2/Datasets/Revised_pyramid_readable_20220302_rjp.pyr"
+	output_xml = r"Revised_pyramid_readable_20220302_rjp_xml.pyr"
+	output_size = r"Revised_pyramid_readable_20220302_rjp_xml.size"
 # Program assumes that the Pyramid is made from 5 essays
 counts = [0 for i in range(5)]
 

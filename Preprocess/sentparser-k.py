@@ -22,7 +22,7 @@
 
 import os
 import glob
-from lib_parser import *
+from lib_parser_mongo_min import *
 #from helpers import *
 from rearrange import *
 from sbarnew import *

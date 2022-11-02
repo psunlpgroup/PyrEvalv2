@@ -2,7 +2,7 @@ import sys
 sys.path.append('src')
 import data_io, SIF_embedding_lib
 #import data_io, params, SIF_embedding
-from lib_preprocessing import getRealName
+from lib_preprocessing_mongo_min import getRealName
 
 
 def SIF_master(segfile,cleanfile,directory,summ_ind):

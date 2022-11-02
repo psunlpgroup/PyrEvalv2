@@ -4,7 +4,7 @@ import time
 import sys
 import configparser
 import itertools
-from pyreval import splitsent, stanford
+from pyreval_mongo_new import splitsent, stanford
 from splitsent import split
 from Stanford.stanford import *
 from Pyramid.pyramid import pyramidmain
@@ -73,8 +73,8 @@ for x in sorted(os.listdir(homedir), reverse=True):
     # sys.exit()
     print("Preprocessing")
     os.chdir(preprocessdir)
-    os.system("python preprocess.py 1")
-    os.system("python preprocess.py 2")
+    os.system("python preprocess_mongo_min.py 1")
+    os.system("python preprocess_mongo_min.py 2")
     
             
 

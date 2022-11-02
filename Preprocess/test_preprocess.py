@@ -19,7 +19,7 @@ import glob
 import sys
 from time import time
 
-from lib_preprocessing import *
+from lib_preprocessing_mongo_min import *
 mode = sys.argv[1]
 file_dir = sys.argv[2]
 
