@@ -1,0 +1,169 @@
+//	When the car moves down the hill, kinetic energy increases and potential energy decreases
+SCU	0	5	the energy transforms from potential energy to kinetic energy when the cart goes down the hill
+SCU	0	5	the potential energy changes to kinetic energy when the cart drops 
+SCU	0	5	going down the hill the car's potential energy transforms to kinetic energy
+SCU	0	5	energy does not get lost in the roller coaster because potential energy changes to kinetic energy 
+SCU	0	5	energy does not get lost but instead kinetic energy can transform to potential energy 
+//	A cart with greater mass will have greater energy in motion or at rest
+SCU	1	5	if the mass is greater then the car would have high potential energy or high kinetic energy
+SCU	1	5	greater mass leads to greater energy
+SCU	1	5	the mass of the cart determines the potential energy of the cart 
+SCU	1	5	reducing the car mass causes the kinetic energy to be lower
+SCU	1	5	mass is proportional to energy
+//	The law of conservation of energy states that energy cannot be created or destroyed, only transformed
+SCU	2	5	the law of conservation of energy states that energy cannot be created or destroyed
+SCU	2	5	the law of conservation provides that energy cannot be created, nor destroyed, only transferred or transformed
+SCU	2	5	the total energy is conserved because energy can only be transformed, not created or lost
+SCU	2	5	energy changes from one form to another according to the law of conservation of energy
+SCU	2	5	law of conservation of energy says that total energy remains the same and only transforms from one form to another
+//	The initial drop height should be higher than the hill height
+SCU	3	5	we made the initial drop really high to be bigger than the hill
+SCU	3	5	the hill has to be smaller than the tall drop at the beginning
+SCU	3	5	first a really tall drop then a hill that's not as tall will work better
+SCU	3	5	the car will have a big drop when it starts and then go up a medium hill
+SCU	3	5	the hill is going to be lower than that big drop at the beginning
+//	Kinetic energy is the energy of an object in motion
+SCU	4	4	kinetic energy is the energy of an object in motion
+SCU	4	4	the energy of an object due to its motion is called kinetic energy
+SCU	4	4	an object that is moving has kinetic energy
+SCU	4	4	kinetic energy is the energy of a moving object
+//	Potential energy of an object comes from its location at rest 
+SCU	5	4	potential energy is based an object’s location
+SCU	5	4	the energy of an object due to its height is called potential energy
+SCU	5	4	potential energy is when an object is not moving
+SCU	5	4	the location of the cart at rest can give it more potential energy
+//	The cart has maximum potential energy at the highest point
+SCU	6	4	this is a tall drop that produces high potential energy when the car is at the top
+SCU	6	4	at the top of the initial drop, the potential energy of the car is biggest
+SCU	6	4	at the top of the lift before the drop, the car has high potential energy and no kinetic energy
+SCU	6	4	there is only potential energy when the cart is sitting at the top of the drop
+//	The car has kinetic energy on the way down the hill
+SCU	7	4	going down the kinetic energy is the energy it has
+SCU	7	4	the car has kinetic energy when it speeds down the hill
+SCU	7	4	kinetic energy increases when the car goes off the drop or down the hill
+SCU	7	4	kinetic energy makes the car race down the hill
+//	Moving the cart up the hill causes the kinetic energy to decrease
+SCU	8	4	as the cart moves upwards its kinetic energy starts to go down
+SCU	8	4	when going up the hill, all energy gets converted to potential energy
+SCU	8	4	moving up the hill causes the kinetic energy to transform into potential energy.
+SCU	8	4	going up the track causes kinetic energy to decrease
+//	When the cart goes down the hill, kinetic energy increases
+SCU	9	4	moving down the hill changes the cart's energy to more kinetic energy
+SCU	9	4	the energy of the car going down is higher kinetic energy
+SCU	9	4	the cart shoots down the hill which means its kinetic energy is getting higher
+SCU	9	4	as the cart goes downhill, it gains kinetic energy
+//	The speed of the cart is proportional to the height of the hill
+SCU	10	3	increasing the height makes the cart speed up more when going downhill
+SCU	10	3	the speed of the cart is proportional to the height of the hill
+SCU	10	3	cart speed depends on the hill height
+//	Potential energy comes from the height of the hill
+SCU	11	3	potential energy depends on the height of the hill
+SCU	11	3	increasing the height makes the potential energy go up
+SCU	11	3	greater height increases the potential energy
+//	Objects with less mass have less potential energy
+SCU	12	3	if the mass was smaller then it would need gain less potential energy going up the hill
+SCU	12	3	if the mass is more, then the potential energy at the top of the hill increases
+SCU	12	3	the weight of the cart determines the potential energy of the cart
+//	Objects with greater speed have more kinetic energy
+SCU	13	3	as the speed increases, the kinetic energy of the cart increases
+SCU	13	3	the kinetic energy depends on the speed of the cart
+SCU	13	3	the speed of the cart and the kinetic energy are proportional
+//	Objects with more mass have greater kinetic energy
+SCU	14	3	if mass increases then kinetic energy increases
+SCU	14	3	the increase in mass causes an increase in the kinetic energy
+SCU	14	3	reducing the weight of the cart reduces the maximum kinetic energy
+//	A particular height was chosen for the hill
+SCU	15	3	we chose height of the hill to be number meters
+SCU	15	3	the cart goes up to number meters high
+SCU	15	3	the height of the hill will be number meters
+//	A particular mass or weight for the car was chosen
+SCU	16	3	the cart weight was kept to be number kilograms
+SCU	16	3	the cart weighed number kilograms 
+SCU	16	3	weight of the cart was chosen to be number kg
+//	The cart reached a certain speed
+SCU	17	3	we calculated the maximum speed of the cart to be number meters per second
+SCU	17	3	the cart speed came out to be number m s
+SCU	17	3	we found the speed of the car to be number m s 
+//	Different hill height configurations were tested
+SCU	18	3	we tried several different heights for the hill
+SCU	18	3	the best hill height was chosen to be number meters
+SCU	18	3	different values were tried to get best hill height
+//	Speed does not depend on mass or weight
+SCU	19	3	increasing the weight of the cart does not change the speed
+SCU	19	3	speed and weight are not related
+SCU	19	3	speed is not affected by increasing or decreasing the mass of the cart
+//	The car was found to haeve a particular energy measure
+SCU	20	2	the kinetic energy is number joules
+SCU	20	2	the potential energy is calculated to be number joules
+//	The track will have friction
+SCU	21	2	the experiments should include the friction caused by the track
+SCU	21	2	friction will affect the results of the experiment
+//	Friction causes energy to change to heat
+SCU	22	2	some of the energy of the cart turns into heat energy due to friction
+SCU	22	2	energy is lost during motion in the form of heat from friction
+//	The acceleration should be at a safe level
+SCU	23	2	the acceleration of the roller coaster is safe
+SCU	23	2	the design of the roller coaster makes it safe for the riders
+//	The end of the track is flat
+SCU	24	2	there is a flat section of track at the end
+SCU	24	2	the track ends with a flat section
+//	Increasing hill height decreases safety
+SCU	25	2	because it is the highest it is able to go without being unsafe
+SCU	25	2	any higher it would have been unsafe
+//	The hill has a rounded shape
+SCU	26	2	a round shaped hill was chosen
+SCU	26	2	the hill has a hill height, and a round shape
+//	A particular hill height was chosen
+SCU	27	2	our hill is m high
+SCU	27	2	the hill height that worked was m
+//	An initial drop provides fun
+SCU	28	2	the drop is fun
+SCU	28	2	the initial drop is fun
+//	A particular car mass was chosen
+SCU	29	2	the mass of the car must be low enough to get up the hill
+SCU	29	2	we chose this mass so that we could generate a good balance of energy
+//	Lift of the ride
+SCU	30	2	as the inclined plane lifts there is more energy
+SCU	30	2	at the lift of the ride potential energy will help
+//	The mass can be small or not
+SCU	31	2	since the mass is small, this also affects the total energy
+SCU	31	2	the mass is also not too low kg
+//	The car needs to make it over the hill
+SCU	32	2	because it sets enough speed, kinetic energy to over the hill
+SCU	32	2	this is enough energy to make it over the hill which is m
+//	The hill is part of the roller coaster
+SCU	33	2	the hill is near the end of the ride,
+SCU	33	2	the third part of the Rollar Coaster is the hill
+//	Energy can be tranferred or not
+SCU	34	2	energy is only transferred
+SCU	34	2	because energy stays the same
+//	The speed is highest going down the hill
+SCU	35	2	so you go down the hill at a higher speed
+SCU	35	2	this means that the roller coaster will speed up as you are going down the track
+SCU	36	1	because there is a centripetal force
+SCU	37	1	the applied force will stay the same through out the lift unless the car mass changes
+SCU	38	1	the next part to our rollercoasters is the hill and loop
+SCU	39	1	if the loop got larger, the centripetal force would get smaller
+SCU	40	1	the experiments showed that kg was the best because its not too small or too big
+SCU	41	1	we could make the lift trek out of a smooth durable material
+SCU	42	1	the initial drop is safe because the amount of kinetic energy at the bottom isn t too close to the amount of potential energy at the top
+SCU	43	1	because Newtons law would come into play
+SCU	44	1	the length is about, the distance would go down due to law of conservation of energy
+SCU	45	1	the acceleration would ve been deadly
+SCU	46	1	potential energy at the hill top hill shape stayed the same joules
+SCU	47	1	the stopping distance isn t effected by mass, but height does
+SCU	48	1	kinetic energy at the base of the hill stayed the same joules
+SCU	49	1	to be exact, in the simulation, the potential energy was joules
+SCU	50	3	as the height of the initial drop increases, so does the distance the car goes
+SCU	51	3	joules of potential energy to use at the top
+SCU	52	1	it will have a high speed
+SCU	53	1	the last part of your roller coaster was the long stretch that would bring the car to a stop
+SCU	54	1	at the base, there is only kinetic energy due to the potential energy being burned off
+SCU	55	1	I chose kg because it is not too heavy
+SCU	56	1	since the mass is small, this also affects the total energy
+SCU	57	1	the reason is that are potential energy will stay the same at the top until it goes down the drop
+SCU	58	1	at the drop point, the customers would scream and yell the most
+SCU	59	1	this should be a great design for the amusement park ride
+SCU	60	1	having more energy means you can have more to the rollercoaster
+SCU	61	1	the next topic the firm chose was the hill
+SCU	62	1	in the simulation the car would always go over the hill no matter what the mass kg

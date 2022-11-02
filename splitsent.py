@@ -64,35 +64,28 @@ def normalize(content, config):
 	#use ast (abstract syntax tree) to parse it to a dictionary first
 	abvs = ast.literal_eval(abvs)
 	
-	
-	
-
-
-
-
-
 # Modified code to fix issues with not getting all the files and trying to open split folder as file
 
 #Wasih (02-19-20) Use functions instead of calling script
-def split(inpath, outpath):
+def split(inpath, outpath, mongodb_operations, student_metadata_obj):
 	#Wasih (02-25-20) Read in normalization schemes and parse it	
 	config = configparser.ConfigParser()
 	config.read('parameters.ini')
 	
 	for filename in glob.glob(inpath + '/*'):
-		# Added a check to make sure that the script does not try to 			open a directory as a file
-		if os.path.isdir(filename):
-			continue
-		# Since there is no error, the script runs for all files and 			so, all files are split
-		content = open(filename).read()
-		#content = normalize(content, config)
+
+		#Getting the essay from the database
+		content = mongodb_operations.get_student_essay(student_metadata_obj)
 		content = removesymbols(content)
+
 		sent_list = sent_tokenize(content)
+
 		slash = filename.rfind('/')
-		fn = outpath+filename[slash:]
+		fn = outpath + "/Student_" + str(student_metadata_obj.student_id)
 		with open(fn,'w') as wf:
 			for i in sent_list:
 				wf.write(i+'\n')
+								
 		# Old code for reference
 		"""
 		for filename in glob.glob(inpath + '/*'):
