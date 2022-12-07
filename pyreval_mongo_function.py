@@ -1,3 +1,5 @@
+
+
 import os
 import sys
 import shutil
@@ -27,7 +29,6 @@ import logging
 import traceback
 
 #Adithya Importing preprocess as a function
-# from Preprocess import preprocess_mongo_min as preprocess_functions
 from Preprocess import preprocess_mongo_min as preprocess_functions
 
 #Adithya Importing scoring as a function
@@ -406,8 +407,8 @@ def error_print(e1, e2=None):
     if e2:
         print(e2)
 
-if __name__ == "__main__":
-
+# if __name__ == "__main__":
+def pyreval():
     try:
 
         config = configparser.ConfigParser()
@@ -416,6 +417,7 @@ if __name__ == "__main__":
         #TODO:Change to receive from notebook
         global student_metadata_obj
         student_metadata_obj = Student_Essay_Model.student_metadata('6278bd4430da3ae9a16a4524', "1", "GS", 2, "R")
+
 
         # base_dir = os.path.dirname(os.path.realpath(__file__))
         base_dir = config.get('DynamicPaths', 'dynamicbasedir')

@@ -22,6 +22,3 @@ MultiWorker/parallelrequests.py
 MultiWorker/pyreval_mongo_function_test.py
 MultiWorker/pyreval_mongo_gunicorn.py
 MultiWorker/pyreval_mongo_tornado.py
-pyreval_service.py
-pyreval_mongo_function.py
-pyreval_mongo_new.py
