@@ -119,7 +119,6 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
 
     #dataset_ind = sys.argv[1]
     #Wasih (02-21-20) results.csv not generating
-
     timer = time()
 
     # config = configparser.ConfigParser()
@@ -132,6 +131,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
     os.chdir(scoring_dir)
 
     #Puru (11-03-21) Fixed bugs with -l -t -a 
+    #Adithya: As we cant use parse_args() with Gunicorn I changed the options to variables
 
     parser = optparse.OptionParser()
     parser.add_option('-a', '--all', action="store_true", dest="a", default=False)
@@ -147,11 +147,11 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
     #Wasih 04-13-21 Add flag for return type data structure for notebook
     parser.add_option('-r', '--returnflag', action='store', dest='returnflag', default=False)
 
-    options, args = parser.parse_args()
-
-    print_all = options.a
+    # options, args = parser.parse_args()
+    all_store_true, table_store_true, options_numsmodel, options_returnflag = False, False, False, False
+    print_all = all_store_true #options.a
     print("Print All booleanb value:", print_all)
-    print_table = options.t
+    print_table = table_store_true#options.t
     # pyramid_path = options.pyramid
     # pyramid_path = sys.argv[2]
 
@@ -168,7 +168,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         if not os.path.exists('../log'):
             os.makedirs('../log')
 
-    model = options.model
+    # model = options.model
     #pyramids = list(glob.iglob(pyramid_path + '*.pyr'))
     pyramids = list(glob.iglob(pyramid_path + '/*.pyr'))
     #pyramids = list(glob.iglob(dir1+"/*.pyr"))
@@ -179,8 +179,9 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         numsmodel = len(list(glob.iglob('../Preprocess/wise_crowd_summaries/*.out')))
 
     #Wasih 07-04-21 Override numsmodel with parser if present
-    if options.numsmodel:
-        numsmodel = options.numsmodel
+    # if options.numsmodel:
+    if options_numsmodel:
+        numsmodel = options_numsmodel
         numsmodel = int(numsmodel)
 
     numsmodel = 5
@@ -228,7 +229,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
                             # print_all = False
                         # threads.append(threading.Thread(target = score, args= (copy.deepcopy(scus_og), fn, raw_scores, quality_scores, coverage_scores, comprehension_scores, pyramid, pyramid_name, scu_labels, numsmodel, print_all, log, options.returnflag)))
                         x.append(fn_name)
-                        score(copy.deepcopy(scus_og), fn, raw_scores, quality_scores, coverage_scores, comprehension_scores, pyramid, pyramid_name, scu_labels, numsmodel, print_all, log, options.returnflag, cu_matches, group_matches, mongodb_operations, student_metadata_obj)
+                        score(copy.deepcopy(scus_og), fn, raw_scores, quality_scores, coverage_scores, comprehension_scores, pyramid, pyramid_name, scu_labels, numsmodel, print_all, log, options_returnflag, cu_matches, group_matches, mongodb_operations, student_metadata_obj)
                         # threads[-1].start()
 
         # for i in range(len(threads)):

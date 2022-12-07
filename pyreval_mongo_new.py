@@ -1,3 +1,5 @@
+
+
 import os
 import sys
 import shutil
@@ -6,9 +8,6 @@ from subprocess import call
 from splitsent import *
 from Stanford.stanford import *
 from Pyramid.pyramid import pyramidmain
-
-#for randomly generating list
-from random import sample
 
 #Wasih (02-26-20) Make conditional imports depending on Python version
 #Wasih (02-27-20) Define a variable for python version & then use it
@@ -27,7 +26,6 @@ import logging
 import traceback
 
 #Adithya Importing preprocess as a function
-# from Preprocess import preprocess_mongo_min as preprocess_functions
 from Preprocess import preprocess_mongo_min as preprocess_functions
 
 #Adithya Importing scoring as a function
@@ -35,6 +33,8 @@ from Scoring import scoring_mongo_maj as scoring_functions
 
 #Importing for MongoDB Operations
 from MongoDB import mongo_db_functions
+from MongoDB.Models import Student_Essay_Model 
+#TODO: Explain what pyramid operations does
 from MongoDB import pyramid_operations_mongo_new
 
 #Variables for MongoDB
@@ -43,18 +43,11 @@ db_conn = "mongodb://localhost:27017"
 database_name = 'PYREVAL_TEST_DB';
 mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
 
-#Code to connect to the databse
-mongodb_operations.connect(database_name)
-
 #Importing Error Object for handling Intermmediate Data
 from Error_Operations import error_operations_mongo_new
 
 #Variables for Handling Intermmediate Data and Errors
 error_operations_obj = error_operations_mongo_new.error_object()
-
-#To maintain globally
-from MongoDB.Models import Student_Essay_Model 
-
 
 INPUT_STR = '>>> '
 
@@ -92,7 +85,7 @@ def autorun(params):
     pyramid(params)
     score(params)
 
-def splitsent():
+def splitsent(params):
     #call(py_interp + [split_script, raw_peer_dir, split_peer_dir])
     #call(py_interp + [split_script, raw_model_dir, split_model_dir])
     #Wasih (02-19-21) Use functions instead of calling script
@@ -112,17 +105,15 @@ def splitsent():
         text = colored('\n\n********************Splitting of Sentences/normalization completed!********************\n\n', 'green', attrs = ['bold'])
         print (text)
 
-        error_operations_obj.sent_split_stage = 'Sentence Splitting Complete'
-
+        error_operations_obj.add_message("Sentence splitting")
         error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)	
     except Exception as e:
         text = colored('\n\n********************Splitting of Sentences/normalization Threw an Error!********************\n\n', 'red', attrs = ['bold'])
         logging.error(traceback.format_exc())
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
         #print(e)
         print (text)
     
-def stanford():
+def stanford(params):
     os.chdir(stanford_dir)
     #call(py_interp + [stanford_script, split_peer_dir, '1', base_dir])
     #call(py_interp + [stanford_script, split_model_dir, '2', base_dir])
@@ -148,18 +139,16 @@ def stanford():
             text = colored('\n\n********************Stanford Pipelining of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
             print (text)    
        	
-        
-        error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
+        error_operations_obj.add_message("Stanford corenlp xml output")	
 
     except Exception as e:
         logging.error(traceback.format_exc())
         print(e)
         text = colored('\n\n********************Stanford Pipelining of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
-        print (text)
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)    
+        print (text)    
     os.chdir(base_dir)
 
-def preprocess():
+def preprocess(params):
 
     if not os.path.exists(preprocess_dynamic_dir):
         os.makedirs(preprocess_dynamic_dir)
@@ -175,7 +164,6 @@ def preprocess():
             print(e)
             text = colored('\n\n********************Preprocessing of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
             print (text)
-            
         try:
             # call(py_interp + [preprocess_script, '2', preprocess_dynamic_dir, ' '.join(py_interp)])
             preprocess_functions.preprocess_function('2', preprocess_dynamic_dir, error_operations_obj)
@@ -188,17 +176,16 @@ def preprocess():
             text = colored('\n\n********************Preprocessing of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
             print (text)
 
-        	
+        error_operations_obj.add_message("Stanford corenlp xml output")	
 
     except Exception as e:
         logging.error(traceback.format_exc())
         print(e)
         text = colored('\n\n********************Preprocessing of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
         print (text)
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
     os.chdir(base_dir)
 
-def pyramid():
+def pyramid(params):
     os.chdir(pyramid_dir)
     #call(py_interp + [pyramid_script])
     try:
@@ -230,14 +217,13 @@ def pyramid():
         print (text)
     os.chdir(base_dir)
 
-def score():
+def score(params):
 
     #Changes to process pyramid from MongoDB
     pyramid_operations_object = pyramid_operations_mongo_new.PyramidOperations(student_metadata_obj.essay_number, pyramid_dir, mongodb_operations)
     pyramid_operations_object.get_pyramid()
 
-    
-    error_operations_obj.pyramid_creation_stage = 'Creation of the pyramid xml/size files from the human-readable pyramid (if applicable) complete'
+    error_operations_obj.add_message("Creation of the pyramid xml/size files from the human-readable pyramid (if applicable)")	
 
     #Changing the Pyramid Directory as per student
     essay_pyramid_dir = pyramid_operations_object.dynamic_pyr_dir
@@ -258,18 +244,15 @@ def score():
         # call_s = py_interp + [scoring_script] + params
         # call(call_s)
         text = colored('\n\n********************Scoring of summaries completed!********************\n\n', 'green', attrs = ['bold'])
-        
+        error_operations_obj.add_message("Scoring results")
     except Exception as e:
         logging.error(traceback.format_exc())
         print(e)
         text = colored('\n\n********************Scoring of summaries threw an Error!********************\n\n', 'red', attrs = ['bold'])
         print (text)
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
 
     os.chdir(base_dir)
-    error_operations_obj.scoring_stage = 'Scoring Results complete'
-    # mongo_db_functions.update_result(student_metadata_obj, log_dir)
-	
+    error_operations_obj.add_message("Scoring Results")	
 
 
 def clean(params):
@@ -407,99 +390,105 @@ def error_print(e1, e2=None):
         print(e2)
 
 if __name__ == "__main__":
+    print(INSTRUCTIONS)
+    config = configparser.ConfigParser()
+    config.read('parameters.ini')
 
-    try:
+    # base_dir = os.path.dirname(os.path.realpath(__file__))
+    base_dir = config.get('DynamicPaths', 'dynamicbasedir')
+    dynamic_base_dir = config.get('DynamicPaths', 'dynamicbasedir')
+    static_base_dir = config.get('StaticPaths', 'staticbasedir')
 
-        config = configparser.ConfigParser()
-        config.read('parameters.ini')
+    # TODO: user-changeable
 
-        #TODO:Change to receive from notebook
-        global student_metadata_obj
-        student_metadata_obj = Student_Essay_Model.student_metadata('6278bd4430da3ae9a16a4524', "1", "GS", 2, "R")
+    #Student changes 
 
-        # base_dir = os.path.dirname(os.path.realpath(__file__))
-        base_dir = config.get('DynamicPaths', 'dynamicbasedir')
-        pre_dynamic_base_dir = config.get('DynamicPaths', 'dynamicbasedir')
-        static_base_dir = config.get('StaticPaths', 'staticbasedir')
-        
-        # student_list = []
-        # documents = mongodb_operations.get_students(2)  
+    #Code to connect to the databse
+    mongodb_operations.connect(database_name)
 
-        #Changing the base dir in parameters to student's temporary folder
-        #TODO: get this from parameters.ini
-        dynamicbasedir = pre_dynamic_base_dir  + "/Student_" + str(student_metadata_obj.student_id)
-        if not os.path.exists(dynamicbasedir):
-                    os.makedirs(dynamicbasedir)
-        
-        config.set('DynamicPaths', 'dynamicbasedir', dynamicbasedir)
+    #Code to point to the Student's temporary folders
+    #TODO:Change to receive from notebook
+    global student_metadata_obj
+    student_metadata_obj = Student_Essay_Model.student_metadata('6278bd4430da3ae9a16a4524', "1", "GS", 2, "R")
 
-        #Student Changes end
-
-        #Wasih (02-20-20) Make ConfigParser
-        dynamic_base_dir = config.get('DynamicPaths', 'dynamicbasedir')
-        raw_peer_dir = config.get('DynamicPaths', 'RawPeerDir')
-        raw_model_dir = config.get('DynamicPaths', 'RawModelDir')
-        split_peer_dir = config.get('DynamicPaths', 'SplitPeerDir')
-        split_model_dir = config.get('DynamicPaths', 'SplitModelDir')
-        preprocess_dir = config.get('DynamicPaths', 'PreprocessDynamicDir')
-        preprocess_dynamic_dir = config.get('DynamicPaths', 'PreprocessDynamicDir')
-        preprocess_peers_dir = config.get('DynamicPaths', 'PreprocessPeersDir')
-        preprocess_model_dir = config.get('DynamicPaths', 'PreprocessModelDir')
-        ext_dir = config.get('DynamicPaths', 'ExtDir')
-        log_dir = config.get('DynamicPaths', 'LogDir')
-        scoring_dynamic_dir = config.get('DynamicPaths', 'ScoringDynamicDir')
-        output_filepath = config.get('DynamicPaths', 'OutputFile')
+    #Changing the base dir in parameters to student's temporary folder
+    #TODO: get this from parameters.ini
+    dynamicbasedir = config.get('DynamicPaths', 'dynamicbasedir')
+    dynamicbasedir = dynamicbasedir + "/Student_" + str(student_metadata_obj.student_id)
+    if not os.path.exists(dynamicbasedir):
+                os.makedirs(dynamicbasedir)
     
-        seg_method = config.get('Segmentation', 'Method')
+    config.set('DynamicPaths', 'dynamicbasedir', dynamicbasedir)
 
-        py_interp = [config.get('StaticPaths', 'PythonInterp')]
-        preprocess_script = config.get('StaticPaths', 'PreprocessScript')
-        pyramid_dir = config.get('StaticPaths', 'PyramidDir')
-        pyramid_script = config.get('StaticPaths', 'PyramidScript')
-        scoring_dir = config.get('StaticPaths', 'ScoringStaticDir')
-        scoring_script = config.get('StaticPaths', 'ScoringScript')
-        pyramid_name = config.get('StaticPaths', 'OutputPyramidName')
-        split_script = config.get('StaticPaths', 'SplitScript')
-        stanford_dir = config.get('StaticPaths', 'StanfordDir')
-        stanford_script = config.get('StaticPaths', 'StanfordScript')
-        abcd_dir = config.get('StaticPaths', 'ABCDDir')
-        preprocess_static_dir = config.get('StaticPaths', 'PreprocessStaticDir')
+    #Student Changes end
 
-        error_operations_obj.set_dir(dynamic_base_dir)
+    #Wasih (02-20-20) Make ConfigParser
+    dynamic_base_dir = config.get('DynamicPaths', 'dynamicbasedir')
+    raw_peer_dir = config.get('DynamicPaths', 'RawPeerDir')
+    raw_model_dir = config.get('DynamicPaths', 'RawModelDir')
+    split_peer_dir = config.get('DynamicPaths', 'SplitPeerDir')
+    split_model_dir = config.get('DynamicPaths', 'SplitModelDir')
+    preprocess_dir = config.get('DynamicPaths', 'PreprocessDynamicDir')
+    preprocess_dynamic_dir = config.get('DynamicPaths', 'PreprocessDynamicDir')
+    preprocess_peers_dir = config.get('DynamicPaths', 'PreprocessPeersDir')
+    preprocess_model_dir = config.get('DynamicPaths', 'PreprocessModelDir')
+    ext_dir = config.get('DynamicPaths', 'ExtDir')
+    log_dir = config.get('DynamicPaths', 'LogDir')
+    scoring_dynamic_dir = config.get('DynamicPaths', 'ScoringDynamicDir')
+    output_filepath = config.get('DynamicPaths', 'OutputFile')
+   
+    seg_method = config.get('Segmentation', 'Method')
 
-    
-        # choice_dict = {
-        #     '0': autorun,
-        #     '1': splitsent,
-        #     '2': stanford,
-        #     '3': preprocess,
-        #     '4': pyramid,
-        #     '5': score,
-        #     'c': clean,
-        #     'i': change_py_interp,
-        #     'q': quit,
-        # }    
+    py_interp = [config.get('StaticPaths', 'PythonInterp')]
+    preprocess_script = config.get('StaticPaths', 'PreprocessScript')
+    pyramid_dir = config.get('StaticPaths', 'PyramidDir')
+    pyramid_script = config.get('StaticPaths', 'PyramidScript')
+    scoring_dir = config.get('StaticPaths', 'ScoringStaticDir')
+    scoring_script = config.get('StaticPaths', 'ScoringScript')
+    pyramid_name = config.get('StaticPaths', 'OutputPyramidName')
+    split_script = config.get('StaticPaths', 'SplitScript')
+    stanford_dir = config.get('StaticPaths', 'StanfordDir')
+    stanford_script = config.get('StaticPaths', 'StanfordScript')
+    abcd_dir = config.get('StaticPaths', 'ABCDDir')
+    preprocess_static_dir = config.get('StaticPaths', 'PreprocessStaticDir')
 
-        #Steps to run PyrEval
-        splitsent()
-        stanford()
-        preprocess()
-        score()
+    error_operations_obj.set_dir(dynamic_base_dir)
 
-        #Extract Intermmediate Files
-        error_operations_obj.extract_file_data()
-
-        #Push the error object to the db
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
-        print("Score Complete")
-
-        #Inserting Debug Data after every stage is affecting performance, TODO: have to work on the error case scenario.
-
-    except Exception as e:
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
-        print('Error %s' %e)
-
-    
-
-
+    choice_dict = {
+        '0': autorun,
+        '1': splitsent,
+        '2': stanford,
+        '3': preprocess,
+        '4': pyramid,
+        '5': score,
+        'c': clean,
+        'i': change_py_interp,
+        'q': quit,
+    }    
+    while True:
+        try:
+            #Wasih (02-27-20) If python 2 => use raw_input, else use input
+            if PYTHON_VERSION == 2:
+                user_in = raw_input(INPUT_STR)
+            else:
+                user_in = input(INPUT_STR)
+        except (EOFError, KeyboardInterrupt):
+            sys.exit(0)
+        if (len(user_in) == 0):
+            continue
+        tokens = user_in.split()
+        command = tokens[0]
+        params = tokens[1:]
+        try:
+            choice = choice_dict[tokens[0]]
+        except KeyError:
+            error_print('Bad command')
+            continue
+        #Wasih (02-21-20) Add ext dir if not present (deleted in deep cleaning)
+        if tokens[0] == 'q':
+            break
+        else:
+            if not os.path.exists(ext_dir):
+                os.makedirs(ext_dir)
+            choice(params)
 
