@@ -76,10 +76,8 @@ def splitsent(mongodb_operations, raw_peer_dir, split_peer_dir, split_model_dir,
 
         text = colored('\n\n********************Splitting of Sentences/normalization completed!********************\n\n', 'green', attrs = ['bold'])
         print (text)
-
         error_operations_obj.sent_split_stage = 'Sentence Splitting Complete'
 
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)	
     except Exception as e:
         text = colored('\n\n********************Splitting of Sentences/normalization Threw an Error!********************\n\n', 'red', attrs = ['bold'])
         logging.error(traceback.format_exc())
@@ -187,132 +185,20 @@ def score(mongodb_operations, pyramid_dir, scoring_dir, scoring_dynamic_dir, out
 
     os.chdir(base_dir)
     error_operations_obj.scoring_stage = 'Scoring Results complete'
+
+def clean(dynamic_base_dir):
+    dir = dynamic_base_dir
+    for files in os.listdir(dir):
+        path = os.path.join(dir, files)
+        try:
+            shutil.rmtree(path)
+        except OSError:
+            os.remove(path)
     
+    #Wasih (02-21-20) Print colored text for user-friendliness
+    text = colored('All temporary data deleted!', 'yellow')
+    print (text)    
 
-# def clean(params):
-#     def remove_files(files):
-#         for file in files:
-#             try:
-#                 os.remove(file)
-#             except OSError as e:
-#                 error_print('Cannot delete ' + file, e2=e)
-
-#     def remove_dirs(dirs):
-#         for dir in dirs:
-#             try: 
-#                 shutil.rmtree(dir)
-#             except OSError as e:
-#                 error_print('Cannot delete ' + file, e2=e)
-
-#     def clean_splits_peers():
-#         if os.path.exists(split_peer_dir):
-#             files = [os.path.join(split_peer_dir,x) for x in os.listdir(split_peer_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep clean; remove split directory too
-#             shutil.rmtree(split_peer_dir)
-        
-#     def clean_splits_model():
-#         if os.path.exists(split_model_dir):
-#             files = [os.path.join(split_model_dir,x) for x in os.listdir(split_model_dir) if x[0] != '.']
-#             remove_files(files)
-#            #Wasih (02-21-20) Deep clean; remove split directory too
-#             shutil.rmtree(split_model_dir)
- 
-#     def clean_preprocess_peers():
-#         if os.path.exists(preprocess_peers_dir):
-#             files = [os.path.join(preprocess_peers_dir,x) for x in os.listdir(preprocess_peers_dir) if x[0] != '.']
-#             dirs = list(filter(os.path.isdir, files))
-#             files = list(filter(os.path.isfile, files))
-#             remove_files(files)
-#             remove_dirs(dirs)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(preprocess_peers_dir)
-
-#     def clean_preprocess_model():
-#         if os.path.exists(preprocess_model_dir):
-#             files = [os.path.join(preprocess_model_dir,x) for x in os.listdir(preprocess_model_dir) if x[0] != '.']
-#             dirs = list(filter(os.path.isdir, files))
-#             files = list(filter(os.path.isfile, files))
-#             remove_files(files)
-#             remove_dirs(dirs)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(preprocess_model_dir)
-
-#     def clean_pyramid():
-#         #Wasih (02-27-20) First check if scores.txt present, only then delete it
-#         if os.path.exists(os.path.join(pyramid_dir, 'scores.txt')) == True:
-#             remove_files( [os.path.join(pyramid_dir,'scores.txt')] )
-
-#     def clean_scoring_pyrs():
-#         if os.path.exists(os.path.join(scoring_dir, 'pyrs')):
-#             pyrs_dir = os.path.join(scoring_dir,'pyrs','pyramids')
-#             files = [os.path.join(pyrs_dir,x) for x in os.listdir(pyrs_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(os.path.join(scoring_dir, 'pyrs'))
-
-#     def clean_scoring_scu():
-#         if os.path.exists(os.path.join(scoring_dir, 'scu')):
-#             scu_dir = os.path.join(scoring_dir,'scu')
-#             files = [os.path.join(scu_dir,x) for x in os.listdir(scu_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(scu_dir)
-
-#     def clean_scoring_sizes():
-#         if os.path.exists(os.path.join(scoring_dir, 'sizes')):
-#             sizes_dir = os.path.join(scoring_dir,'sizes')
-#             files = [os.path.join(sizes_dir,x) for x in os.listdir(sizes_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(sizes_dir)
-
-#     def clean_scoring_temp():
-#         if os.path.exists(os.path.join(scoring_dir, 'temp')):
-#             temp_dir = os.path.join(scoring_dir,'temp')
-#             files = [os.path.join(temp_dir,x) for x in os.listdir(temp_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(temp_dir)
-
-#     def clean_ext():
-#         if os.path.exists(ext_dir):
-#             files = [os.path.join(ext_dir,x) for x in os.listdir(ext_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(ext_dir)
-
-#     def clean_log():
-#         if os.path.exists(log_dir):
-#             files = [os.path.join(log_dir,x) for x in os.listdir(log_dir) if x[0] != '.']
-#             remove_files(files)
-#             #Wasih (02-21-20) Deep Clean; remove folders too
-#             shutil.rmtree(log_dir)
-
-#     def clean_base():
-#         files = [os.path.join(base_dir,x) for x in os.listdir(base_dir) if (os.path.splitext(x)[1] == '.csv' and x[0] != '.')]
-#         remove_files(files)
-
-#     clean_splits_peers()
-#     clean_splits_model()
-#     clean_preprocess_peers()
-#     clean_preprocess_model()
-#     clean_pyramid()
-#     #Wasih (02-22-20) Remove results.csv
-#     output_file = config.get('DynamicPaths', 'OutputFile')
-#     if os.path.exists(output_file):
-#         os.remove(output_file)
-#     clean_scoring_pyrs()
-#     clean_scoring_scu()
-#     clean_scoring_sizes()
-#     clean_scoring_temp()
-#     clean_ext()
-#     clean_log()
-#     clean_base()
-    
-#     #Wasih (02-21-20) Print colored text for user-friendliness
-#     text = colored('Everything Cleaned!', 'yellow')
-#     print (text)
 
 def change_py_interp(params):
     global py_interp
@@ -405,6 +291,8 @@ def pyreval(student_metadata_obj_req):
         error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
         print("Score Complete")
 
+        # Uncomment the below line if needed to clear the temporary data 
+        # clean(dynamic_base_dir)
         #Inserting Debug Data after every stage is affecting performance, TODO: have to work on the error case scenario.
 
     except Exception as e:
@@ -417,7 +305,7 @@ def Initial_Page():
     # pyreval()
     return "<h1>Gunicorn Deployed and Running</h1>"
 
-@app.route("/flask_with_request ", methods=['POST'])
+@app.route("/flask_with_request", methods=['POST'])
 def pyreval_request():
     request_data = request.get_json()
     student_id = request_data["student_id"]
