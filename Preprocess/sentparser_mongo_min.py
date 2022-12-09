@@ -22,10 +22,9 @@ decompose = {"default":0, "sentence":1, "sentsplit":2, "vpsbar":3,"convp":4}
 rule_parameter = decompose[decomposeLabel]
 # Command line arguments for filename, output directory, and summary index
 fname = sys.argv[1]
-##sys.argv[1]#"/home/adithya/Desktop/NLP_Internship/ProjectCode/PyrEvalv2/Preprocess/peer_summaries/T3_PN5_ROW15_sentence_2.xml"
-##
-ext = sys.argv[3]##sys.argv[3]#"/home/adithya/Desktop/NLP_Internship/ProjectCode/PyrEvalv2/Preprocess/peer_summaries"##
-summary_index =sys.argv[2] # sys.argv[2] ##1
+
+ext = sys.argv[3]
+summary_index =sys.argv[2]
 
 # Initial input initialization
 content = open(fname).read()

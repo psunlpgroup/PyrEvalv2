@@ -104,14 +104,6 @@ class PyramidOperations:
             for size in size_file_content:
                 size_file.write(size + '\n')
 
-
-
-if __name__ == "__main__":
-    pobject = PyramidOperations(2, '/home/adithya/Desktop/NLP_Internship/ProjectCode/PyrEvalv2/UWISC_Data/Pyramid_Data')
-
-    if not (pobject.local_pyramid_check()):
-        pobject.get_pyramid()
-
         
 
         
