@@ -84,12 +84,6 @@ def autorun():
     preprocess()
     score()
 
-    #Extract Intermmediate Files
-    error_operations_obj.extract_file_data()
-
-    #Push the error object to the db
-    error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
-    print("Score Complete")
 
 def splitsent():
 
@@ -124,25 +118,25 @@ def stanford():
     try:
         try:
             stanfordmain(split_peer_dir, 1, dynamic_base_dir, seg_method)
+            error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
         except Exception as e:
             logging.error(traceback.format_exc())
             print(e)
             text = colored('\n\n********************Stanford Pipelining of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
             print (text)
-    
+            error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
         os.chdir(stanford_dir)
         try:
             stanfordmain(split_model_dir, 2, dynamic_base_dir, seg_method)
             text = colored('\n\n********************Stanford Pipelining of Sentences completed!********************\n\n', 'green', attrs = ['bold'])
             print (text)
+            error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
         except Exception as e:
             logging.error(traceback.format_exc())
             print(e)
             text = colored('\n\n********************Stanford Pipelining of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
             print (text)    
-       	
-        
-        error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
+            error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
 
     except Exception as e:
         logging.error(traceback.format_exc())
@@ -239,8 +233,14 @@ def score():
         scoring_functions.scoring_function(scoring_dynamic_dir, essay_pyramid_dir, output_filepath, log_dir, scoring_dir, config, error_operations_obj, mongodb_operations, student_metadata_obj)
         # call_s = py_interp + [scoring_script] + params
         # call(call_s)
+        error_operations_obj.scoring_stage = 'Scoring Results complete'
+        #Extract Intermmediate Files
+        error_operations_obj.extract_file_data()
+        #Push the error object to the db
+        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
         text = colored('\n\n********************Scoring of summaries completed!********************\n\n', 'green', attrs = ['bold'])
-        
+        print("Score Complete")
+
     except Exception as e:
         logging.error(traceback.format_exc())
         print(e)
@@ -249,8 +249,8 @@ def score():
         error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
 
     os.chdir(base_dir)
-    error_operations_obj.scoring_stage = 'Scoring Results complete'
-    print("Score Complete")
+    
+    
 
 def clean():
     try:

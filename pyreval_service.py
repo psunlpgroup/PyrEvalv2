@@ -85,7 +85,7 @@ def splitsent(mongodb_operations, raw_peer_dir, split_peer_dir, split_model_dir,
         #print(e)
         print (text)
     
-def stanford(stanford_dir, split_peer_dir, split_model_dir, dynamic_base_dir, seg_method, base_dir, error_operations_obj):
+def stanford(mongodb_operations, stanford_dir, split_peer_dir, split_model_dir, dynamic_base_dir, seg_method, base_dir, error_operations_obj):
     os.chdir(stanford_dir)
     #call(py_interp + [stanford_script, split_peer_dir, '1', base_dir])
     #call(py_interp + [stanford_script, split_model_dir, '2', base_dir])
@@ -94,25 +94,26 @@ def stanford(stanford_dir, split_peer_dir, split_model_dir, dynamic_base_dir, se
     try:
         try:
             stanfordmain(split_peer_dir, 1, dynamic_base_dir, seg_method)
+            error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
         except Exception as e:
             logging.error(traceback.format_exc())
             print(e)
             text = colored('\n\n********************Stanford Pipelining of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
+            error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
             print (text)
     
         os.chdir(stanford_dir)
         try:
             stanfordmain(split_model_dir, 2, dynamic_base_dir, seg_method)
             text = colored('\n\n********************Stanford Pipelining of Sentences completed!********************\n\n', 'green', attrs = ['bold'])
+            error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
             print (text)
         except Exception as e:
             logging.error(traceback.format_exc())
             print(e)
             text = colored('\n\n********************Stanford Pipelining of Sentences threw an Error!********************\n\n', 'red', attrs = ['bold'])
+            error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
             print (text)    
-       	
-        
-        error_operations_obj.stanford_core_nlp_stage = 'Stanford corenlp xml output complete'
 
     except Exception as e:
         logging.error(traceback.format_exc())
@@ -175,16 +176,24 @@ def score(mongodb_operations, pyramid_dir, scoring_dir, scoring_dynamic_dir, out
     try:
         scoring_functions.scoring_function(scoring_dynamic_dir, essay_pyramid_dir, output_filepath, log_dir, scoring_dir, config, error_operations_obj, mongodb_operations, student_metadata_obj)
         text = colored('\n\n********************Scoring of summaries completed!********************\n\n', 'green', attrs = ['bold'])
-        
+        error_operations_obj.scoring_stage = 'Scoring Results complete'
+        #Extract Intermmediate Files
+        error_operations_obj.extract_file_data()
+        #Push the error object to the db
+        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
+        print("Score Complete")
+
     except Exception as e:
         logging.error(traceback.format_exc())
         print(e)
         text = colored('\n\n********************Scoring of summaries threw an Error!********************\n\n', 'red', attrs = ['bold'])
         print (text)
+        #Extract Intermmediate Files
+        error_operations_obj.extract_file_data()
         error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
 
     os.chdir(base_dir)
-    error_operations_obj.scoring_stage = 'Scoring Results complete'
+    
 
 def clean(dynamic_base_dir):
     dir = dynamic_base_dir
@@ -213,6 +222,10 @@ def pyreval(student_metadata_obj_req):
     try:
         db_conn = "mongodb://localhost:27017"
         database_name = 'PYREVAL_TEST_DB';
+
+        #Getting Current Working Directory
+        current_dir = os.path.dirname(os.path.realpath(__file__))
+        os.chdir(current_dir)
 
         # global mongodb_operations
         mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
@@ -280,16 +293,9 @@ def pyreval(student_metadata_obj_req):
 
     
         splitsent(mongodb_operations, raw_peer_dir, split_peer_dir, split_model_dir, error_operations_obj)
-        stanford(stanford_dir, split_peer_dir, split_model_dir, dynamic_base_dir, seg_method, base_dir, error_operations_obj)
+        stanford(mongodb_operations, stanford_dir, split_peer_dir, split_model_dir, dynamic_base_dir, seg_method, base_dir, error_operations_obj)
         preprocess(mongodb_operations, preprocess_dynamic_dir, preprocess_dir, base_dir, error_operations_obj)
         score(mongodb_operations, pyramid_dir, scoring_dir, scoring_dynamic_dir, output_filepath, log_dir, config, base_dir, error_operations_obj)
-
-        #Extract Intermmediate Files
-        error_operations_obj.extract_file_data()
-
-        #Push the error object to the db
-        error_operations_obj.insert_data(student_metadata_obj, mongodb_operations)
-        print("Score Complete")
 
         # Uncomment the below line if needed to clear the temporary data 
         # clean(dynamic_base_dir)
