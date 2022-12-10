@@ -3,6 +3,15 @@
 
 //Install MongoDB and MongoDB Compass
 
+
+//Method 1:
+// --Open the Dump_Files folder in the terminal and run the below command
+
+mongorestore dump
+
+
+//Method 2:
+
 //Enter MongoDB shell with the terminal/command prompt and type "mongo sh"
 
 //Verify by running the below query, we will be able to see all the existing databases
@@ -102,12 +111,7 @@ db.ESSAY_PYRAMID_COLLECTION.insertMany([
 // Post this data is inserted we can use pyreval_mongo_launcher.py and change the metadata(In the student object) in the script according to the new entries and run the script
 
 
-
-
-
-
-
-
+///-------------------------------------------------------------------------------------------------------------------------------------------///
 
 //-----------Misc: Query to insert data into DEBUG_DATA_COLLECTION
 
