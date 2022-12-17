@@ -34,10 +34,10 @@ This script runs PyrEval with MongoDB in launcher mode. Also, it only runs for o
 3.PyrEval_mongo_serialtesting:
 This script currently takes "n" number of student essays randomly from the database and processes those essays.
 
-###Note:
+### Note:
 Before running pyreval mongo the directory in the parameter.ini file needs to be updated.
     
-#PyrEval Documentation:
+# PyrEval Documentation:
 PyrEval Copyright (C) 2017 Yanjun Gao
 
 This is the package for running PyrEval (which includes a new variant PyrEval+CR). The current package is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing. (Has been used with Python versions up to 3.9 on MAC OS, does not work as well on Windows.)
