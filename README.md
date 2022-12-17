@@ -1,5 +1,43 @@
 # PyrEval 2
+## PyrEval_mongo
+The documentation for PyrEval in this branch is similar to the older branch as mentioned in the below sections.
 
+With PyrEval_mongo, we have integrated PyrEval with MongoDB and built it into a RESTful service so it can be used by the front end Notebook to process web requests. This version of PyrEval will enable students to submit their essays and get immediate feedback.
+
+The initial setup of MongoDB can be found in the Initial_Setup_Queries.mongodb in the MongoDB folder.
+
+There are 3 major PyrEval scripts in this version,
+
+1. pyreval_service.py
+This code is the flask implementation of PyrEval and can be run as a flask instance. Requests to this can be sent using Postman or using Axios in another script.
+This is by default run on the local host and 5000 port. Requests to this service can be sent using the below URL in the mentioned JSON format.
+The request needs to be a POST request to the URL http://127.0.0.1:5000/flask_with_request
+
+The JSON format to be sent is as below,
+
+{
+"student_id":"<<student id>>",
+"class_id" :  "<<class id>>",
+"teacher_id" : "<<teacher id>>",
+"essay_number" : "<<essay number>>",
+"essay_version" : "<<essay version>>"
+}
+    
+
+This function can also be run on multiple workers using the command, 
+    
+    gunicorn --workers 4 --timeout 1200 --log-level=DEBUG --bind 0.0.0.0:5000 pyreval_wsgi:app
+    
+2.PyrEval_mongo_launcher:
+This script runs PyrEval with MongoDB in launcher mode. Also, it only runs for one student at a time and the student metadata should be modified in the code.
+    
+3.PyrEval_mongo_serialtesting:
+This script currently takes "n" number of student essays randomly from the database and processes those essays.
+
+###Note:
+Before running pyreval mongo the directory in the parameter.ini file needs to be updated.
+    
+#PyrEval Documentation:
 PyrEval Copyright (C) 2017 Yanjun Gao
 
 This is the package for running PyrEval (which includes a new variant PyrEval+CR). The current package is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing. (Has been used with Python versions up to 3.9 on MAC OS, does not work as well on Windows.)
