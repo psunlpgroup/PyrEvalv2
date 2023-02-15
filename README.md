@@ -29,7 +29,7 @@ This function can also be run on multiple workers using the command,
     gunicorn --workers 4 --timeout 1200 --log-level=DEBUG --bind 0.0.0.0:5000 pyreval_wsgi:app
     
 2.PyrEval_mongo_launcher:
-This script runs PyrEval with MongoDB in launcher mode. Also, it only runs for one student at a time and the student metadata should be modified in the code.
+This script runs PyrEval with MongoDB in launcher mode. Also, it only runs for one student at a time and the student metadata should be modified in the PyrEval_mongo_launcher at line 283 where the student metadata for a student in the DB is provided.
     
 3.PyrEval_mongo_serialtesting:
 This script currently takes "n" number of student essays randomly from the database and processes those essays.
