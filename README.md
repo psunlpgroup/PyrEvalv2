@@ -65,13 +65,13 @@ The tool is aimed at two audiences. It can help educators evaluate the content o
 
 Below is an image showing the original pipeline and log output. 
 
-![PyrEval system pipeline and log output example](img/pyreval_img.png)
+![PyrEval system pipeline and log output example](Img/pyreval_img.png)
 
 PyrEval version 2 has been modified to include the original pipeline (shown again below) or a new pipeline for use with a computable rubric (PyrEval+CR) as described in [10, 11].  
 
-![PyrEval2 pipeline: original](img/pyreval_orig.png)
+![PyrEval2 pipeline: original](Img/pyreval_orig.png)
 
-![Pyreval2 pipeline: for PyrEval+CR [7,8]](./img/pyreval_mod.png)
+![Pyreval2 pipeline: for PyrEval+CR [7,8]](Img/pyreval_mod.png)
 
 ## Requirements
 ### Installation Requirement 
