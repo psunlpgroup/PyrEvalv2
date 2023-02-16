@@ -1,8 +1,10 @@
 # PyrEval 2
 ## PyrEval_mongo
-The documentation for PyrEval in this branch is similar to the older branch as mentioned in the below sections. 
+The documentation for PyrEval in this branch is similar to the main branch as desribed below. This Mongo branch of PyrEval is for utilizing a mongo
+database to store inputs and outputs, and to run PyrEval as a service.  This branch was developed to support use of PyrEval in classrooms as part of 
+a research project.
 
-![PyrEval Mongo system design](Img/PyrEval_As_A_Service.png)
+![PyrEval Mongo system design]<img src="Img/PyrEval_As_A_Service.png" height="50%" width="50%"/>
 
 With PyrEval_mongo, we have integrated PyrEval with MongoDB and built it into a RESTful service so it can be used by the front end Notebook to process web requests. This version of PyrEval will enable students to submit their essays and get immediate feedback.
 
