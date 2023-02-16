@@ -71,7 +71,7 @@ PyrEval version 2 has been modified to include the original pipeline (shown agai
 
 ![PyrEval2 pipeline: original](img/pyreval_orig.png)
 
-![Pyreval2 pipeline: for PyrEval+CR [7,8]](img/pyreval_mod.png)
+![Pyreval2 pipeline: for PyrEval+CR [7,8]](./img/pyreval_mod.png)
 
 ## Requirements
 ### Installation Requirement 
