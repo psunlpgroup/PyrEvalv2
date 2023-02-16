@@ -2,11 +2,15 @@
 ## PyrEval_mongo
 The documentation for PyrEval in this branch is similar to the older branch as mentioned in the below sections. 
 
+![PyrEval Mongo system design](Img/PyrEval_As_A_Service.png)
+
 With PyrEval_mongo, we have integrated PyrEval with MongoDB and built it into a RESTful service so it can be used by the front end Notebook to process web requests. This version of PyrEval will enable students to submit their essays and get immediate feedback.
 
 The initial setup of MongoDB can be found in the Initial_Setup_Queries.mongodb in the MongoDB folder.
 
-There are 3 major PyrEval scripts in this version,
+There are 3 major PyrEval scripts in this version, and changes throughout to various PyrEval scripts.  The figure above shows the design of the Mongo
+version of PyrEval, and the three major PyrEval scripts are identified below.  Any script whose file name ends in _mongo_maj.py
+
 
 1. pyreval_service.py
 This code is the flask implementation of PyrEval and can be run as a flask instance. Requests to this can be sent using Postman or using Axios in another script.
