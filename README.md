@@ -80,7 +80,7 @@ PyrEval version 2 has been modified to include the original pipeline (shown agai
 3. Install the packages listed in requirements.txt to the environment along with additional dependencies:
 ```
 pip install -r requirements.txt
-sudo apt install python-lxml
+sudo apt install python-lxml         ## 02/16/23 - Is this necessary?
 python3 -m nltk.downloader punkt
 ```
 4. Java DK
