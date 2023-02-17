@@ -280,7 +280,8 @@ if __name__ == "__main__":
 
         #TODO:Change to receive from notebook
         global student_metadata_obj
-        student_metadata_obj = Student_Essay_Model.student_metadata('62415f3185f4d8ff4cc29cc7', "1", "JN", 2, "R")
+        #TYPES OF student_metadata(STRING, STRING, STRING, INT32, STRING) in DB
+        student_metadata_obj = Student_Essay_Model.student_metadata("62415f3185f4d8ff4cc29cc7", "1", "JN", 2, "R")
 
         # base_dir = os.path.dirname(os.path.realpath(__file__))
         base_dir = config.get('DynamicPaths', 'dynamicbasedir')
