@@ -15,7 +15,9 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#Wasih (02-21-20) Add more structure 
+
+#Wasih (02-21-20) Add more structure
+#Last updated by Mahsa (02-17-2023)
 from MongoDB.mongo_db_functions import MongoDB_Operations
 from Scoring.lib_scoring_mongo_min import *
 #from lib_scoring import sentencesFromSegmentations, SummaryGraph, buildSCUcandidateList, filename, getsegsCount
@@ -36,6 +38,7 @@ import pandas as pd
 import pickle
 import threading
 import json
+import main_ideas_dictionary
 
 #Wasih (02-21-20) results.csv not generating
 PYTHON_VERSION = 2
@@ -108,6 +111,65 @@ def getDictionary(segList, pyramid, results, scores):
         answer['comprehensive'] = value
     return answer
 
+def get_results(elogs_path, result_obj):
+    data = ""
+    lines = []
+
+    int_results = []
+    float_results = []
+
+    pyramid_id = 0
+
+    with open(elogs_path+"/" + os.listdir(elogs_path)[0], "r") as file:
+        data = file.read()
+
+    with open(elogs_path + "/" + os.listdir(elogs_path)[0], "r") as file:
+        lines = file.readlines()
+
+        pyramid_id = lines[2].split("_")[1].split(".")[0]
+
+        for line in lines[4:7]:
+            int_results.append(int(line.split(": ")[1]))
+
+        for line in lines[7:12]:
+            float_results.append(float(line.split(": ")[1]))
+
+        content_unit_list = (lines[13].split(": "))[1].replace(" \n","")
+
+
+    result_obj.no_of_segments = int_results[0]
+    result_obj.pyramid_name = int(pyramid_id)
+    result_obj.raw = int_results[1]
+    result_obj.max_score = int_results[2]
+    result_obj.quality = float_results[0]
+    result_obj.avg_scu = float_results[1]
+    result_obj.max_score_avg_scu = float_results[2]
+    result_obj.coverage = float_results[3]
+    result_obj.comprehensive = float_results[4]
+    result_obj.content_unit_list = content_unit_list
+    sentences = data.split("Sentence:")[1:]
+
+
+    sentence_match_dict = {}
+    for sent in sentences:
+        segments_dict = {}
+
+        for seg in sent.split("\n\n")[1:-1]:
+            seg_index = int(seg.split("| Content Unit:")[0].split("ID:")[1])
+            segments_dict['Segment ID: ' + str(seg_index)] = seg.split("| ")[1]
+
+        segment_id = int(sent.split("\n")[0].split("| Segmentation: ")[0])
+        segmentation = int(sent.split("\n")[0].split("| Segmentation: ")[1])
+
+        sentence_match_dict['Sentence ' + str(segment_id)+", Segmentation "+str(segmentation)] = segments_dict
+
+    result_obj.sentence_match_dict = sentence_match_dict
+    return result_obj
+
+
+
+
+
 ##Adithya:- Rearranging the code to run as  function
 
 def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_static_dir, config, error_operations_obj, mongodb_operations, student_metadata_obj):
@@ -130,7 +192,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         os.makedirs(scoring_dir)
     os.chdir(scoring_dir)
 
-    #Puru (11-03-21) Fixed bugs with -l -t -a 
+    #Puru (11-03-21) Fixed bugs with -l -t -a
     #Adithya: As we cant use parse_args() with Gunicorn I changed the options to variables
 
     parser = optparse.OptionParser()
@@ -198,14 +260,18 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
     ====================== Scoring Pipeline ========================
     """
 
-    #Puru (11-03-21) Implemented Threading. Commented out since did not improve performance 
+    #Puru (11-03-21) Implemented Threading. Commented out since did not improve performance
 
     for pyramid in pyramids:
         raw_scores = {}
         quality_scores = {}
         coverage_scores = {}
         comprehension_scores = {}
+
+        #TODO find out why it gets pyramid id
         pyramid_name = pyramid[pyramid.rfind('/') + 1:pyramid.rfind('.')]
+        pyramid_id = int(pyramid[pyramid.rfind('Pyramid_')+8:pyramid.rfind('.')-2])
+
         #print "test"
         dynamic_base_dir = scoring_dir.replace("/Scoring", '')
         scus_og, scu_labels = readPyramid(pyramid, dynamic_base_dir, config, error_operations_obj)
@@ -219,7 +285,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         for summary in summaries:
             if os.path.isdir(summary):
                 summ = glob.iglob(summary+'/*')
-                #fn is the summary name 
+                #fn is the summary name
                 for fn in summ:
                     if fn.endswith('.ls'):
                         fn_name = fn.split('/')[-1].rsplit('.', 1)[0]
@@ -235,7 +301,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         # for i in range(len(threads)):
         #     threads[i].join()
         # if print_table:
-            #results_f = 
+            #results_f =
             ### For DUC05
 
 
@@ -244,26 +310,37 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         cu_vectors_json_path = scoring_static_dir + "/cu_vectors.json"
         grouping_vectors_path = scoring_static_dir + "/grouping_vectors.json"
         cu_vectors_csv_path = scoring_static_dir + "/cu_vectors.csv"
+        enotebook_cu_vectors_csv_path = dynamic_base_dir + "/Scoring/cu_vectors_enotebook.csv"
         grouping_vectors_csv_path = scoring_static_dir + "/group_vectors.csv"
+        log_path = dynamic_base_dir+'/log'
+        elog_path = log_path + "_enotebook"
 
         # Puru 02/17/22 Extension for Notebook Input generation and descriptive spreadsheets
-        with open(cu_vectors_json_path, 'w') as f:
-            json.dump(cu_matches, f)
-        with open(grouping_vectors_path, 'w') as f:
-            json.dump(group_matches, f)
+        #Commented grouping_vectors.csv& grouping_vectors.json & cu_vectors.json
+        # with open(cu_vectors_json_path, 'w') as f:
+        #     json.dump(cu_matches, f)
+        # with open(grouping_vectors_path, 'w') F f:
+        #     json.dump(group_matches, f)
         # Take input from file for the grouping names once file is decided
         cu_df = pd.DataFrame.from_dict(cu_matches, orient='index')
         cu_df = cu_df.sort_index()
+
+        scu_mapping_list = mongodb_operations.get_scu_mapping(pyramid_id)
+        essay_main_ideas_list = mongodb_operations.get_essay_main_ideas(pyramid_id)
+
+        main_ideas_dictionary.reorder_cu_vectors(cu_vectors_csv_path,enotebook_cu_vectors_csv_path,scu_mapping_list,essay_main_ideas_list,True)
+        mongodb_operations.update_cu_vectors(student_metadata_obj,enotebook_cu_vectors_csv_path)
         with open(cu_vectors_csv_path, 'w') as f:
             cu_df.to_csv(f)
-        gp_df = pd.DataFrame.from_dict(group_matches, orient='index', columns = ['A', 'B', 'C', 'D'])
-        gp_df = gp_df.sort_index()
-        with open(grouping_vectors_csv_path, 'w') as f:
-            gp_df.to_csv(f)    
+        # gp_df = pd.DataFrame.from_dict(group_matches, orient='index', columns = ['A', 'B', 'C', 'D'])
+        # gp_df = gp_df.sort_index()
+        # with open(grouping_vectors_csv_path, 'w') as f:
+        #     gp_df.to_csv(f)
+        main_ideas_dictionary.replace_log(log_path,elog_path,scu_mapping_list,essay_main_ideas_list,True)
+        result_obj = Result_Model.result_data()
+        result_obj = get_results(elog_path,result_obj)
+        mongodb_operations.update_result(result_obj, student_metadata_obj)
 
-
-        # print(cu_matches)
-        # print(group_matches)
         ## FOr Duc 05
         #results_file = "results-raw.csv"
         print ("Will write into results file!! ", results_file)

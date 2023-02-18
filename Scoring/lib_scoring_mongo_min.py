@@ -14,7 +14,7 @@
 
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+#Last updated bu Mahsa (02-18-2023)
 
 from sklearn.metrics.pairwise import cosine_similarity as cos
 from Scoring.printEsumLog_mongo_maj import *
@@ -408,7 +408,8 @@ def readPyramid(fname, scoring_dir, config_obj, error_operations_obj):
     
     #AdT: Changed the code for the new file structure to run PyrEval as a Service
     # fname = 'sizes/' + filename(fname) + '.size'
-    fname = str(fname).split(".",1)[0] + '.size'
+    baseFile = os.path.splitext(fname)[0]
+    fname = baseFile + '.size'
     with open(fname, 'w') as f:
         for size in layer_sizes:
             f.write(str(size) + '\n')
@@ -601,7 +602,8 @@ def score(scus, fn, raw_scores, quality_scores, coverage_scores, comprehension_s
 
     #AdT: Chnages to run PyrEval as a service
     # size_file = 'sizes/' + filename(pyramid) + '.size'
-    size_file = str(pyramid).split(".",1)[0] + '.size'
+    baseFile = os.path.splitext(pyramid)[0]
+    size_file = baseFile + '.size'
     
     #count_by_weight, avg = getLayerSizes(size_file)
     # New get layersize 

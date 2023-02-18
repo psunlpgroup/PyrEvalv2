@@ -18,18 +18,19 @@ import Scoring.lib_scoring_mongo_min
 import os
 import textwrap
 
-#Changes to send results to the MongoDB
+# Changes to send results to the MongoDB
 from MongoDB.Models import Result_Model
 
 result_obj = Result_Model.result_data()
 
-#Written by Purushartha Singh (05/27/19)
-#Puru (11-03-21) Added additional functionality for APCS visibility in output
-#Puru (11-03-21) Fixed implementation of the print all tag
-
+#Last updated by Mahsa (02-17-2023)
+# Written by Purushartha Singh (05/27/19)
+# Puru (11-03-21) Added additional functionality for APCS visibility in output
+# Puru (11-03-21) Fixed implementation of the print all tag
 
 
 file_width = 100
+
 
 ##########################################################################
 # Class definitions
@@ -45,7 +46,7 @@ class Summary():
         self.segs = segs
         self.used_sentence_list = []
         self.check_tups = {}
-        
+
 
 # A class holding all the arguments related to the pyramid
 
@@ -53,6 +54,7 @@ class Pyramid():
     def __init__(self, scu_labels, pyramid_name):
         self.scu_labels = scu_labels
         self.pyramid_name = pyramid_name
+
 
 # A class holding all the arguments related to scoring
 class Scores():
@@ -65,6 +67,7 @@ class Scores():
         self.cmax = cmax
         self.avg = avg
 
+
 class Value():
     def __init__(self, metadata, value):
         _, self.sentid, self.segid, self.segmtid = metadata.split('&')
@@ -73,14 +76,16 @@ class Value():
         self.scuwt = value[2]
         self.stdapcs = value[3]
 
+
 ##########################################################################
 # Helper Functions
 ##########################################################################
 # returns the width of the presently open terminal
 def getWidth():
-        import fcntl, termios, struct
-        th, tw, hp, wp = struct.unpack('HHHH', fcntl.ioctl(0, termios.TIOCGWINSZ, struct.pack('HHHH', 0, 0, 0, 0)))
-        return tw
+    import fcntl, termios, struct
+    th, tw, hp, wp = struct.unpack('HHHH', fcntl.ioctl(0, termios.TIOCGWINSZ, struct.pack('HHHH', 0, 0, 0, 0)))
+    return tw
+
 
 # Returns true if the segment has the same sentence id and segment id as the args
 def segIsEqual(seg, sentence_id, segment_id):
@@ -89,6 +94,7 @@ def segIsEqual(seg, sentence_id, segment_id):
     else:
         return False
 
+
 # Returns the sentence id, segment id, and segmentation id for the given arg line
 def getMetadata(x):
     r = x.split('&')
@@ -96,6 +102,7 @@ def getMetadata(x):
     segment_id = int(r[2])
     segmentation_id = int(r[3])
     return sentence_id, segment_id, segmentation_id
+
 
 # Prints the initial header containing the summary name, Pyramid name, and the number of segments in the summary
 def printHeader(summary, pyramid, output, print_screen, results_obj):
@@ -115,9 +122,11 @@ def printHeader(summary, pyramid, output, print_screen, results_obj):
         print("\n{:>40}: {}".format("No. of segments in the summary", summary.segment_count))
     output.write("{:>40}: {}\n".format("No. of segments in the summary", summary.segment_count))
 
-    #Changes to insert results into MongoDB
+    # Changes to insert results into MongoDB
     result_obj.no_of_segments = summary.segment_count
     result_obj.pyramid_name = pyramid.pyramid_name
+    print("result object")
+
 
 # Prints out all the scoring information
 def printScores(scores, output, print_screen, result_obj):
@@ -143,7 +152,7 @@ def printScores(scores, output, print_screen, result_obj):
         print("{:>40}: {:.4f}".format("Comprehensive", scores.comprehension))
     output.write("{:>40}: {:.4f}\n".format("Comprehensive", scores.comprehension))
 
-    #Changes to insert results into MongoDB
+    # Changes to insert results into MongoDB
     result_obj.raw = scores.score
     result_obj.max_score = scores.qmax
     result_obj.quality = scores.quality
@@ -152,6 +161,7 @@ def printScores(scores, output, print_screen, result_obj):
     result_obj.coverage = scores.coverage
     result_obj.comprehensive = scores.comprehension
 
+
 # Prints the footer at the end of the file
 def printFooter(output, print_screen):
     w = getWidth()
@@ -159,25 +169,26 @@ def printFooter(output, print_screen):
         print(os.linesep)
     output.write('\n')
     if print_screen:
-        print("="*w)
-    output.write("="*file_width)
+        print("=" * w)
+    output.write("=" * file_width)
     if print_screen:
         print(os.linesep)
     output.write('\n')
+
 
 # Function that makes a list of all the used and unused segments from the initial segment_list arg and returns the
 # unused segments list and the linked scus for the used segments with the text added to the struct
 def listSegments(summary, pyramid, results):
     for seg in summary.segment_list:
-        #print ("seg" +str(seg.sentence_id) + " " + str(seg.segment_id))
+        # print ("seg" +str(seg.sentence_id) + " " + str(seg.segment_id))
         for res, scu in results.items():
             sentence_id, segment_id, segmentation_id = getMetadata(res)
-            #print ("res" +str(sentence_id)+ " " + str(segment_id))# + " " + str(segmentation_id))
-            if segIsEqual(seg,sentence_id,segment_id):
-                #print ("match")
-                check = (sentence_id,segment_id)
+            # print ("res" +str(sentence_id)+ " " + str(segment_id))# + " " + str(segmentation_id))
+            if segIsEqual(seg, sentence_id, segment_id):
+                # print ("match")
+                check = (sentence_id, segment_id)
                 if check in summary.check_tups.keys():
-                    #print (check)
+                    # print (check)
                     if segmentation_id not in summary.check_tups[check]:
                         summary.check_tups[check].append(segmentation_id)
                 else:
@@ -195,46 +206,46 @@ def listSegments(summary, pyramid, results):
 
     usedSegList = [s for s in summary.segment_list if s.used is True]
     scuList = []
-    
+
     for s in usedSegList:
         for seg, text in s.text.items():
             if seg in s.scu_text_pairs.keys():
                 scuList.append((s.scu_text_pairs[seg], len(pyramid.scu_labels[s.scu_text_pairs[seg]])))
-                
+
     notused = [s for s in summary.segment_list if s.used == False]
 
     notusedSegList = []
-    #print (summary.used_sentence_list)
+    # print (summary.used_sentence_list)
     for i in range(1, summary.num_sentences + 1):
         if i not in summary.used_sentence_list:
-            #print("not here" + str(i))
+            # print("not here" + str(i))
             missed = 0
             for each in notused:
-                #print (each.sentenceid)
+                # print (each.sentenceid)
                 if each.sentence_id == i:
                     if missed == 0 or len(each.segments) > len(missed.segments):
                         missed = each
             if missed != 0:
                 missed.used = True
                 notusedSegList.append(missed)
-    #print (usedSegList)
-    
+    # print (usedSegList)
+
     for s in notusedSegList:
         for seg, segment in summary.segs.items():
             sentence_id, segment_id, segmentation_id = getMetadata(seg)
             if segIsEqual(s, sentence_id, segment_id):
                 s.text[segmentation_id] = segment
 
-    
     newSegList = [s for s in summary.segment_list if s.used is True]
     return newSegList, scuList
+
 
 # Prints the list of all the SCUs used in the file with their weight
 def printScuList(scu_list, printfile, print_screen, result_obj):
     if len(scu_list) == 0:
         output = 'No linked Content Units'
     else:
-        scu_list = sorted(scu_list, key=lambda x:(10 - x[1], x[0]))
+        scu_list = sorted(scu_list, key=lambda x: (10 - x[1], x[0]))
         """sorted_cu_list = {}
         for item in scu_list:
             if item[1] in sorted_cu_list.keys():
@@ -245,18 +256,19 @@ def printScuList(scu_list, printfile, print_screen, result_obj):
         for i in range(5, 0, -1):
             sorted_cu_list[i] = sorted(sorted_cu_list[i], key=lambda x:int(x[0]))
             scu_list.append(sorted_cu_list[i])
-        
+
         # print(scu_list)"""
         cu_line = ''
         output = '[ID(Weight)]: '
         for scu in scu_list:
-            output += (str(scu[0])+'('+str(scu[1])+'), ')
+            output += (str(scu[0]) + '(' + str(scu[1]) + '), ')
         output = output[:-2]
     if print_screen:
         print("\n{:>20}{} \n\n".format("Content Unit List ", output))
     printfile.write("\n\n{:>20}{} \n\n".format("Content Unit List ", output))
-    #ADT DB Changes
+    # ADT DB Changes
     result_obj.content_unit_list = output
+
 
 # Prints the segments and associated SCU for each segment of the summary
 def printSegments(segList, scuList, pyramid, output, values, print_screen):
@@ -268,85 +280,92 @@ def printSegments(segList, scuList, pyramid, output, values, print_screen):
         for seg_index, text in s.text.items():
             if seg_index in s.scu_text_pairs.keys():
                 if print_screen:
-                    print("\n\tSegment ID: {} | Content Unit: {} [Weight: {}]".format(seg_index,s.scu_text_pairs[seg_index], len(pyramid.scu_labels[s.scu_text_pairs[seg_index]])))
-                output.write("\n\n\tSegment ID: {} | Content Unit: {} [Weight: {}]".format(seg_index,s.scu_text_pairs[seg_index], len(pyramid.scu_labels[s.scu_text_pairs[seg_index]])))
+                    print("\n\tSegment ID: {} | Content Unit: {} [Weight: {}]".format(seg_index,
+                                                                                      s.scu_text_pairs[seg_index], len(
+                            pyramid.scu_labels[s.scu_text_pairs[seg_index]])))
+                output.write("\n\n\tSegment ID: {} | Content Unit: {} [Weight: {}]".format(seg_index,
+                                                                                           s.scu_text_pairs[seg_index],
+                                                                                           len(pyramid.scu_labels[
+                                                                                                   s.scu_text_pairs[
+                                                                                                       seg_index]])))
                 # key = str(s.sentence_id) + '&' + str(s.segment_id) + '&' + str(seg_index)
                 # val_list = values[key]
                 # match = val_list[0]
                 # for val in val_list:
-                    # if val.scuid == s.scu_text_pairs[seg_index]:
-                        # match = val
+                # if val.scuid == s.scu_text_pairs[seg_index]:
+                # match = val
 
                 # print("\n\tSegment ID: {} | Content Unit: {} [Weight: {}] | APCS: {:.4f} +/- {:.4f}".format(seg_index,s.scu_text_pairs[seg_index], len(pyramid.scu_labels[s.scu_text_pairs[seg_index]]), val.apcs, val.stdapcs))
                 # output.write("\n\n\tSegment ID: {} | Content Unit: {} [Weight: {}] | APCS: {:.4f} +/- {:.4f}".format(seg_index,s.scu_text_pairs[seg_index], len(pyramid.scu_labels[s.scu_text_pairs[seg_index]]), val.apcs, val.stdapcs))
 
-                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=getWidth()-38)
+                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=getWidth() - 38)
                 if print_screen:
                     for i, line in enumerate(wrap_seg):
                         if i == 0:
                             print("\tSegment: .................... " + line)
                         else:
-                            print("\t"+" "*9+".................... " + line)
-                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=file_width-34)
+                            print("\t" + " " * 9 + ".................... " + line)
+                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=file_width - 34)
                 for i, line in enumerate(wrap_seg):
                     if i == 0:
                         output.write("\n\tSegment: .................... " + line)
                     else:
-                        output.write("\n\t"+" "*9+".................... " + line)
+                        output.write("\n\t" + " " * 9 + ".................... " + line)
                 # print("\n\tSegment: .................... {}".format(s.text[seg_index].strip()))
                 # output.write("\n\tSegment: .................... {}".format(s.text[seg_index].strip()))
 
                 content_unit = pyramid.scu_labels[s.scu_text_pairs[seg_index]]
                 for n, cu_part in enumerate(content_unit):
-                    wrap_seg = textwrap.wrap(cu_part, width = getWidth()-42)
-                    wrap_file = textwrap.wrap(cu_part, width = file_width-38)
+                    wrap_seg = textwrap.wrap(cu_part, width=getWidth() - 42)
+                    wrap_file = textwrap.wrap(cu_part, width=file_width - 38)
                     if n == 0:
                         if print_screen:
                             for i, line in enumerate(wrap_seg):
                                 if i == 0:
-                                    print("\tContent Unit: ............... ("+str(n+1)+") " + line)
+                                    print("\tContent Unit: ............... (" + str(n + 1) + ") " + line)
                                 else:
-                                    print("\t"+" "*14 + "."*15+"     " + line)
+                                    print("\t" + " " * 14 + "." * 15 + "     " + line)
                         for i, line in enumerate(wrap_file):
                             if i == 0:
-                                output.write("\n\tContent Unit: ............... ("+str(n+1)+") " + line)
+                                output.write("\n\tContent Unit: ............... (" + str(n + 1) + ") " + line)
                             else:
-                                output.write("\n\t"+" "*14 + "."*15+"     " + line)
+                                output.write("\n\t" + " " * 14 + "." * 15 + "     " + line)
 
-                        #print("\tContent Unit: ............... ({}) {}".format(n+1, cu_part))
-                        #output.write("\n\tContent Unit: ............... ({}) {}".format(n+1, cu_part))
+                        # print("\tContent Unit: ............... ({}) {}".format(n+1, cu_part))
+                        # output.write("\n\tContent Unit: ............... ({}) {}".format(n+1, cu_part))
                     else:
                         if print_screen:
                             for i, line in enumerate(wrap_seg):
                                 if i == 0:
-                                    print("\t              ............... ("+str(n+1)+") " + line)
+                                    print("\t              ............... (" + str(n + 1) + ") " + line)
                                 else:
-                                    print("\t"+" "*14 + "."*15+"     " + line)
+                                    print("\t" + " " * 14 + "." * 15 + "     " + line)
                         for i, line in enumerate(wrap_file):
                             if i == 0:
-                                output.write("\n\t              ............... ("+str(n+1)+") " + line)
+                                output.write("\n\t              ............... (" + str(n + 1) + ") " + line)
                             else:
-                                output.write("\n\t"+" "*14 + "."*15+"     " + line)
+                                output.write("\n\t" + " " * 14 + "." * 15 + "     " + line)
 
-                        #print("\t              ............... ({}) {}".format(n+1, cu_part))
-                        #output.write("\n\t              ............... ({}) {}".format(n+1, cu_part))
+                        # print("\t              ............... ({}) {}".format(n+1, cu_part))
+                        # output.write("\n\t              ............... ({}) {}".format(n+1, cu_part))
             else:
                 if print_screen:
                     print("\n\tSegment ID: {} | Content Unit: None".format(seg_index))
                 output.write("\n\n\tSegment ID: {} | Content Unit: None".format(seg_index))
-                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=getWidth()-38)
+                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=getWidth() - 38)
                 if print_screen:
                     for i, line in enumerate(wrap_seg):
                         if i == 0:
                             print("\tSegment: .................... " + line)
                         else:
-                            print("\t"+" "*9+".................... " + line)
-                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=file_width-34)
+                            print("\t" + " " * 9 + ".................... " + line)
+                wrap_seg = textwrap.wrap(s.text[seg_index].strip(), width=file_width - 34)
                 for i, line in enumerate(wrap_seg):
                     if i == 0:
                         output.write("\n\tSegment: .................... " + line)
                     else:
-                        output.write("\n\t"+" "*9+".................... " + line)
+                        output.write("\n\t" + " " * 9 + ".................... " + line)
+
 
 def createSentenceMatchDict(segList, pyramid):
     sentence_match_dict = {}
@@ -365,9 +384,9 @@ def createSentenceMatchDict(segList, pyramid):
                 segment_dict['Weight'] = len(pyramid.scu_labels[s.scu_text_pairs[seg_index]])
                 segment_dict['Content Unit'] = pyramid.scu_labels[s.scu_text_pairs[seg_index]]
             segments_dict['Segment Match Metadata ' + str(seg_index)] = segment_dict
-    
+
         sentence_match_dict['Sentence ' + str(s.sentence_id)] = segments_dict
-    
+
     return sentence_match_dict
 
 
@@ -389,7 +408,9 @@ def getInfo(values):
 ####Wrapper Function
 ##########################################################################
 
-def printEsumLogWrapper(summary_name, segment_count, score, quality, coverage, comprehension, q_max, c_max, avg, results, segment_list, num_sentences, segs, scu_labels, pyramid_name, log_file, values, print_screen, mongodb_operations, student_metadata_obj):
+def printEsumLogWrapper(summary_name, segment_count, score, quality, coverage, comprehension, q_max, c_max, avg,
+                        results, segment_list, num_sentences, segs, scu_labels, pyramid_name, log_file, values,
+                        print_screen, mongodb_operations, student_metadata_obj):
     # creates instances of the wrapper classes and passes them to the main function
     s = Summary(summary_name, segment_count, segment_list, num_sentences, segs)
     r = Scores(score, quality, coverage, comprehension, q_max, c_max, avg)
@@ -401,29 +422,29 @@ def printEsumLogWrapper(summary_name, segment_count, score, quality, coverage, c
 ##########################################################################
 # Main Function
 ##########################################################################
-def printEsumLog(summary, scores, pyramid, values, results, log_file, print_screen, mongodb_operations, student_metadata_obj):
-
-    #Changes to send results to the MongoDB
+def printEsumLog(summary, scores, pyramid, values, results, log_file, print_screen, mongodb_operations,
+                 student_metadata_obj):
+    # Changes to send results to the MongoDB
     global result_obj
 
     output = open(log_file, "w+")
     printHeader(summary, pyramid, output, print_screen, result_obj)
     printScores(scores, output, print_screen, result_obj)
-    
+
     segList, scuList = listSegments(summary, pyramid, results)
 
     printScuList(scuList, output, print_screen, result_obj)
     printSegments(segList, scuList, pyramid, output, values, print_screen)
 
-    #Result Handling
+    # Result Handling
     sentence_match_dict = createSentenceMatchDict(segList, pyramid)
     result_obj.sentence_match_dict = sentence_match_dict
 
     printFooter(output, print_screen)
     output.close()
 
-    mongodb_operations.update_result(result_obj, student_metadata_obj)
-    
+    # mongodb_operations.update_result(result_obj, student_metadata_obj)
+
 
 
 
