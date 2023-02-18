@@ -1,11 +1,11 @@
 nltk==3.4.5
 scikit-learn
 beautifulsoup4
-numpy
+numpy == 1.19.5
 scipy
 networkx
 statistics
-pandas
+pandas == 1.4.4
 theano
 termcolor
 lxml
