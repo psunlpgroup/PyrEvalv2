@@ -15,8 +15,6 @@ def reorder_cu_vectors(cu_vectors_path,enotebook_cu_vectors_path,scu_mapping_lis
     scu_mapping_list_int = [eval(i) for i in scu_mapping_list]
     scu_mapping_list_int_one_added = [i+1 for i in scu_mapping_list_int]
 
-
-
     reordered_cu_df = cu_df[cu_df.columns[[0]+scu_mapping_list_int_one_added ]]
 
     #This changes the dictionary order
