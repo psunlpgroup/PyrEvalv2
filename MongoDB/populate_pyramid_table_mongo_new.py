@@ -11,7 +11,8 @@ mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
 
 if __name__ == "__main__":
     hrp_location = '/Users/la-mfs6614/PycharmProjects/PyrEvalv2_Mongo_PD/MongoDB/HRP_Files/essay1_pyramid_readable_20221207.pyr'
-    pyramid_id = 20221207
+    # must cast the pyramid_id as float 
+    pyramid_id = float(20221207)             
     pyramid_name = "essay1_pyramid_readable_20221207"
     essay_number = 1
     essay_main_ideas = ["1", "2", "3", "4", "5", "6"]
