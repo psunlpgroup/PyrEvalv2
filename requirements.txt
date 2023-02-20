@@ -1,3 +1,6 @@
+## 02/20/2023, Becky; lines 7 and 9 versions of numpy/pandas are the highest versions that are consistent
+## with python 3.9. Our codebase would need to be modified to support python versions higher than 3.9.
+## For versions of python from 3.6 thru 3.8, lines 7 and 9 might need to be set to earlier versions.
 nltk==3.4.5
 scikit-learn
 beautifulsoup4
