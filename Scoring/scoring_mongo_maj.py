@@ -309,7 +309,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
 
         cu_vectors_json_path = scoring_static_dir + "/cu_vectors.json"
         grouping_vectors_path = scoring_static_dir + "/grouping_vectors.json"
-        cu_vectors_csv_path = scoring_static_dir + "/cu_vectors.csv"
+        cu_vectors_csv_path = dynamic_base_dir + "/Scoring/cu_vectors.csv"
         enotebook_cu_vectors_csv_path = dynamic_base_dir + "/Scoring/cu_vectors_enotebook.csv"
         grouping_vectors_csv_path = scoring_static_dir + "/group_vectors.csv"
         log_path = dynamic_base_dir+'/log'
@@ -328,7 +328,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         scu_mapping_list = mongodb_operations.get_scu_mapping(pyramid_id)
         essay_main_ideas_list = mongodb_operations.get_essay_main_ideas(pyramid_id)
 
-        main_ideas_dictionary.reorder_cu_vectors(cu_vectors_csv_path,enotebook_cu_vectors_csv_path,scu_mapping_list,essay_main_ideas_list,True)
+        main_ideas_dictionary.reorder_cu_vectors(cu_df,enotebook_cu_vectors_csv_path,scu_mapping_list,essay_main_ideas_list,True)
         mongodb_operations.update_cu_vectors(student_metadata_obj,enotebook_cu_vectors_csv_path)
         with open(cu_vectors_csv_path, 'w') as f:
             cu_df.to_csv(f)
