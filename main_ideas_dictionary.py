@@ -10,22 +10,21 @@ def replace_all(repls, str):
                   lambda k: repls[k.group(0)], str)
 
 #Function to create a new cu_vectors.csv with the indexing from the curriculum, not the pyramid indexing
-def reorder_cu_vectors(cu_vectors_path,enotebook_cu_vectors_path,scu_mapping_list,essay_main_ideas_list,is_essay_one):
-    cu_df = pd.read_csv(cu_vectors_path)
+def reorder_cu_vectors(cu_df,enotebook_cu_vectors_path,scu_mapping_list,essay_main_ideas_list,is_essay_one):
+
     scu_mapping_list_int = [eval(i) for i in scu_mapping_list]
     scu_mapping_list_int_one_added = [i+1 for i in scu_mapping_list_int]
-
-    reordered_cu_df = cu_df[cu_df.columns[[0]+scu_mapping_list_int_one_added ]]
+    reordered_cu_df = cu_df
+    reordered_cu_df = reordered_cu_df[reordered_cu_df.columns[scu_mapping_list_int ]]
 
     #This changes the dictionary order
-    reordered_cu_df.rename(columns={'Unnamed: 0':'',scu_mapping_list[0]: essay_main_ideas_list[0], scu_mapping_list[1]: essay_main_ideas_list[1], scu_mapping_list[2]: essay_main_ideas_list[2], scu_mapping_list[3]: essay_main_ideas_list[3], scu_mapping_list[4]: essay_main_ideas_list[4], scu_mapping_list[5]: essay_main_ideas_list[5]}, inplace=True)
+    reordered_cu_df.rename(columns={scu_mapping_list_int[0]: essay_main_ideas_list[0], scu_mapping_list_int[1]: essay_main_ideas_list[1], scu_mapping_list_int[2]: essay_main_ideas_list[2], scu_mapping_list_int[3]: essay_main_ideas_list[3], scu_mapping_list_int[4]: essay_main_ideas_list[4], scu_mapping_list_int[5]: essay_main_ideas_list[5]}, inplace=True)
 
-    reordered_cu_df.to_csv(enotebook_cu_vectors_path,index=False)
+    reordered_cu_df.to_csv(enotebook_cu_vectors_path)
 
 
 
 def replace_log(log_path,elog_path,scu_mapping_list,essay_main_ideas_list,is_essay_one):
-    print("dictionary")
     scu_mapping_list_int = [eval(i) for i in scu_mapping_list]
     scu_mapping_list_int_one_added = [i + 1 for i in scu_mapping_list_int]
 
