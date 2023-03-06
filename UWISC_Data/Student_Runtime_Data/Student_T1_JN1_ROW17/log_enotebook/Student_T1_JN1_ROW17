@@ -1,0 +1,70 @@
+
+########################################Student_T1_JN1_ROW17########################################
+                                         Pyramid_20221207.0                                         
+
+          No. of segments in the summary: 12
+                                     Raw: 30
+         Maximum possible score with Raw: 54
+                                 Quality: 0.5556
+                     Average No. of SCUs: 56.0
+  Maximum score with average No. of SCUs: 177.0
+                                Coverage: 0.1695
+                           Comprehensive: 0.3625
+
+  Content Unit List [ID(Weight)]: 1(5) 2(5) 5(5) 
+
+
+
+Sentence: 2 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 2 [Weight: 5]
+	Segment: .................... The roller coaster should have a huge initial drop leading right
+	         .................... with a loop going upside down but also safe because you know you
+	         .................... will have potential energy to make it over the loop.
+	Content Unit: ............... (1) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (2) As the car goes up the hill, the kinetic energy turns into
+	              ...............     potential energy, to be used while going down the hill.
+	              ............... (3) The potential energy decreases as you go down the roller
+	              ...............     coaster and the kinetic energy increases.
+	              ............... (4) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (5) The amount of potential energy decreases at the bottom of the
+	              ...............     drop and the amount of kinetic energy increased when the car
+	              ...............     went down.
+
+	Sentence: 3 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 5]
+	Segment: .................... we found that a meter drop worked the best and stored enough
+	         .................... potential energy to the loop following right after
+	Content Unit: ............... (1) When another roller coaster was dropped from a lower height
+	              ...............     such as meters, the potential energy was only calculated to
+	              ...............     Joules.
+	              ............... (2) the higher the drop the more potential energy will have at the
+	              ...............     top KE.
+	              ............... (3) The taller the initial drop, the more potential energy the
+	              ...............     roller coaster has.
+	              ............... (4) So the higher the drop the more potential energy.
+	              ............... (5) At the initial drop, the potential energy depends on the
+	              ...............     height.
+
+	Sentence: 5 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 5 [Weight: 5]
+	Segment: .................... it is not at a out of control speed so it safe, there will be a
+	         .................... mini drop after the hill to give the riders a break
+	Content Unit: ............... (1) This suggests that the initial drop should be higher than the
+	              ...............     hill for the car to make it over the hill.
+	              ............... (2) the height of the initial drop was higher than the hills and
+	              ...............     loop afterwards
+	              ............... (3) When you add a hill you want the height of that to be less
+	              ...............     than the initial drop.
+	              ............... (4) In order for the car to reach back over the hill after the
+	              ...............     initial drop, the hill height has to be lower than the initial
+	              ...............     drop height.
+	              ............... (5) The hill can not be higher than the initial drop,
+
+	

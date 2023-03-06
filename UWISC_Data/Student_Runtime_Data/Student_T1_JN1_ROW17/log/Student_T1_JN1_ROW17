@@ -1,0 +1,143 @@
+
+########################################Student_T1_JN1_ROW17########################################
+                                         Pyramid_20221207.0                                         
+
+          No. of segments in the summary: 12
+                                     Raw: 30
+         Maximum possible score with Raw: 54
+                                 Quality: 0.5556
+                     Average No. of SCUs: 56.0
+  Maximum score with average No. of SCUs: 177.0
+                                Coverage: 0.1695
+                           Comprehensive: 0.3625
+
+
+  Content Unit List [ID(Weight)]: 0(5), 1(5), 5(5), 28(3), 29(3), 53(2), 66(2), 72(2), 88(1), 98(1), 129(1) 
+
+
+
+Sentence: 1 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 28 [Weight: 3]
+	Segment: .................... about meters this ensures that you will have enough kinetic energy
+	         .................... to finish off the ride strong
+	Content Unit: ............... (1) The total energy limit for the roller coaster is the PE that
+	              ...............     is calculated before the ride starts.
+	              ............... (2) You have to have enough kinetic energy for the cart to get
+	              ...............     over the hill and to make it to the end of the track.
+	              ............... (3) , you get your total energy, which at all times in the ride
+	              ...............     will be the same.
+
+	Segment ID: 1 | Content Unit: 72 [Weight: 2]
+	Segment: .................... I recommend to the Gonzales family to create a roller coaster with
+	         .................... a big drop at the beginning of and have the amount of energy to
+	         .................... then have a loop going upside down.
+	Content Unit: ............... (1) a roller coaster design that has lots of ups and downs, twists
+	              ...............     and turns, and spins, and is very unpredictable
+	              ............... (2) when another roller coaster was dropped from a lower height
+	              ...............     such as
+
+Sentence: 2 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 0 [Weight: 5]
+	Segment: .................... The roller coaster should have a huge initial drop leading right
+	         .................... with a loop going upside down but also safe because you know you
+	         .................... will have potential energy to make it over the loop.
+	Content Unit: ............... (1) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (2) As the car goes up the hill, the kinetic energy turns into
+	              ...............     potential energy, to be used while going down the hill.
+	              ............... (3) The potential energy decreases as you go down the roller
+	              ...............     coaster and the kinetic energy increases.
+	              ............... (4) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (5) The amount of potential energy decreases at the bottom of the
+	              ...............     drop and the amount of kinetic energy increased when the car
+	              ...............     went down.
+
+	Segment ID: 1 | Content Unit: 66 [Weight: 2]
+	Segment: .................... because it will bring excitement to the ride
+	Content Unit: ............... (1) And with the unpredictability we can say that this ride will
+	              ...............     be very fun and exciting to ride, and attract lots of
+	              ...............     customers!
+	              ............... (2) Roller coasters can be fun and exciting while being safe at
+	              ...............     the same time.
+
+Sentence: 3 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 5 [Weight: 5]
+	Segment: .................... we found that a meter drop worked the best and stored enough
+	         .................... potential energy to the loop following right after
+	Content Unit: ............... (1) When another roller coaster was dropped from a lower height
+	              ...............     such as meters, the potential energy was only calculated to
+	              ...............     Joules.
+	              ............... (2) the higher the drop the more potential energy will have at the
+	              ...............     top KE.
+	              ............... (3) The taller the initial drop, the more potential energy the
+	              ...............     roller coaster has.
+	              ............... (4) So the higher the drop the more potential energy.
+	              ............... (5) At the initial drop, the potential energy depends on the
+	              ...............     height.
+
+	Segment ID: 1 | Content Unit: 98 [Weight: 1]
+	Segment: .................... We measured this in are experiment by playing around with
+	         .................... different heights for the drop.
+	Content Unit: ............... (1) you want the height of that to be less than the initial drop.
+
+Sentence: 4 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... but it wont be to heavy to not make it over certain obstacles.
+
+	Segment ID: 1 | Content Unit: 29 [Weight: 3]
+	Segment: .................... We know this will be safe for the riders because the roller carts
+	         .................... will be able to carry kilograms
+	Content Unit: ............... (1) Now talking about the actual roller coaster car, we need to
+	              ...............     pick how heavy it is.
+	              ............... (2) We can build a roller coaster with many twists, turns, ups,
+	              ...............     downs, and hills as we want,
+	              ............... (3) which keeps the roller coaster moving
+
+Sentence: 5 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 5]
+	Segment: .................... it is not at a out of control speed so it safe, there will be a
+	         .................... mini drop after the hill to give the riders a break
+	Content Unit: ............... (1) This suggests that the initial drop should be higher than the
+	              ...............     hill for the car to make it over the hill.
+	              ............... (2) the height of the initial drop was higher than the hills and
+	              ...............     loop afterwards
+	              ............... (3) When you add a hill you want the height of that to be less
+	              ...............     than the initial drop.
+	              ............... (4) In order for the car to reach back over the hill after the
+	              ...............     initial drop, the hill height has to be lower than the initial
+	              ...............     drop height.
+	              ............... (5) The hill can not be higher than the initial drop,
+
+	Segment ID: 1 | Content Unit: 88 [Weight: 1]
+	Segment: .................... will go down a huge thrilling drop extending lower to the ground
+	Content Unit: ............... (1) as the height goes up
+
+	Segment ID: 2 | Content Unit: 129 [Weight: 1]
+	Segment: .................... Continuing through the ride there will be hill after the loop to
+	         .................... make sure then the riders for the final big drop continuing with
+	         .................... another loop and going backwards.
+	Content Unit: ............... (1) But there is not enough kinetic energy still left at the top
+	              ...............     of the hill it is not able to get over, so when the hill
+	              ...............     height and the initial drop were equal the cart was not able
+	              ...............     to get over the hill and to the end.
+
+Sentence: 6 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 53 [Weight: 2]
+	Segment: .................... We will end the ride with a slower ending in a straight line to
+	         .................... ensure the safe stop and to slow down the potential energy a bit
+	         .................... more
+	Content Unit: ............... (1) When you add multiple hills, the next hill height always has
+	              ...............     to be less than the previous hill height to sustain the
+	              ...............     movement of the car.
+	              ............... (2) because it will then have more PE and KE, meaning it can move
+	              ...............     faster and for a longer amount of time
+====================================================================================================

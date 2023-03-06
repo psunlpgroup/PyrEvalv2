@@ -1,0 +1,53 @@
+
+########################################Student_T1_JN1_ROW19########################################
+                                         Pyramid_20221207.0                                         
+
+          No. of segments in the summary: 16
+                                     Raw: 47
+         Maximum possible score with Raw: 70
+                                 Quality: 0.6714
+                     Average No. of SCUs: 56.0
+  Maximum score with average No. of SCUs: 177.0
+                                Coverage: 0.2655
+                           Comprehensive: 0.4685
+
+  Content Unit List [ID(Weight)]: 1(5) 2(5) 4(5) 5(5) 6(5) 
+
+
+
+Sentence: 4 | Segmentation: 16
+
+	Segment ID: 0 | Content Unit: 2 [Weight: 5]
+	Segment: .................... the PE went down to at the bottom and the KE increased the Joules
+	         .................... because energy cant not be created nor destroyed so it transferred
+	         .................... to kinetic.
+	Content Unit: ............... (1) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (2) As the car goes up the hill, the kinetic energy turns into
+	              ...............     potential energy, to be used while going down the hill.
+	              ............... (3) The potential energy decreases as you go down the roller
+	              ...............     coaster and the kinetic energy increases.
+	              ............... (4) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (5) The amount of potential energy decreases at the bottom of the
+	              ...............     drop and the amount of kinetic energy increased when the car
+	              ...............     went down.
+
+	Sentence: 7 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 1 [Weight: 5]
+	Segment: .................... When the drop height is higher it creates more energy and
+	Content Unit: ............... (1) When another roller coaster was dropped from a lower height
+	              ...............     such as meters, the potential energy was only calculated to
+	              ...............     Joules.
+	              ............... (2) the higher the drop the more potential energy will have at the
+	              ...............     top KE.
+	              ............... (3) The taller the initial drop, the more potential energy the
+	              ...............     roller coaster has.
+	              ............... (4) So the higher the drop the more potential energy.
+	              ............... (5) At the initial drop, the potential energy depends on the
+	              ...............     height.
+
+	

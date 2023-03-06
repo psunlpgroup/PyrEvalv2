@@ -1,0 +1,177 @@
+
+########################################Student_T1_JN1_ROW19########################################
+                                         Pyramid_20221207.0                                         
+
+          No. of segments in the summary: 16
+                                     Raw: 47
+         Maximum possible score with Raw: 70
+                                 Quality: 0.6714
+                     Average No. of SCUs: 56.0
+  Maximum score with average No. of SCUs: 177.0
+                                Coverage: 0.2655
+                           Comprehensive: 0.4685
+
+
+  Content Unit List [ID(Weight)]: 0(5), 1(5), 2(5), 3(5), 5(5), 11(4), 14(4), 15(4), 21(3), 26(3), 47(2), 88(1), 89(1) 
+
+
+
+Sentence: 1 | Segmentation: 4
+
+	Segment ID: 0 | Content Unit: None
+	Segment: .................... so it has enough potential energy that will transfer into kinetic
+	         .................... energy going down the hill
+
+	Segment ID: 1 | Content Unit: 14 [Weight: 4]
+	Segment: .................... that will continue to transfer back into potential going up the
+	         .................... hill
+	Content Unit: ............... (1) The potential energy decreases the amount from the initial
+	              ...............     drop to the top of the hill.
+	              ............... (2) The total energy was J. And the initial drop did give enough
+	              ...............     energy to go over the hill.
+	              ............... (3) This potential energy from the initial drop converts into
+	              ...............     kinetic energy.
+	              ............... (4) A hill cant require more kinetic energy to climb than the
+	              ...............     initial drop gives,.
+
+	Segment ID: 2 | Content Unit: 26 [Weight: 3]
+	Segment: .................... which is meters high
+	Content Unit: ............... (1) In one of my tests, I had my initial drop set at meters.
+	              ............... (2) At the initial drop, the potential energy depends on the
+	              ...............     height.
+	              ............... (3) Firstly, I strongly recommend an initial drop height of meters
+	              ...............     tall.
+
+	Segment ID: 3 | Content Unit: 11 [Weight: 4]
+	Segment: .................... The height we found best was having the Initial drop height at
+	         .................... meters.
+	Content Unit: ............... (1) Setting the hill height to m and the initial drop to m, there
+	              ...............     was J of potential energy at the initial drop and J of kinetic
+	              ...............     energy.
+	              ............... (2) when I changed the hill height to meters
+	              ............... (3) m and made the hill height to.
+	              ............... (4) when I made the initial drop height meters tall
+
+Sentence: 2 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 47 [Weight: 2]
+	Segment: .................... The relationship between PE and KE is inverse.
+	Content Unit: ............... (1) the PE will be because the two have a direct relationship
+	              ............... (2) The relationship between mass and KE is the same as mass and
+	              ...............     PE.
+
+Sentence: 3 | Segmentation: 1
+
+	Segment ID: 0 | Content Unit: 88 [Weight: 1]
+	Segment: .................... when one goes up the other
+	Content Unit: ............... (1) as the height goes up
+
+	Segment ID: 1 | Content Unit: 89 [Weight: 1]
+	Segment: .................... This means that goes down.
+	Content Unit: ............... (1) As the car goes down the hill
+
+Sentence: 4 | Segmentation: 16
+
+	Segment ID: 0 | Content Unit: 0 [Weight: 5]
+	Segment: .................... the PE went down to at the bottom and the KE increased the Joules
+	         .................... because energy cant not be created nor destroyed so it transferred
+	         .................... to kinetic.
+	Content Unit: ............... (1) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (2) As the car goes up the hill, the kinetic energy turns into
+	              ...............     potential energy, to be used while going down the hill.
+	              ............... (3) The potential energy decreases as you go down the roller
+	              ...............     coaster and the kinetic energy increases.
+	              ............... (4) As the car goes down the initial drop, the potential energy
+	              ...............     decreases while the kinetic energy increases, causing the
+	              ...............     roller coaster to move.
+	              ............... (5) The amount of potential energy decreases at the bottom of the
+	              ...............     drop and the amount of kinetic energy increased when the car
+	              ...............     went down.
+
+	Segment ID: 1 | Content Unit: 2 [Weight: 5]
+	Segment: .................... and the Kinetic energy was at, but
+	Content Unit: ............... (1) According to the law of conservation of energy, you can not
+	              ...............     create energy, so we can not create more kinetic energy for
+	              ...............     the car.
+	              ............... (2) This brings in total energy, because the law of conservation
+	              ...............     states that energy cant be created nor destroyed.
+	              ............... (3) The Law of Conservation of Energy says that energy cant be
+	              ...............     created nor destroyed,
+	              ............... (4) since the Law of Conservation of Energy states that energy can
+	              ...............     not be created nor destroyed.
+	              ............... (5) The Law of conservation of Energy states that energy can be
+	              ...............     transformed into other kinds of energy but can not be created
+	              ...............     or destroyed.
+
+	Segment ID: 2 | Content Unit: 1 [Weight: 5]
+	Segment: .................... For example, in our experiment when the drop height was at the
+	         .................... highest point the potential energy was at Joules
+	Content Unit: ............... (1) This suggests that the initial drop should be higher than the
+	              ...............     hill for the car to make it over the hill.
+	              ............... (2) the height of the initial drop was higher than the hills and
+	              ...............     loop afterwards
+	              ............... (3) When you add a hill you want the height of that to be less
+	              ...............     than the initial drop.
+	              ............... (4) In order for the car to reach back over the hill after the
+	              ...............     initial drop, the hill height has to be lower than the initial
+	              ...............     drop height.
+	              ............... (5) The hill can not be higher than the initial drop,
+
+	Segment ID: 3 | Content Unit: 21 [Weight: 3]
+	Segment: .................... when the cart started going down the hill
+	Content Unit: ............... (1) when you add hills
+	              ............... (2) As the car goes up the hill
+	              ............... (3) When you add a hill
+
+Sentence: 5 | Segmentation: 0
+
+	Segment ID: 0 | Content Unit: 3 [Weight: 5]
+	Segment: .................... When the mass of the cart is higher the PE and KE increase.
+	Content Unit: ............... (1) This shows that the more mass of the car you have, the greater
+	              ...............     total energy.
+	              ............... (2) The more mass the more energy you have.
+	              ............... (3) This means that when the car has more mass it has more energy.
+	              ............... (4) When theres more total energy caused by more mass in a cart,.
+	              ............... (5) We noticed that the higher the amount of mass the car has, the
+	              ...............     more total, potential, and kinetic energy it had.
+
+Sentence: 6 | Segmentation: 2
+
+	Segment ID: 0 | Content Unit: 15 [Weight: 4]
+	Segment: .................... can move at a greater speed so since they are able to move faster
+	         .................... the PE and KE increase due to more energy
+	Content Unit: ............... (1) because, the potential energy turns into kinetic energy,
+	              ...............     making the car be able to climb higher hills, go for longer,
+	              ...............     and go faster
+	              ............... (2) Thats because as you lose height the potential energy
+	              ...............     decreases while the kinetic energy increases.
+	              ............... (3) KE is transferred from PE when the potential for energy
+	              ...............     decreases as you go down the roller coaster.
+	              ............... (4) Because there wont be enough kinetic energy to get you over,
+	              ...............     and we know that the potential energy converts to kinetic
+	              ...............     energy.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... This is happening b c something with a greater mass.
+
+Sentence: 7 | Segmentation: 3
+
+	Segment ID: 0 | Content Unit: 5 [Weight: 5]
+	Segment: .................... When the drop height is higher it creates more energy and
+	Content Unit: ............... (1) When another roller coaster was dropped from a lower height
+	              ...............     such as meters, the potential energy was only calculated to
+	              ...............     Joules.
+	              ............... (2) the higher the drop the more potential energy will have at the
+	              ...............     top KE.
+	              ............... (3) The taller the initial drop, the more potential energy the
+	              ...............     roller coaster has.
+	              ............... (4) So the higher the drop the more potential energy.
+	              ............... (5) At the initial drop, the potential energy depends on the
+	              ...............     height.
+
+	Segment ID: 1 | Content Unit: None
+	Segment: .................... it has enough energy built up that it can go over a hill at almost
+	         .................... the same height.
+====================================================================================================
