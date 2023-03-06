@@ -3,7 +3,7 @@ import sys
 import shutil
 from subprocess import call
 #Wasih (02-19-20) Use functions instead of calling script
-from splitsent import *
+from splitsent_mongo_min import *
 from Stanford.stanford import *
 from Pyramid.pyramid import pyramidmain
 
@@ -37,10 +37,13 @@ from Scoring import scoring_mongo_maj as scoring_functions
 from MongoDB import mongo_db_functions
 from MongoDB import pyramid_operations_mongo_new
 
-#Variables for MongoDB
-#TODO: to fetch from parameters files
-db_conn = "mongodb://localhost:27017"
-database_name = 'PYREVAL_TEST_DB';
+#Variables for MongoDB; changed 03/03/23 MS
+config = configparser.ConfigParser()
+config.read('parameters.ini')
+
+db_conn = config.get('Database', 'db_conn')
+database_name = config.get('Database', 'database_name')
+
 mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
 
 #Code to connect to the databse
@@ -281,7 +284,7 @@ if __name__ == "__main__":
         #TODO:Change to receive from notebook
         global student_metadata_obj
         #TYPES OF student_metadata(STRING, STRING, STRING, INT32, STRING) in DB
-        student_metadata_obj = Student_Essay_Model.student_metadata("123", "1", "JK", 1, "O")
+        student_metadata_obj = Student_Essay_Model.student_metadata("T1_JN1_ROW19", "1", "JN", 1, "O")
 
         # base_dir = os.path.dirname(os.path.realpath(__file__))
         base_dir = config.get('DynamicPaths', 'dynamicbasedir')
