@@ -4,14 +4,34 @@
 # Script to populate hrp content to the pyramid collection from the HRP Folder
 
 import mongo_db_functions
+# START CHANGES RJP 3/03/23
+import os
+import sys
+import mongo_db_functions
 
-db_conn = "mongodb://localhost:27017"
-database_name = 'TEST_FEB2023';
+PYTHON_VERSION = 2
+if sys.version_info[0] == 2:
+    import ConfigParser as configparser
+else:
+    import configparser
+    PYTHON_VERSION = 3
+
+config = configparser.ConfigParser()
+parametersfile = os.path.join(os.getcwd(),"parameters.ini")
+config.read(parametersfile)
+basedir = config.get('StaticPaths', 'staticbasedir')
+# END CHANGES RJP 3/03/23
+# START CHANGES MS 3/03/23
+db_conn = config.get('Database', 'db_conn')
+database_name = config.get('Database', 'database_name')
+# END CHANGES MS 3/03/23
+
 mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
 
 if __name__ == "__main__":
-    hrp_location = '/Users/la-mfs6614/PycharmProjects/PyrEvalv2_Mongo_PD/MongoDB/HRP_Files/essay1_pyramid_readable_20221207.pyr'
-    # must cast the pyramid_id as float 
+    # RJP 03/03/23 replaced abs path with relative path
+    hrp_location = os.path.join(basedir, "MongoDB/HRP_Files/essay1_pyramid_readable_20221207.pyr")
+    # must cast the pyramid_id as float
     pyramid_id = float(20221207)             
     pyramid_name = "essay1_pyramid_readable_20221207"
     essay_number = 1
