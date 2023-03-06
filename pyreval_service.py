@@ -11,7 +11,7 @@ import sys
 import shutil
 from subprocess import call
 #Wasih (02-19-20) Use functions instead of calling script
-from splitsent import *
+from splitsent_mongo_min import *
 from Stanford.stanford import *
 from Pyramid.pyramid import pyramidmain
 
@@ -43,15 +43,6 @@ from Scoring import scoring_mongo_maj as scoring_functions
 #Importing for MongoDB Operations
 from MongoDB import mongo_db_functions
 from MongoDB import pyramid_operations_mongo_new
-
-#Variables for MongoDB
-#TODO: to fetch from parameters files
-# db_conn = "mongodb://localhost:27017"
-# database_name = 'PYREVAL_TEST_DB';
-# mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
-
-# #Code to connect to the databse
-# mongodb_operations.connect(database_name)
 
 #Importing Error Object for handling Intermmediate Data
 from Error_Operations import error_operations_mongo_new
@@ -220,8 +211,12 @@ def error_print(e1, e2=None):
 
 def pyreval(student_metadata_obj_req):
     try:
-        db_conn = "mongodb://localhost:27017"
-        database_name = 'PYREVAL_TEST_DB';
+        config = configparser.ConfigParser()
+        config.read('parameters.ini')
+
+        #Variables for MongoDB
+        db_conn = config.get('Database', 'db_conn')
+        database_name = config.get('Database', 'database_name')
 
         #Getting Current Working Directory
         current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -236,13 +231,12 @@ def pyreval(student_metadata_obj_req):
         #Variables for Handling Intermmediate Data and Errors
         error_operations_obj = error_operations_mongo_new.error_object()
 
-        config = configparser.ConfigParser()
-        config.read('parameters.ini')
+
 
         #TODO:Change to receive from notebook
         global student_metadata_obj
         student_metadata_obj = student_metadata_obj_req
-        # student_metadata_obj = Student_Essay_Model.student_metadata('6278bd4430da3ae9a16a4524', "1", "GS", 2, "R")
+        # student_metadata_obj = Student_Essay_Model.student_metadata('6278bd4430da3ae9a16a4527', "1", "GS", 2, "R")
         
         # base_dir = os.path.dirname(os.path.realpath(__file__))
         base_dir = config.get('DynamicPaths', 'dynamicbasedir')
