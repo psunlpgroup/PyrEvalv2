@@ -23,19 +23,42 @@ def reorder_cu_vectors(cu_df,enotebook_cu_vectors_path,scu_mapping_list,essay_ma
     reordered_cu_df.to_csv(enotebook_cu_vectors_path)
 
 
+def write_logs_to_file(data, write_path, filename):
+    if not os.path.exists(write_path):
+        os.makedirs(write_path)
+    with open(write_path + "/" + filename, 'w') as file:
+        file.write(data)
+
 
 def replace_log(log_path,elog_path,scu_mapping_list,essay_main_ideas_list,is_essay_one):
     scu_mapping_list_int = [eval(i) for i in scu_mapping_list]
-    scu_mapping_list_int_one_added = [i + 1 for i in scu_mapping_list_int]
 
     for filename in os.listdir(log_path):
 
 
         with open(log_path+"/" + filename, "r") as file:
             data = file.read()
+            write_path = elog_path
 
             listi = data.split('\n')
-            listi_sp = listi[14].split(': ')[1].split('(5)')
+            content_unit_list_split = listi[14].split(': ')
+
+            #Has no content units
+            if (len( content_unit_list_split) == 1):
+                listi[14] = content_unit_list_split[0] + ":"
+                data = ''.join(str(f)+"\n" for f in listi[0:15])
+                write_logs_to_file(data, write_path, filename)
+                return
+
+            listi_sp = content_unit_list_split[1].split('(5)')
+
+            #Has no content unit of weight five
+            if(len(listi_sp) == 1):
+                listi[14] = content_unit_list_split[0]+ ":"
+                data = ''.join(str(f)+"\n" for f in listi[0:15])
+                write_logs_to_file(data, write_path, filename)
+                return
+
             listi2 = []
             listi3 = []
             for l in listi_sp:
@@ -130,10 +153,6 @@ def replace_log(log_path,elog_path,scu_mapping_list,essay_main_ideas_list,is_ess
         data = ''.join(str(f) for f in final)
         data= temp + data
 
+        write_logs_to_file(data,write_path,filename)
+        return
 
-
-        write_path =  elog_path
-        if not os.path.exists(write_path):
-            os.makedirs(write_path)
-        with open(write_path+"/" + filename, 'w') as file:
-            file.write(data)
