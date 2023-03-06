@@ -9,7 +9,7 @@ class student_metadata():
         self.teacher_id = teacher_id
         self.essay_number = essay_number
         self.essay_version = essay_version
-        self.essay_content = essay_content
+
     
     
 
