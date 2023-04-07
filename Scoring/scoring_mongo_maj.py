@@ -17,7 +17,7 @@
 
 
 #Wasih (02-21-20) Add more structure
-#Last updated by Mahsa (02-17-2023)
+#Last updated by Mahsa (04-06-2023)
 from MongoDB.mongo_db_functions import MongoDB_Operations
 from Scoring.lib_scoring_mongo_min import *
 #from lib_scoring import sentencesFromSegmentations, SummaryGraph, buildSCUcandidateList, filename, getsegsCount
@@ -325,10 +325,19 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         cu_df = pd.DataFrame.from_dict(cu_matches, orient='index')
         cu_df = cu_df.sort_index()
 
+        print(cu_df)
+
         scu_mapping_list = mongodb_operations.get_scu_mapping(pyramid_id)
         essay_main_ideas_list = mongodb_operations.get_essay_main_ideas(pyramid_id)
 
-        main_ideas_dictionary.reorder_cu_vectors(cu_df,enotebook_cu_vectors_csv_path,scu_mapping_list,essay_main_ideas_list,True)
+        #Added 04/05/2023 by MS
+        if len(essay_main_ideas_list) == 6:
+            isessayone = True
+        elif len(essay_main_ideas_list) == 8:
+            isessayone =  False
+
+
+        main_ideas_dictionary.reorder_cu_vectors(cu_df,enotebook_cu_vectors_csv_path,scu_mapping_list,essay_main_ideas_list,isessayone)
         mongodb_operations.update_cu_vectors(student_metadata_obj,enotebook_cu_vectors_csv_path)
         with open(cu_vectors_csv_path, 'w') as f:
             cu_df.to_csv(f)
@@ -336,7 +345,7 @@ def scoring_function(scoring_dir, pyramid_path, results_file, log, scoring_stati
         # gp_df = gp_df.sort_index()
         # with open(grouping_vectors_csv_path, 'w') as f:
         #     gp_df.to_csv(f)
-        main_ideas_dictionary.replace_log(log_path,elog_path,scu_mapping_list,essay_main_ideas_list,True)
+        main_ideas_dictionary.replace_log(log_path,elog_path,scu_mapping_list,essay_main_ideas_list,isessayone)
         result_obj = Result_Model.result_data()
         result_obj = get_results(elog_path,result_obj)
         mongodb_operations.update_result(result_obj, student_metadata_obj)
