@@ -8,6 +8,7 @@ import mongo_db_functions
 import os
 import sys
 import mongo_db_functions
+import argparse
 
 PYTHON_VERSION = 2
 if sys.version_info[0] == 2:
@@ -24,19 +25,44 @@ basedir = config.get('StaticPaths', 'staticbasedir')
 # START CHANGES MS 3/03/23
 db_conn = config.get('Database', 'db_conn')
 database_name = config.get('Database', 'database_name')
-# END CHANGES MS 3/03/23
+# END CHANGES MS 4/05/23
 
 mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
 
-if __name__ == "__main__":
-    # RJP 03/03/23 replaced abs path with relative path
+def populate_pyramid1():
     hrp_location = os.path.join(basedir, "MongoDB/HRP_Files/essay1_pyramid_readable_20221207.pyr")
     # must cast the pyramid_id as float
-    pyramid_id = float(20221207)             
+    pyramid_id = float(20221207)
     pyramid_name = "essay1_pyramid_readable_20221207"
     essay_number = 1
     essay_main_ideas = ["1", "2", "3", "4", "5", "6"]
     scu_mapping = ["5", "0", "4", "2", "1", "3"]
+
+    return hrp_location, pyramid_id, pyramid_name, essay_number, essay_main_ideas, scu_mapping
+
+
+def populate_pyramid2():
+    hrp_location = os.path.join(basedir, "MongoDB/HRP_Files/essay2_pyramid_readable_20230403.pyr")
+    # must cast the pyramid_id as float
+    pyramid_id = float(20230403)
+    pyramid_name = "essay2_pyramid_readable_20230403"
+    essay_number = 2
+    essay_main_ideas = ["1", "2", "3", "4", "5", "6","7","8"]
+    scu_mapping = ["5", "0", "4", "2", "1", "3","6","7"]
+
+    return hrp_location, pyramid_id, pyramid_name, essay_number, essay_main_ideas, scu_mapping
+
+
+if __name__ == "__main__":
+    # Added 4/05/23 by MS
+    parser = argparse.ArgumentParser(description='Pyramid2 or Pyramid1')
+    parser.add_argument('--pyramidNumber', required=True, type=int)
+    args = parser.parse_args()
+
+    if args.pyramidNumber == 1:
+        hrp_location, pyramid_id, pyramid_name, essay_number, essay_main_ideas, scu_mapping = populate_pyramid1()
+    elif args.pyramidNumber == 2:
+        hrp_location, pyramid_id, pyramid_name, essay_number, essay_main_ideas, scu_mapping = populate_pyramid2()
 
     # Code to connect to the databse
     mongodb_operations.connect(database_name);
