@@ -176,8 +176,9 @@ class MongoDB_Operations:
         except Exception as e:
             print('MongoDB Error %s' %e)
 
-     # Added 2/17/23 to ensure that the essay_main_ideas to scu_mapping and the essay number are populated in the db along with the pyramid that is read in
-    def populate_essay_pyramid(self, pyramid_id, essay_number, essay_main_ideas, scu_mapping):
+    # Added 2/17/23 to ensure that the essay_main_ideas to scu_mapping and the essay number are populated in the db along with the pyramid that is read in
+    # Becky: Updated 4/7/23 to pass the main_idea_accuracy in from populate_pyramid_table_mongo_new.py rather than define it here
+    def populate_essay_pyramid(self, pyramid_id, essay_number, essay_main_ideas, scu_mapping, main_idea_accuracy):
         try:
             essay_pyramid_collection = self.__db__['ESSAY_PYRAMID_COLLECTION']
             insert_input_dict = {
@@ -186,11 +187,7 @@ class MongoDB_Operations:
                 "essay_main_ideas": essay_main_ideas,
                 "scu_mapping": scu_mapping,
                 # RJP 03/03/23 added main_idea_accuracy
-                "main_idea_accuracy": {
-                    "high_acc": ["2", "4", "6"],
-                    "med_acc": ["1", "5"],
-                    "low_acc": ["3"]
-                }
+                "main_idea_accuracy": main_idea_accuracy
             }
 
             if (essay_pyramid_collection.insert_one(insert_input_dict)):
