@@ -48,7 +48,7 @@ Before running pyreval mongo the directory in the parameter.ini file needs to be
 # PyrEval Documentation:
 PyrEval Copyright (C) 2017 Yanjun Gao
 
-This is the package for running PyrEval (which includes a new variant PyrEval+CR). The current package is written in Python 3.6 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing. (Has been used with Python versions up to 3.9 on MAC OS, does not work as well on Windows.)
+This is the package for running PyrEval (which includes a new variant PyrEval+CR). The current package is written in Python 3.8 and is an update of the original PyrEval version [Link](https://github.com/serenayj/PyrEval/) which used PyrEval 2.7. This version comes with many optimizations and other changes to facilitate experiments and parameter tuning.  In particular, many of the recent and ongoing changes facilitate use of PyrEval for real-time assessment of student writing. (Has been used with Python versions up to 3.9 on MAC OS, does not work as well on Windows.)
 
 [Here](https://youtu.be/i_wdH3__urY) is a demo presented at the [CLIEDE2017](https://sites.psu.edu/cliede2017/) workshop. Look for a more recent demo video soon.
 
@@ -83,7 +83,7 @@ PyrEval version 2 has been modified to include the original pipeline (shown agai
 
 ## Requirements
 ### Installation Requirement 
-1. Python 3.6 (Has been tested with python versions up to 3.9; not guaranteed to work with higher versions)
+1. Python 3.8 (Has been tested with python versions up to 3.9; not guaranteed to work with higher versions)
 2. Stanford CoreNLP System [5], see download [link](https://stanfordnlp.github.io/CoreNLP/). PyrEval has been tested with version 4.4.0 of Stanford CoreNLP. The directory should be placed inside the Stanford subdirectory of the repository.
 3. Install the packages listed in requirements.txt to the environment along with additional dependencies:
 ```
