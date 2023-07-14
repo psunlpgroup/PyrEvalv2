@@ -134,8 +134,10 @@ def get_results(elogs_path, result_obj):
         for line in lines[7:12]:
             float_results.append(float(line.split(": ")[1]))
 
-        content_unit_list = (lines[13].split(": "))[1].replace(" \n","")
-
+        if len(lines[13].split(": ")) > 1:
+            content_unit_list = (lines[13].split(": "))[1].replace(" \n", "")
+        else:
+            content_unit_list = []
 
     result_obj.no_of_segments = int_results[0]
     result_obj.pyramid_name = int(pyramid_id)

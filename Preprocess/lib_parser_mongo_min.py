@@ -15,7 +15,8 @@
 
 
 # Written by: Purushartha Singh
-# Last Update: 07/04/19
+#Updated by Mahsa (06-21-2023)
+# Last Update: 06/21/2023
 # The code is written with Yanjun Gao's package by the same name as reference
 
 # Libraries needed: bs4(beautifulSoup4), nltk
@@ -231,7 +232,7 @@ def compoundSplit(tree):
 def makeSubtreeList(subtrees, numlist):
     sublists = []
     for each in subtrees:
-        ele = [item[1] for item in each.leaves()]
+        ele = [item[1] for item in each.leaves() if len(item)>1]
         sublists.append(ele)
     sentence_list = [item[1] for item in numlist]
     ind = 0
@@ -386,7 +387,7 @@ def ruleSBAR(tr, numlist):
     # Finds the remaining nodes after removing the split subtree
     valids = []
     for each in segments:
-        ele = [item[1] for item in each]
+        ele = [item[1] for item in each if len(item)>1]
         valids.append(ele)
     list2 = [item[1] for item in numlist]
     ind = 0

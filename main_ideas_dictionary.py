@@ -3,7 +3,7 @@ import os
 
 import re
 
-#Written by Mahsa (04-06-2023)
+#Updated by Mahsa (06-21-2023)
 def replace_all(repls, str):
     # return re.sub('|'.join(repls.keys()), lambda k: repls[k.group(0)], str)
     return re.sub('|'.join(re.escape(key) for key in repls.keys()),
@@ -21,7 +21,7 @@ def reorder_cu_vectors(cu_df,enotebook_cu_vectors_path,scu_mapping_list,essay_ma
     # reordered_cu_df.rename(columns={scu_mapping_list_int[0]: essay_main_ideas_list[0], scu_mapping_list_int[1]: essay_main_ideas_list[1], scu_mapping_list_int[2]: essay_main_ideas_list[2], scu_mapping_list_int[3]: essay_main_ideas_list[3], scu_mapping_list_int[4]: essay_main_ideas_list[4], scu_mapping_list_int[5]: essay_main_ideas_list[5]}, inplace=True)
     for col in reordered_cu_df.columns:
         i = 0
-        reordered_cu_df.rename(columns={col:str(col).replace(str(scu_mapping_list_int[i]),str(essay_main_ideas_list[i]))}, inplace=True)
+        reordered_cu_df = reordered_cu_df.rename(columns={col:str(col).replace(str(scu_mapping_list_int[i]),str(essay_main_ideas_list[i]))})
         i = i+1
 
     reordered_cu_df.to_csv(enotebook_cu_vectors_path)
