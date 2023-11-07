@@ -15,10 +15,11 @@ if sys.version_info[0] == 2:
     import ConfigParser as configparser
 else:
     import configparser
+
     PYTHON_VERSION = 3
 
 config = configparser.ConfigParser()
-parametersfile = os.path.join(os.getcwd(),"parameters.ini")
+parametersfile = os.path.join(os.getcwd(), "parameters.ini")
 config.read(parametersfile)
 basedir = config.get('StaticPaths', 'staticbasedir')
 # END CHANGES RJP 3/03/23
@@ -28,6 +29,7 @@ database_name = config.get('Database', 'database_name')
 # END CHANGES MS 4/05/23
 
 mongodb_operations = mongo_db_functions.MongoDB_Operations(db_conn)
+
 
 # Becky 4/7/23 added another attribute for this function to return: main_idea_accuracy
 def populate_pyramid1():
@@ -39,26 +41,27 @@ def populate_pyramid1():
     essay_main_ideas = ["1", "2", "3", "4", "5", "6"]
     scu_mapping = ["5", "0", "4", "2", "1", "3"]
     main_idea_accuracy = {
-                    "high_acc": ["2", "4", "6"],
-                    "med_acc": ["1", "5"],
-                    "low_acc": ["3"]
-                    }
+        "high_acc": ["2", "4", "6"],
+        "med_acc": ["1", "5"],
+        "low_acc": ["3"]
+    }
 
     return hrp_location, pyramid_id, pyramid_name, essay_number, essay_main_ideas, scu_mapping, main_idea_accuracy
 
+
 # Becky 4/7/23 added another attribute for this function to return: main_idea_accuracy
 def populate_pyramid2():
-    hrp_location = os.path.join(basedir, "MongoDB/HRP_Files/essay2_pyramid_readable_20230403.pyr")
+    hrp_location = os.path.join(basedir, "MongoDB/HRP_Files/essay2_pyramid_readable_20231029.pyr")
     # must cast the pyramid_id as float
-    pyramid_id = float(20230403)
-    pyramid_name = "essay2_pyramid_readable_20230403"
+    pyramid_id = float(20231029)
+    pyramid_name = "essay2_pyramid_readable_20231029"
     essay_number = 2
-    essay_main_ideas = ["1", "2", "3", "4", "5", "6","7","8"]
-    scu_mapping = ["5", "0", "4", "2", "1", "3","6","7"]
+    essay_main_ideas = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    scu_mapping = ["5", "7", "4", "0", "2", "6", "3", "1"]
     main_idea_accuracy = {
-        "high_acc": ["4", "6"],
-        "med_acc": ["1", "2", "3"],
-        "low_acc": ["5", "7", "8"]
+        "high_acc": ["1", "2", "5"],
+        "med_acc": ["4", "6"],
+        "low_acc": ["3", "7", "8"]
     }
 
     return hrp_location, pyramid_id, pyramid_name, essay_number, essay_main_ideas, scu_mapping, main_idea_accuracy
@@ -83,4 +86,5 @@ if __name__ == "__main__":
 
     # Added 2/17/23 to ensure that the essay_main_ideas to scu_mapping and the essay number are populated in the db along with the pyramid that is read in
     # Updated 4/7/23 to input main_ideas_accuracy here rather than in mongo_db_functions
-    mongodb_operations.populate_essay_pyramid(pyramid_id, essay_number, essay_main_ideas, scu_mapping, main_idea_accuracy)
+    mongodb_operations.populate_essay_pyramid(pyramid_id, essay_number, essay_main_ideas, scu_mapping,
+                                              main_idea_accuracy)
