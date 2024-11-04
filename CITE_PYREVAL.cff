@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Singh
+    given-names: Purushartha
+title: "PyrEval v.2"
+identifiers:
+  - type: doi
+    value: 10.1007/978-3-031-11644-5_64
+date-released: 2022-09-24
